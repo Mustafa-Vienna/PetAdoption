@@ -8,7 +8,7 @@ def index_page(request):
     return render(request, "pets/index.html")
 
 
-def posts(request):
+def posts_page(request):
     pass
 
 

@@ -9,7 +9,6 @@
     <meta name="keywords"
           content="Pet adoption, Adopt a pet, Pet giveaway, Pet rehoming, Free pet listings, Pet adoption community, Animal rescue, Pet adoption platform, Pet comments and discussions, Rehome your pet, Adopt dogs and cats, Post pets for adoption, Find a new pet home">
     <title>
-      Pets
       {% block page_title %}
       {% endblock page_title %}
     </title>
@@ -22,33 +21,7 @@
     {% endblock css-files %}
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pets need Help</a>
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Posts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login/Register</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include "nav.html" %}
     {% block content %}
     {% endblock content %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

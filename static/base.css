@@ -11,11 +11,32 @@
   padding: 0;
 }
 
+:root {
+  /* Fonts */
+  --font-family: 'Open Sans', 'Lato', sans-serif; /* Main font */
+  --sans-font: 'Open Sans', sans-serif;
+  --lato-font: 'Lato', sans-serif;
+
+  /* colors */
+  --main-color: #0a0908; /* Black */
+  --air-color: #7c9eb2; /* Air superiority blue */
+  --violet-color: #52528c; /* Ultra Violet */
+  --brown-color: #a44200; /* Brown */
+  --whitesmoke-color: #f5f5f5; /*  whitesmoke */
+  --bronze-color: #d58936; /*  whitesmoke */
+}
+
 html {
-  font-family: 'Open Sans', 'Lato', sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
-  background-color: whitesmoke;
-  color: red;
+  background-color: var(--whitesmoke-color);
+  color: var(--main-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--lato-font);
 }
