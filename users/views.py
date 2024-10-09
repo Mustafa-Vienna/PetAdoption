@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 from .forms import UserRegisterForm
 
@@ -17,3 +19,9 @@ class RegisterView(View):
         if form.is_valid():
             form.save()
             return redirect('main-page')
+
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return render(request, 'users/logout.html')
