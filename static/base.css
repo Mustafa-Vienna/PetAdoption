@@ -17,13 +17,14 @@
   --sans-font: 'Open Sans', sans-serif;
   --lato-font: 'Lato', sans-serif;
 
-  /* colors */
-  --main-color: #0a0908; /* Black */
-  --air-color: #7c9eb2; /* Air superiority blue */
-  --violet-color: #52528c; /* Ultra Violet */
-  --brown-color: #a44200; /* Brown */
-  --whitesmoke-color: #f5f5f5; /*  whitesmoke */
-  --bronze-color: #d58936; /*  whitesmoke */
+  /* New Color Palette */
+  --main-color: #1d3557; /* Deep Blue for header and important elements */
+  --accent-color: #e63946; /* Coral Red for CTA buttons */
+  --highlight-color: #a8dadc; /* Soft Light Blue for backgrounds or hover states */
+  --secondary-color: #f1faee; /* Off-White for light backgrounds */
+  --neutral-color: #457b9d; /* Muted Blue for navigation and footers */
+  --highlight-brown: #d4a373; /* Warm Tan for accents and sections */
+  --text-color: #343a40; /* Dark Gray for general text */
 }
 
 html {
@@ -31,7 +32,7 @@ html {
 }
 
 body {
-  background-color: var(--whitesmoke-color);
+  background-color: var(--secondary-color);
   color: var(--main-color);
 }
 
@@ -39,4 +40,15 @@ h1,
 h2,
 h3 {
   font-family: var(--lato-font);
+  color: inherit;
+}
+
+#main-navigation .navbar {
+  background-color: var(--secondary-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: var(--highlight-brown);
 }

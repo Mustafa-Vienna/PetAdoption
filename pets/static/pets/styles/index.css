@@ -1,0 +1,16 @@
+body {
+  background-color: var(--highlight-brown);
+}
+
+#home h2 {
+  color: rgba(29, 34, 29, 0.731);
+}
+
+#home .span-color {
+  color: var(--main-color);
+}
+
+#home p {
+  font-family: var(--sans-font);
+  color: var(--text-color);
+}

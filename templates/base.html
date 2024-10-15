@@ -34,11 +34,13 @@
             <link rel="manifest" href="/site.webmanifest">
             <!-- Base css file -->
             <link rel="stylesheet" href="{% static "base.css" %}">
-            {% block css-files %}
-            {% endblock css-files %}
+            {% block css_files %}
+            {% endblock css_files %}
       </head>
       <body>
-            {% include "nav.html" %}
+            <header id="main-navigation">
+                  {% include "nav.html" %}
+            </header>
             {% block content %}
             {% endblock content %}
             <!-- JQuery CDN link -->
