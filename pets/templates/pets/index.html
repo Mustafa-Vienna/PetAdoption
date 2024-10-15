@@ -15,27 +15,31 @@
            data-aos="slide-right"
            data-oas-duration="2000"
            data-osdelay="500">
-        <h2 class="py-4">
+        <h1 class="py-4">
           Hello!
           <br>
           Welcome to
-          <span class="span-color fw-bold">Pet Adoption</span>
-        </h2>
+          <span class="span-color fw-bold">Pet Adoption <i class="fa-solid fa-paw"></i></span>
+        </h1>
         <p class="text-muted fs-4 py-4">
           where we help pets find loving homes. With years of experience, we're dedicated to connecting pets in need with families ready to give them a new beginning. Let's find the perfect companion for you today!
         </p>
         <p class="text-muted fs-4">
-          <strong>At Pet Adoption</strong>, we believe every pet deserves a loving home. Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
+          <strong>At Pet Adoption</strong>, we believe every pet deserves a loving home <i class="fa-solid fa-house"></i>.
+          <br>
+          Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
         </p>
-        <button class="btn btn-outline-warning mt-3 py-3 px-5 rounded-pill">
-          <span class="fw-bold text-dark">About Us</span>
-        </button>
-        <a href="#{% static "about" %}" class="link ms-4 d-none"></a>
+        <a href="#About Us" class="link ms-4 d-none"></a>
       </div>
-      <div class="col-10 col-md-4 d-none d-md-block">
+      <div class="col-10 col-md-5 d-none d-md-block">
         <img src="{% static "pets/images/main_pic.png" %}" class="img-fluid" data-aos="slide-left" alt="pet with new family" />
       </div>
     </div>
   </section>
   <!-- home section ends here -->
+  <!-- About page start -->
+  <section class="py-5" id="about">
+    {% include "pets/about.html" %}
+  </section>
+  <!-- About page ends here-->
 {% endblock content %}

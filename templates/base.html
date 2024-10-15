@@ -31,7 +31,6 @@
                   type="image/png"
                   sizes="16x16"
                   href="{% static 'favicon/favicon-16x16.png' %}">
-            <link rel="manifest" href="/site.webmanifest">
             <!-- Base css file -->
             <link rel="stylesheet" href="{% static "base.css" %}">
             {% block css_files %}
@@ -52,5 +51,8 @@
             <!-- AOS library js link -->
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
             <script>AOS.init();</script>
+            <!-- Font Awesome kit -->
+            <script src="https://kit.fontawesome.com/ef3b9e6deb.js"
+                    crossorigin="anonymous"></script>
       </body>
 </html>
