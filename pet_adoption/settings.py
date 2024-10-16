@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "cloudinary",
+    "cloudinary_storage",
     "crispy_bootstrap5",
     'crispy_forms',
     'pets',
@@ -144,5 +146,8 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-# To do connect to cloudinary
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
+
+MEDIA_URL = '/media/'
