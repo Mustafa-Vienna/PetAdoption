@@ -8,6 +8,7 @@ Django==5.1.1
 django-crispy-forms==2.3
 djlint==1.35.2
 EditorConfig==0.12.4
+gunicorn==23.0.0
 html-tag-names==0.1.2
 html-void-elements==0.1.0
 jsbeautifier==1.15.1
@@ -18,3 +19,4 @@ psycopg2-binary==2.9.10
 regex==2024.9.11
 sqlparse==0.5.1
 tqdm==4.66.5
+whitenoise==6.7.0
