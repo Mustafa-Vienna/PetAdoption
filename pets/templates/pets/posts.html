@@ -4,16 +4,17 @@
   All Posts
 {% endblock page_title %}
 {% block css_files %}
-  <link rel="stylesheet" href="{% static "pets/styles/index.css" %}">
+  <link rel="stylesheet" href="{% static "pets/styles/posts.css" %}">
+  <link rel="stylesheet" href="{% static "pets/styles/includes/post.css" %}">
 {% endblock css_files %}
 {% block content %}
-  <section id="all-posts">
-    <h2>My Collected Posts</h2>
+  <section id="posts">
+    <h2 class="py-5">
+      The latest Post<i class="fa-solid fa-medal"></i>
+    </h2>
     <ul>
-      {% for post in all_posts %}
-        <p>Lorem ipsum dolor sit amet.</p>
-        {% include "pets/includes/post.html" %}
-      {% endfor %}
+      {% include "pets/includes/post.html" %}
+      {% include "pets/includes/post.html" %}
     </ul>
   </section>
 {% endblock content %}

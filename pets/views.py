@@ -9,7 +9,7 @@ def index_page(request):
 
 
 def posts(request):
-    pass
+    return render(request, "pets/posts.html")
 
 
 def testimonials_page(requests):
