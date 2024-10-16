@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}
+  All Posts
+{% endblock page_title %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "pets/styles/index.css" %}">
+{% endblock css_files %}
+{% block content %}
+  <section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+      {% for post in all_posts %}
+        <p>Lorem ipsum dolor sit amet.</p>
+        {% include "pets/includes/post.html" %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock content %}

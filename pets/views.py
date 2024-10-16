@@ -8,6 +8,10 @@ def index_page(request):
     return render(request, "pets/index.html")
 
 
+def posts(request):
+    pass
+
+
 def testimonials_page(requests):
     pass
 
