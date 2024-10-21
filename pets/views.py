@@ -1,20 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
+from .models import Post
 
 # Create your views here.
 
 
 def index_page(request):
-    return render(request, "pets/index.html")
+    fresh_posts = Post.objects.all().order_by("-date")[:3]
+    return render(request, "pets/index.html", {
+        "posts": fresh_posts
+    })
 
 
 def posts(request):
-    return render(request, "pets/posts.html")
+    all_posts = Post.objects.all().order_by("-date")
+    return render(request, "pets/posts.html", {
+        "all_posts": all_posts
+    })
 
 
-def testimonials_page(requests):
-    pass
+def post_detail(request, slug):
+    selected_post = get_object_or_404(Post, slug=slug)
+    return render(request, "pets/post-detail.html", {
+        "post": selected_post
+    })
 
 
-def post_detail(requests):
+def testimonials_page(request):
     pass
