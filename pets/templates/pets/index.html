@@ -44,8 +44,19 @@
   </section>
   <!-- About page ends here-->
   <!-- Letest Posts section start -->
-  <section class="py-5" id="posts">
-    {% include "pets/includes/post.html" %}
-  </section>
+  <div id="newest">
+    <div class="heading text-center pt-5">
+      <small>Latest Posts</small>
+      <h3>Blog &amp; Articles</h3>
+      <a href="{% url "posts-page" %}">View All Posts</a>
+    </div>
+    <div class="container mt-5">
+      <div class="row p-3">
+        {% for post in posts %}
+          {% include "pets/includes/post.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
   <!-- Latest posts section ends here-->
 {% endblock content %}
