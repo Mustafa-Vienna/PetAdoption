@@ -30,7 +30,7 @@ class Post(models.Model):
     pet_age = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(15)])
     excerpt = models.CharField(max_length=150)
-    image_name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="posts", null=True, blank=True)
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(15)])
