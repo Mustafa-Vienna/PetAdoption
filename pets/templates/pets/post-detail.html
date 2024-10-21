@@ -1,1 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  {{ post.title }}
+{% endblock title %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "pets/styles/post-detail.css" %}">
+{% endblock css_files %}
+{% block content %}
+  <section id="single-post">
     <div class="container">
+      <div class="card mx-auto my-5 custom-card">
+        <div class="card-body">
+          <h2 class="card-title text-center">{{ post.title }}</h2>
+          <div class="row mt-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <img src="{% static "pets/images/"|add:post.image_name %}" alt="{{ post.title }}" class="img-fluid card-image">
+            </div>
+            <div class="col-md-6">
+              <div class="card-details my-5">
+                <p class="author mb-1 fst-italic">
+                  Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
+                </p>
+                <p class="date mb-1 my-4">Published Date: {{ post.date|date:"d M Y" }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <p>{{ post.content }}</p>
+  </main>
+{% endblock content %}
