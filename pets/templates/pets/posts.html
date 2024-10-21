@@ -9,12 +9,14 @@
 {% endblock css_files %}
 {% block content %}
   <section id="posts">
-    <h2 class="py-5">
-      The latest Post<i class="fa-solid fa-medal"></i>
+    <h2 class="py-5 text-center">
+      The latest Post
+      <i class="fa-solid fa-medal"></i>
     </h2>
     <ul>
-      {% include "pets/includes/post.html" %}
-      {% include "pets/includes/post.html" %}
+      {% for post in all_posts %}
+        {% include "pets/includes/post.html" %}
+      {% endfor %}
     </ul>
   </section>
 {% endblock content %}
