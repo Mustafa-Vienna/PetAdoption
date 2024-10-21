@@ -11,13 +11,21 @@
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
         <div class="card-body">
-          <h2 class="card-title text-center">{{ post.title }}</h2>
+          <h2 class="card-title text-center fw-bold">{{ post.title }}</h2>
           <div class="row mt-3">
             <div class="col-md-6 mb-3 mb-md-0">
+              <div class="pet-name my-3 fst-italic">
+                Hey, I am {{ post.pet_name }} <span class="text-success fw-bold fs-4 ps-2"><i class="fa-regular fa-face-smile-wink"></i></span>
+              </div>
               <img src="{% static "pets/images/"|add:post.image_name %}" alt="{{ post.title }}" class="img-fluid card-image">
             </div>
             <div class="col-md-6">
-              <div class="card-details my-5">
+              <div class="card-details my-3">
+                <div class="tags mb-5">
+                  {% for tag in post_tags %}
+                    <span class="badge bg-success fs-5 rounded-pill me-2 mb-2">{{ tag.caption }}</span>
+                  {% endfor %}
+                </div>
                 <p class="author mb-1 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>

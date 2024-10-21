@@ -22,7 +22,8 @@ def posts(request):
 def post_detail(request, slug):
     selected_post = get_object_or_404(Post, slug=slug)
     return render(request, "pets/post-detail.html", {
-        "post": selected_post
+        "post": selected_post,
+        "post_tags": selected_post.tags.all()
     })
 
 
