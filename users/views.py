@@ -19,6 +19,9 @@ class RegisterView(View):
         if form.is_valid():
             form.save()
             return redirect('main-page')
+        return render(request, "users/register.html", {
+            'form': form
+        })
 
 
 @login_required
