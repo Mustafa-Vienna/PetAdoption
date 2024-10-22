@@ -11,27 +11,27 @@
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
         <div class="card-body">
-          <h2 class="card-title text-center fw-bold">{{ post.title }}</h2>
-          <div class="row mt-3">
-            <div class="col-md-6 mb-3 mb-md-0">
-              <div class="pet-name my-3 fst-italic">
+          <h2 class="card-title text-center fw-bold fs-3">{{ post.title }}</h2>
+          <div class="row">
+            <div class="col-md-6 mb-2 mb-md-0">
+              <div class="pet-name fst-italic mb-1">
                 Hey, I am {{ post.pet_name }} <span class="text-success fw-bold fs-4 ps-2"><i class="fa-regular fa-face-smile-wink"></i></span>
               </div>
               <img src="{{ post.image.url }}"
                    alt="{{ post.title }}"
                    class="img-fluid card-image">
             </div>
-            <div class="col-md-6">
-              <div class="card-details my-3">
-                <div class="tags mb-5">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <div class="card-details my-3 ms-4">
+                <div class="tags mb-3">
                   {% for tag in post_tags %}
-                    <span class="badge bg-success fs-5 rounded-pill me-2 mb-2">{{ tag.caption }}</span>
+                    <span class="badge bg-success fs-6 rounded-pill me-2 mb-2">{{ tag.caption }}</span>
                   {% endfor %}
                 </div>
-                <p class="author mb-1 fst-italic">
+                <p class="author mb-3 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>
-                <p class="date mb-1 my-4">Published Date: {{ post.date|date:"d M Y" }}</p>
+                <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M Y" }}</p>
               </div>
             </div>
           </div>
@@ -42,4 +42,32 @@
   <main>
     <p>{{ post.content }}</p>
   </main>
+  <section id="comments">
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <h2>{{ comment.user_name }}</h2>
+          <p>{{ comment.text|linebreaks }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section id="comment-section" class="row mb-3 mx-auto">
+    <h3 class="text-center">Leave Your Comment</h3>
+    <form action="{% url "post-detail-page" post.slug %}"
+          method="POST"
+          id="comment-form">
+      {% csrf_token %}
+      {% for form_field in comment_form %}
+        <div class="mb-3">
+          {{ form_field.label_tag }}
+          {{ form_field }}
+          {{ form_field.errors }}
+        </div>
+      {% endfor %}
+      <div class="submit d-flex justify-content-center">
+        <button type="submit" class="btn py-3 d-block">Save Comment</button>
+      </div>
+    </form>
+  </section>
 {% endblock content %}

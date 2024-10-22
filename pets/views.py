@@ -1,6 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
-from .models import Post
+from django.views.generic import ListView
+from django.views import View
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+from .models import Post, Comment
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -24,14 +29,36 @@ class AllPostsView(ListView):
     context_object_name = "all_posts"
 
 
-class SelectedPostView(DetailView):
-    template_name = "pets/post-detail.html"
-    model = Post
+class SelectedPostView(View):
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["post_tags"] = self.object.tags.all()
-        return context
+    def get(self, request, slug):
+        post = Post.objects.get(slug=slug)
+        context = {
+            "post": post,
+            "post_tags": post.tags.all(),
+            "comment_form": CommentForm(),
+            "comments": post.comments.all().order_by("-id")
+        }
+        return render(request, "pets/post-detail.html", context)
+
+    def post(self, request, slug):
+        comment_form = CommentForm(request.POST)
+        post = Post.objects.get(slug=slug)
+
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+
+            return HttpResponseRedirect(reverse("post-detail-page", args=[slug]))
+
+        context = {
+            "post": post,
+            "post_tags": post.tags.all(),
+            "comment_form": comment_form,
+            "comments": post.comments.all().order_by("-id")
+        }
+        return render(request, "pets/post-detail.html", context)
 
 
 def testimonials_page(request):
