@@ -1,30 +1,37 @@
 from django.shortcuts import render, get_object_or_404
-
+from django.views.generic import ListView, DetailView
 from .models import Post
 
 # Create your views here.
 
 
-def index_page(request):
-    fresh_posts = Post.objects.all().order_by("-date")[:3]
-    return render(request, "pets/index.html", {
-        "posts": fresh_posts
-    })
+class HomePageView(ListView):
+    template_name = "pets/index.html"
+    model = Post
+    ordering = ["-date"]
+    context_object_name = "posts"
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        data = queryset[:3]
+        return data
 
 
-def posts(request):
-    all_posts = Post.objects.all().order_by("-date")
-    return render(request, "pets/posts.html", {
-        "all_posts": all_posts
-    })
+class AllPostsView(ListView):
+    template_name = "pets/posts.html"
+    model = Post
+    ordering = ["-date"]
+    context_object_name = "all_posts"
 
 
-def post_detail(request, slug):
-    selected_post = get_object_or_404(Post, slug=slug)
-    return render(request, "pets/post-detail.html", {
-        "post": selected_post,
-        "post_tags": selected_post.tags.all()
-    })
+class SelectedPostView(DetailView):
+    template_name = "pets/post-detail.html"
+    model = Post
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["post_tags"] = self.object.tags.all()
+        return context
 
 
 def testimonials_page(request):
