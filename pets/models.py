@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator, MinValueValidator, MaxValueValidator
 
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 # Create your models here.
 
@@ -31,7 +32,7 @@ class Post(models.Model):
     pet_age = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(15)])
     excerpt = models.CharField(max_length=150)
-    image = models.ImageField(upload_to="posts", null=True, blank=True)
+    image = CloudinaryField('image', folder="posts")
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(15)])
