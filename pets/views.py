@@ -1,11 +1,11 @@
 from django.views.generic import ListView
 from django.views import View
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, UserPostForm
 
 # Create your views here.
 
@@ -59,6 +59,23 @@ class SelectedPostView(View):
             "comments": post.comments.all().order_by("-id")
         }
         return render(request, "pets/post-detail.html", context)
+
+
+class CreatePost(View):
+    def get(self, request):
+        form = UserPostForm()
+        return render(request, 'pets/create-post.html', {
+            'form': form
+        })
+
+    def post(self, request):
+        form = UserPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('main-page')
+        return render(request, 'pets/create-post.html', {
+            'form': form
+        })
 
 
 def testimonials_page(request):

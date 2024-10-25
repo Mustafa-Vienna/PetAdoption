@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Comment
+from .models import Comment, Post
 
 
 class CommentForm(forms.ModelForm):
@@ -17,3 +17,11 @@ class CommentForm(forms.ModelForm):
             "user_email": forms.EmailInput(attrs={'class': 'form-control mb-3'}),
             "text": forms.Textarea(attrs={'class': 'form-control mb-3', 'rows': 5}),
         }
+
+
+class UserPostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = [
+            'title', 'pet_name', 'pet_age', 'excerpt', 'image', 'content'
+        ]
