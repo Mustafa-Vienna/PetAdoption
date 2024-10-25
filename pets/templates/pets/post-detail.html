@@ -43,31 +43,33 @@
     <p>{{ post.content }}</p>
   </main>
   <section id="comments">
-    <ul>
-      {% for comment in comments %}
-        <li>
-          <h2>{{ comment.user_name }}</h2>
-          <p>{{ comment.text|linebreaks }}</p>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
-  <section id="comment-section" class="row mb-3 mx-auto">
-    <h3 class="text-center">Leave Your Comment</h3>
-    <form action="{% url "post-detail-page" post.slug %}"
-          method="POST"
-          id="comment-form">
-      {% csrf_token %}
-      {% for form_field in comment_form %}
-        <div class="mb-3">
-          {{ form_field.label_tag }}
-          {{ form_field }}
-          {{ form_field.errors }}
+    <h3 class="text-center mb-4 fw-bold">Community Feedback</h3>
+    <div>
+      <ul>
+        {% for comment in comments %}
+          <li>
+            <h2>{{ comment.user_name }}</h2>
+            <p>{{ comment.text|linebreaks }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section id="comment-section" class="row mb-3 mx-auto">
+      <h3 class="text-center mb-4 fw-bold">Leave Your Comment</h3>
+      <form action="{% url "post-detail-page" post.slug %}"
+            method="POST"
+            id="comment-form">
+        {% csrf_token %}
+        {% for form_field in comment_form %}
+          <div class="mb-3">
+            {{ form_field.label_tag }}
+            {{ form_field }}
+            {{ form_field.errors }}
+          </div>
+        {% endfor %}
+        <div class="submit d-flex justify-content-center">
+          <button type="submit" class="btn py-3 d-block">Save Comment</button>
         </div>
-      {% endfor %}
-      <div class="submit d-flex justify-content-center">
-        <button type="submit" class="btn py-3 d-block">Save Comment</button>
-      </div>
-    </form>
-  </section>
-{% endblock content %}
+      </form>
+    </section>
+  {% endblock content %}
