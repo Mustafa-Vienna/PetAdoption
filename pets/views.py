@@ -50,6 +50,8 @@ class SelectedPostView(View):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
+            comment.author = request.user
+            comment.email = request.user.email
             comment.save()
 
             return HttpResponseRedirect(reverse("post-detail-page", args=[slug]))

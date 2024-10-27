@@ -48,8 +48,8 @@
       <ul>
         {% for comment in comments %}
           <li>
-            <h2>{{ comment.user_name }}</h2>
-            <p>{{ comment.text|linebreaks }}</p>
+            <h2>{{ comment.author.username }}</h2>
+            <small class="text-muted">{{ comment.text|linebreaks }}</small>
           </li>
         {% endfor %}
       </ul>
