@@ -31,7 +31,7 @@
                 <p class="author mb-3 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>
-                <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M Y" }}</p>
+                <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M, Y" }}</p>
               </div>
             </div>
           </div>
@@ -49,27 +49,42 @@
         {% for comment in comments %}
           <li>
             <h2>{{ comment.author.username }}</h2>
-            <small class="text-muted">{{ comment.text|linebreaks }}</small>
+            <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
+            <p>{{ comment.text|linebreaks }}</p>
           </li>
         {% endfor %}
       </ul>
     </section>
-    <section id="comment-section" class="row mb-3 mx-auto">
+    <section id="comment-section" class="row mb-5 mx-auto">
       <h3 class="text-center mb-4 fw-bold">Leave Your Comment</h3>
-      <form action="{% url "post-detail-page" post.slug %}"
-            method="POST"
-            id="comment-form">
-        {% csrf_token %}
-        {% for form_field in comment_form %}
-          <div class="mb-3">
-            {{ form_field.label_tag }}
-            {{ form_field }}
-            {{ form_field.errors }}
+      {% if request.user.is_authenticated %}
+        <form action="{% url "post-detail-page" post.slug %}"
+              method="POST"
+              id="comment-form">
+          {% csrf_token %}
+          {% for form_field in comment_form %}
+            <div class="mb-3">
+              {{ form_field.label_tag }}
+              {{ form_field }}
+              {{ form_field.errors }}
+            </div>
+          {% endfor %}
+          <div class="submit d-flex justify-content-center">
+            <button type="submit" class="btn py-3 d-block">Save Comment</button>
           </div>
-        {% endfor %}
-        <div class="submit d-flex justify-content-center">
-          <button type="submit" class="btn py-3 d-block">Save Comment</button>
+        </form>
+      {% else %}
+        <h3 class="text-center my-3 text-danger">Only registered users can add comments!</h3>
+        <div class="pt-3 px-4">
+          <small class="text-muted">Need an account?
+            <a href="{% url 'register' %}" class="ml-2 mx-2">Sign Up</a>
+          </small>
         </div>
-      </form>
+        <div class="py-4 my-3 px-4">
+          <small class="text-muted mb-3">Already have an account?
+            <a href="{% url 'login' %}" class="ml-2 mx-2">Sign In</a>
+          </small>
+        </div>
+      {% endif %}
     </section>
   {% endblock content %}
