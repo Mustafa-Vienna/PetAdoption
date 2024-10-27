@@ -16,16 +16,10 @@
           <a class="nav-link" href="{% url "main-page" %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About Us</a>
+          <a class="nav-link" href="{% url "posts-page" %}">All Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url "posts-page" %}">Posts</a>
-        </li>
-        {% comment %} <li class="nav-item">
-          <a class="nav-link" href="{% url "post-detail-page" "dog-picture" %}">Post Details</a>
-        </li> {% endcomment %}
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials">Testimonials</a>
+          <a class="nav-link" href="{% url "create-post" %}">Add Post</a>
         </li>
       </ul>
       <ul class="navbar-nav">

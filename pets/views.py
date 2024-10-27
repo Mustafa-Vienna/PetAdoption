@@ -1,8 +1,10 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from django.views import View
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Post, Comment
 from .forms import CommentForm, UserPostForm
@@ -61,22 +63,13 @@ class SelectedPostView(View):
         return render(request, "pets/post-detail.html", context)
 
 
-class CreatePost(View):
-    def get(self, request):
-        form = UserPostForm()
-        return render(request, 'pets/create-post.html', {
-            'form': form
-        })
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    template_name = "pets/create-post.html"
+    form_class = UserPostForm
+    login_url = 'login'
+    success_url = reverse_lazy('posts-page')
 
-    def post(self, request):
-        form = UserPostForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('main-page')
-        return render(request, 'pets/create-post.html', {
-            'form': form
-        })
-
-
-def testimonials_page(request):
-    pass
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

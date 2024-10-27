@@ -3,6 +3,7 @@ from django.core.validators import MinLengthValidator, MinValueValidator, MaxVal
 
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 # Create your models here.
 
 
@@ -27,26 +28,38 @@ class Author(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=200, unique=True)
     pet_name = models.CharField(max_length=40)
     pet_age = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(15)])
     excerpt = models.CharField(max_length=150)
     image = CloudinaryField('image', folder="posts")
     date = models.DateField(auto_now=True)
-    slug = models.SlugField(unique=True, db_index=True)
+    slug = models.SlugField(unique=True, db_index=True, blank=True)
     content = models.TextField(validators=[MinLengthValidator(15)])
     author = models.ForeignKey(
-        Author, on_delete=models.SET_NULL, null=True, related_name="posts")
+        User, on_delete=models.SET_NULL, null=True, related_name="posts")
     tags = models.ManyToManyField(Tag)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            user_slug = slugify(self.title)
+            slug = user_slug
+            unique_slug_counter = 1
+            while Post.objects.filter(slug=slug).exists():
+                slug = f"{user_slug} - {unique_slug_counter}"
+                unique_slug_counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
 
 
 class Comment(models.Model):
-    user_name = models.CharField(max_length=100)
-    user_email = models.EmailField()
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="comments")
+    author = models.EmailField()
     text = models.TextField(max_length=400)
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
