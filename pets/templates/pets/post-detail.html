@@ -24,22 +24,30 @@
                    alt="{{ post.title }}"
                    class="img-fluid card-image">
             </div>
-            <div class="col-md-6 mb-3 mb-md-0">
-              <div class="card-details my-3 ms-4">
+            <div class="col-md-6 mb-2 mb-md-0">
+              <div class="card-details my-2 ms-4">
                 <div class="tags mb-3">
                   {% for tag in post_tags %}
                     <span class="badge bg-success fs-6 rounded-pill me-2 mb-2">{{ tag.caption }}</span>
                   {% endfor %}
                 </div>
-                <p class="author mb-3 fst-italic">
+                <p class="author mb-2 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>
-                {% if request.user == post.author %}
-                  <div class="justify-content-end my-4">
-                    <a href="{% url "delete-post" post.slug %}"
-                       class="btn btn-outline-danger btn-bold-outline">Delete Post</a>
-                  </div>
-                {% endif %}
+                <div class="buttons d-flex ms-4 fs-3">
+                  {% if request.user == post.author %}
+                    <div class="me-2">
+                      <a href="{% url "delete-post" post.slug %}"
+                         class="btn btn-outline-danger btn-bold-outline">Delete Post</a>
+                    </div>
+                  {% endif %}
+                  {% if request.user == post.author %}
+                    <div class="ms-2">
+                      <a href="{% url "update-post" post.slug %}"
+                         class="btn btn-outline-danger btn-bold-outline">Update Post</a>
+                    </div>
+                  {% endif %}
+                </div>
                 <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M, Y" }}</p>
               </div>
             </div>

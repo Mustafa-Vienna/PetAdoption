@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView, DeleteView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.views import View
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
@@ -83,6 +83,26 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     template_name = "pets/delete-post.html"
     success_url = reverse_lazy("posts-page")
     slug_url_kwarg = 'slug'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    template_name = "pets/create-post.html"
+    form_class = UserPostForm
+    login_url = 'login'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        self.success_url = reverse('post-detail-page', kwargs={
+            'slug': form.instance.slug
+        })
+        return super().form_valid(form)
 
     def test_func(self):
         post = self.get_object()
