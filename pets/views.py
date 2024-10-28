@@ -27,6 +27,7 @@ class HomePageView(ListView):
 class AllPostsView(ListView):
     template_name = "pets/posts.html"
     model = Post
+    paginate_by = 5
     ordering = ["-date"]
     context_object_name = "all_posts"
 
