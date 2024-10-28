@@ -11,10 +11,10 @@
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
         <div class="card-body">
-          <h2 class="card-title text-center fw-bold fs-1">{{ post.title }}</h2>
-          <div class="row">
-            <div class="col-md-6 mb-2 mb-md-0">
-              <div class="pet-name fst-italic mb-3 fs-6  ">
+          <h2 class="card-title text-center fw-bold">{{ post.title }}</h2>
+          <div class="row g-3">
+            <div class="col-md-6 d-flex flex-column align-item-center justify-content-center h-100">
+              <div class="pet-name fst-italic mb-3 text-center">
                 Hey, I am {{ post.pet_name }}
                 <br>
                 I am {{ post.pet_age }} years old and excited to meet you!
@@ -22,33 +22,27 @@
               </div>
               <img src="{{ post.image.url }}"
                    alt="{{ post.title }}"
-                   class="img-fluid card-image">
+                   class="img-fluid card-image mb-3">
             </div>
-            <div class="col-md-6 mb-2 mb-md-0">
-              <div class="card-details my-2 ms-4">
+            <div class="col-md-6 d-flex flex-column h-100">
+              <div class="card-details py-2 px-4">
                 <div class="tags mb-3">
-                  {% for tag in post_tags %}
-                    <span class="badge bg-success fs-6 rounded-pill me-2 mb-2">{{ tag.caption }}</span>
-                  {% endfor %}
+                  {% for tag in post_tags %}<span class="badge bg-success rounded-pill fs-6 me-2">{{ tag.caption }}</span>{% endfor %}
                 </div>
                 <p class="author mb-2 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>
-                <div class="buttons d-flex ms-4 fs-3">
+                <hr>
+                <div class="buttons d-flex mb-3">
                   {% if request.user == post.author %}
-                    <div class="me-2">
-                      <a href="{% url "delete-post" post.slug %}"
-                         class="btn btn-outline-danger btn-bold-outline">Delete Post</a>
-                    </div>
-                  {% endif %}
-                  {% if request.user == post.author %}
-                    <div class="ms-2">
-                      <a href="{% url "update-post" post.slug %}"
-                         class="btn btn-outline-danger btn-bold-outline">Update Post</a>
-                    </div>
+                    <a href="{% url "delete-post" post.slug %}"
+                       class="btn btn-outline-danger me-2">Delete Post</a>
+                    <a href="{% url "update-post" post.slug %}"
+                       class="btn btn-outline-success">Update Post</a>
                   {% endif %}
                 </div>
-                <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M, Y" }}</p>
+                <p class="date fst-italic">Published Date: {{ post.date|date:"d M, Y" }}</p>
+                <p class="card-text">{{ post.content }}</p>
               </div>
             </div>
           </div>
@@ -56,9 +50,6 @@
       </div>
     </div>
   </section>
-  <main>
-    <p>{{ post.content }}</p>
-  </main>
   <section id="comments">
     <h3 class="text-center mb-4 fw-bold">Community Feedback</h3>
     <div>
