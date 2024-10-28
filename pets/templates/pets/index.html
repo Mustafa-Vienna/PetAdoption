@@ -50,7 +50,7 @@
       <h3>Blog &amp; Articles</h3>
       <a href="{% url "posts-page" %}">View All Posts</a>
     </div>
-    <div class="container mt-5">
+    <div class="mt-5">
       <div class="row p-3">
         {% for post in posts %}
           {% include "pets/includes/post.html" %}
