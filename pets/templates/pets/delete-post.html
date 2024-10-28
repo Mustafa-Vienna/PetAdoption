@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+  Delete Post
+{% endblock title %}
+{% block css_files %}
+{% endblock css_files %}
+{% block content %}
+  <div class="row justify-content-center px-2">
+    <div class="col-11 col-md-6 mx-md-auto mx-3 mt-5 mb-3 p-4 border rounded">
+      <div class="border border-5 border-danger">
+        <h1 class="text-center text-danger fw-bold my-4 g-3">
+          <i class="fa-solid fa-triangle-exclamation text-warning"></i>
+          Delete Post
+        </h1>
+      </div>
+      <p class="text-center fs-5 mt-4">
+        Are you sure you want to permanently delete this post titled <strong>{{ post.title }}</strong>?
+        <br>
+        <span class="text-warning fw-bold p-3 fs-4 mt-5">This action cannot be undone!</span>
+      </p>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="mb-4 text-center visually-hidden">Delete Post Confirmation</legend>
+        </fieldset>
+        <div class="d-flex justify-container-around my-3">
+          <button class="btn btn-outline-danger fw-bold mt-3 px-4" type="submit">Yes, Delete</button>
+          <a href="{% url "post-detail-page" post.slug %}"
+             class="btn btn-outline-danger fw-bold mt-3 px-4 ms-4">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

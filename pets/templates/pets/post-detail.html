@@ -11,11 +11,14 @@
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
         <div class="card-body">
-          <h2 class="card-title text-center fw-bold fs-3">{{ post.title }}</h2>
+          <h2 class="card-title text-center fw-bold fs-1">{{ post.title }}</h2>
           <div class="row">
             <div class="col-md-6 mb-2 mb-md-0">
-              <div class="pet-name fst-italic mb-1">
-                Hey, I am {{ post.pet_name }} <span class="text-success fw-bold fs-4 ps-2"><i class="fa-regular fa-face-smile-wink"></i></span>
+              <div class="pet-name fst-italic mb-3 fs-6  ">
+                Hey, I am {{ post.pet_name }}
+                <br>
+                I am {{ post.pet_age }} years old and excited to meet you!
+                <span class="text-success fw-bold fs-5 ps-2"><i class="fa-regular fa-face-smile-wink"></i></span>
               </div>
               <img src="{{ post.image.url }}"
                    alt="{{ post.title }}"
@@ -31,6 +34,12 @@
                 <p class="author mb-3 fst-italic">
                   Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
                 </p>
+                {% if request.user == post.author %}
+                  <div class="justify-content-end my-4">
+                    <a href="{% url "delete-post" post.slug %}"
+                       class="btn btn-outline-danger btn-bold-outline">Delete Post</a>
+                  </div>
+                {% endif %}
                 <p class="date mb-1 mt-3">Published Date: {{ post.date|date:"d M, Y" }}</p>
               </div>
             </div>
@@ -51,6 +60,12 @@
             <h2>{{ comment.author.username }}</h2>
             <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
             <p>{{ comment.text|linebreaks }}</p>
+            {% if current_post.likes.count == 1 %}
+              <small class="text-muted">{{ current_post.likes.count }} user likes this post</small>
+            {% else %}
+              <small class="text-muted">{{ current_post.likes.count }} users likes this post</small>
+            {% endif %}
+            <div class="my-3">{{ current_post.content }}</div>
           </li>
         {% endfor %}
       </ul>
