@@ -4,11 +4,8 @@ body {
 
 #posts {
   margin: 7rem auto;
-  width: 90%;
-  max-width: 60rem;
-}
-
-.post img {
-  width: 7rem;
-  height: 7rem;
+  width: 100%;
+  max-width: auto;
+  height: 100%;
+  height: auto;
 }

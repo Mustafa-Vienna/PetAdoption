@@ -14,9 +14,13 @@
       <i class="fa-solid fa-medal"></i>
     </h2>
     <ul>
-      {% for post in all_posts %}
-        {% include "pets/includes/post.html" %}
-      {% endfor %}
+      <div class="mt-5">
+        <div class="row">
+          {% for post in all_posts %}
+            {% include "pets/includes/post.html" %}
+          {% endfor %}
+        </div>
+      </div>
     </ul>
   </section>
   <nav aria-label="Page navigation">

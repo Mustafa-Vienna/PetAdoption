@@ -11,7 +11,7 @@
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
         <div class="card-body">
-          <h2 class="card-title text-center fw-bold">{{ post.title }}</h2>
+          <h2 class="card-title text-center py-2 fw-bold">{{ post.title }}</h2>
           <div class="row g-3">
             <div class="col-md-6 d-flex flex-column align-item-center justify-content-center h-100">
               <div class="pet-name fst-italic mb-3 text-center">
@@ -51,7 +51,7 @@
     </div>
   </section>
   <section id="comments">
-    <h3 class="text-center mb-4 fw-bold">Community Feedback</h3>
+    <h3 class="text-center my-3 fw-bold">Community Feedback</h3>
     <div>
       <ul>
         {% for comment in comments %}
@@ -70,7 +70,7 @@
       </ul>
     </section>
     <section id="comment-section" class="row mb-5 mx-auto">
-      <h3 class="text-center mb-4 fw-bold">Leave Your Comment</h3>
+      <h3 class="text-center my-3 fw-bold">Leave Your Comment</h3>
       {% if request.user.is_authenticated %}
         <form action="{% url "post-detail-page" post.slug %}"
               method="POST"

@@ -1,19 +1,19 @@
 <div class="col-sm-10 col-md-6 col-lg-4 mb-3 recent">
-  <div class="card p-3">
-    <div class="card-body">
-      <h5 class="card-title">{{ post.pet_name }}</h5>
-      <div class="ratio ratio-4x3">
-        <img src="{{ post.image.url }}"
-             alt="{{ post.title }}"
-             class="card-img-top img-fluid rounded-4">
-      </div>
-      <div class="card-body px-4 py-1">
-        <address class="fst-italic">By &nbsp;&nbsp;<a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a></address><time class="ms-3">Published: {{ post.date|date:"d M Y" }}</time>
-        <h4 class="card-title">
-          <a href="{% url "post-detail-page" post.slug %}">{{ post.title }}</a>
-        </h4>
-        <p class="text-muted">{{ post.excerpt|truncatewords:20 }}</p>
-      </div>
+  <div class="card p-3 h-100 d-flex flex-column">
+    <div class="ratio ratio-4x3">
+      <img src="{{ post.image.url }}"
+           alt="{{ post.title }}"
+           class="card-img-top img-fluid rounded-4">
     </div>
-  </div>
+    <div class="card-body d-flex flex-column px-4">
+      <h4 class="card-title py-3 mn-2">
+        <a href="{% url "post-detail-page" post.slug %}"
+           class="text-decoration-non ">{{ post.title }}</a>
+      </h4>
+      <p class="text-muted">{{ post.excerpt|truncatewords:20 }}</p>
+    <address class="fst-italic text-muted mb-2">By &nbsp;&nbsp;<a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
+  </address>
+  <time class="mb-2">Published: {{ post.date|date:"d M Y" }}</time>
+</div>
+</div>
 </div>
