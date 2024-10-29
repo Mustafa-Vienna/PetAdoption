@@ -25,6 +25,9 @@
       <ul class="navbar-nav">
         {% if request.user.is_authenticated %}
           <li class="nav-item">
+            <a class="nav-link fst-italic me-2">Welcome: <span class="fw-bold">{{ user.username }}</span></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{% url "logout" %}">Sign Out</a>
           </li>
         {% else %}
