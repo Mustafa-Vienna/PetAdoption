@@ -46,10 +46,18 @@
               </div>
               <div class="text-center fs-1 bg-transparent border-0">
                 <span>{% include "pets/includes/like-post.html" %}</span>
-                {% if post.likes.count == 1 %}
-                  <small class="text-muted fs-5">{{ post.likes.count }} user likes this post</small>
+                {% if request.user.is_authenticated and liked_by_user %}
+                  {% if post.likes.count == 1 %}
+                    <small class="text-muted fs-5">{{ post.likes.count }} &nbsp;&nbsp; You liked this post</small>
+                  {% else %}
+                    <small class="text-muted fs-5">{{ post.likes.count }} &nbsp;&nbsp; You and {{ post.likes.count|add:"-1" }} other user likes this post</small>
+                  {% endif %}
                 {% else %}
-                  <small class="text-muted fs-5">{{ post.likes.count }} users likes this post</small>
+                  {% if post.likes.count == 1 %}
+                    <small class="text-muted fs-5">{{ post.likes.count }} &nbsp;&nbsp; user likes this post</small>
+                  {% else %}
+                    <small class="text-muted fs-5">{{ post.likes.count }} &nbsp;&nbsp; users likes this post</small>
+                  {% endif %}
                 {% endif %}
               </div>
             </div>

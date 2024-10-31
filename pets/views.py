@@ -37,12 +37,14 @@ class SelectedPostView(View):
 
     def get(self, request, slug):
         post = Post.objects.get(slug=slug)
+        liked_by_user = post.likes.filter(id=request.user.id).exists()
         context = {
             "post": post,
             "post_tags": post.tags.all(),
             "comment_form": CommentForm(),
             "comments": post.comments.all().order_by("-id"),
-            "post_like": post.likes.all()
+            "post_like": post.likes.all(),
+            "liked_by_user": liked_by_user
         }
         return render(request, "pets/post-detail.html", context)
 
