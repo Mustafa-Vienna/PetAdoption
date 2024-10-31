@@ -1,0 +1,29 @@
+{% load static %}
+<strong>
+  {% if user.is_authenticated %}
+    <form action="{% url "like-post" post.slug %}"
+          class="d-inline"
+          method="POST">
+      {% csrf_token %}
+      {% if liked %}
+        <button type="submit"
+                value="{{ post.slug }}"
+                class="text-danger bg-transparent border-0 mt-5"
+                id="like-button">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      {% else %}
+        <button type="submit"
+                value="{{ post.slug }}"
+                class="text-danger bg-transparent border-0 mt-5"
+                id="like-button">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      {% endif %}
+    </form>
+  {% else %}
+    <span id="like-button" class="bg-transparent">
+      <i class="fa-solid fa-heart"></i>
+    </span>
+  {% endif %}
+</strong>

@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MinLengthValidator, MinValueValidator, MaxValueValidator
+from django.core.validators import MaxLengthValidator, MinValueValidator, MaxValueValidator
 
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
@@ -31,15 +31,16 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     pet_name = models.CharField(max_length=40)
     pet_age = models.IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(15)])
+        validators=[MinValueValidator(0), MaxValueValidator(10)])
     excerpt = models.CharField(max_length=150)
     image = CloudinaryField('image', folder="posts")
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True, db_index=True, blank=True)
-    content = models.TextField(validators=[MinLengthValidator(15)])
+    content = models.TextField(validators=[MaxLengthValidator(600)])
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="posts")
     tags = models.ManyToManyField(Tag)
+    likes = models.ManyToManyField(User, related_name="post_likes", blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -54,6 +55,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def total_likes(self):
+        return self.likes.count()
 
 
 class Comment(models.Model):
