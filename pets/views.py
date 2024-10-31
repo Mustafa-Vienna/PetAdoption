@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib import messages
 
 from .models import Post, Comment
 from .forms import CommentForm, UserPostForm
@@ -40,7 +41,8 @@ class SelectedPostView(View):
             "post": post,
             "post_tags": post.tags.all(),
             "comment_form": CommentForm(),
-            "comments": post.comments.all().order_by("-id")
+            "comments": post.comments.all().order_by("-id"),
+            "post_like": post.likes.all()
         }
         return render(request, "pets/post-detail.html", context)
 
@@ -54,6 +56,10 @@ class SelectedPostView(View):
             comment.author = request.user
             comment.email = request.user.email
             comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment Submitted!'
+            )
 
             return HttpResponseRedirect(reverse("post-detail-page", args=[slug]))
 
@@ -109,3 +115,18 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+
+
+class PostLikeView(View):
+    def post(self, request, slug):
+        post = Post.objects.get(slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.error(request, "You have just unliked this post.")
+
+        else:
+            post.likes.add(request.user)
+            messages.success(request, "You just liked this post.")
+
+        return HttpResponseRedirect(reverse('post-detail-page', args=[slug]))

@@ -42,13 +42,28 @@
                   {% endif %}
                 </div>
                 <p class="date fst-italic">Published Date: {{ post.date|date:"d M, Y" }}</p>
-                <p class="card-text">{{ post.content }}</p>
+                <p class="card-text">{{ post.content | safe }}</p>
+              </div>
+              <div class="text-center fs-1 bg-transparent border-0">
+                <span>{% include "pets/includes/like-post.html" %}</span>
+                {% if post.likes.count == 1 %}
+                  <small class="text-muted fs-5">{{ post.likes.count }} user likes this post</small>
+                {% else %}
+                  <small class="text-muted fs-5">{{ post.likes.count }} users likes this post</small>
+                {% endif %}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <section id="comment-verified">
+    {% if messages %}
+      <div class="messages my-3 text-center fw-bold text-success">
+        {% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}
+      </div>
+    {% endif %}
   </section>
   <section id="comments">
     <h3 class="text-center my-3 fw-bold">Community Feedback</h3>
@@ -59,46 +74,43 @@
             <h2>{{ comment.author.username }}</h2>
             <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
             <p>{{ comment.text|linebreaks }}</p>
-            {% if current_post.likes.count == 1 %}
-              <small class="text-muted">{{ current_post.likes.count }} user likes this post</small>
-            {% else %}
-              <small class="text-muted">{{ current_post.likes.count }} users likes this post</small>
-            {% endif %}
-            <div class="my-3">{{ current_post.content }}</div>
+            <div class="my-3">{{ comment.content }}</div>
           </li>
         {% endfor %}
       </ul>
-    </section>
-    <section id="comment-section" class="row mb-5 mx-auto">
-      <h3 class="text-center my-3 fw-bold">Leave Your Comment</h3>
-      {% if request.user.is_authenticated %}
-        <form action="{% url "post-detail-page" post.slug %}"
-              method="POST"
-              id="comment-form">
-          {% csrf_token %}
-          {% for form_field in comment_form %}
-            <div class="mb-3">
-              {{ form_field.label_tag }}
-              {{ form_field }}
-              {{ form_field.errors }}
-            </div>
-          {% endfor %}
-          <div class="submit d-flex justify-content-center">
-            <button type="submit" class="btn py-3 d-block">Save Comment</button>
+    </div>
+  </section>
+  <section id="comment-section" class="row mb-5 mx-auto">
+    <h3 class="text-center my-1 fw-bold">Leave Your Comment</h3>
+    <span class="my-3">Written by: {{ user.username }}</span>
+    {% if request.user.is_authenticated %}
+      <form action="{% url "post-detail-page" post.slug %}"
+            method="POST"
+            id="comment-form">
+        {% csrf_token %}
+        {% for form_field in comment_form %}
+          <div class="my-3">
+            {{ form_field.label_tag }}
+            {{ form_field }}
+            {{ form_field.errors }}
           </div>
-        </form>
-      {% else %}
-        <h3 class="text-center my-3 text-danger">Only registered users can add comments!</h3>
-        <div class="pt-3 px-4">
-          <small class="text-muted">Need an account?
-            <a href="{% url 'register' %}" class="ml-2 mx-2">Sign Up</a>
-          </small>
+        {% endfor %}
+        <div class="submit d-flex justify-content-center">
+          <button type="submit" class="btn py-3 d-block">Save Comment</button>
         </div>
-        <div class="py-4 my-3 px-4">
-          <small class="text-muted mb-3">Already have an account?
-            <a href="{% url 'login' %}" class="ml-2 mx-2">Sign In</a>
-          </small>
-        </div>
-      {% endif %}
-    </section>
-  {% endblock content %}
+      </form>
+    {% else %}
+      <h3 class="text-center my-3 text-danger">Only registered users can add comments!</h3>
+      <div class="pt-3 px-4">
+        <small class="text-muted">Need an account?
+          <a href="{% url 'register' %}" class="ml-2 mx-2">Sign Up</a>
+        </small>
+      </div>
+      <div class="py-4 my-3 px-4">
+        <small class="text-muted mb-3">Already have an account?
+          <a href="{% url 'login' %}" class="ml-2 mx-2">Sign In</a>
+        </small>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}
