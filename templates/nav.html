@@ -16,10 +16,18 @@
           <a class="nav-link" href="{% url "main-page" %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url "posts-page" %}">All Posts</a>
+          <a class="nav-link"
+             href="{% url "posts-page" %}"
+             data-bs-toggle="tooltip"
+             data-bs-title="Click to explore all posts"
+             data-bs-placement="bottom">All Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url "create-post" %}">Add Post</a>
+          <a class="nav-link"
+             href="{% url "create-post" %}"
+             data-bs-toggle="tooltip"
+             data-bs-title="Click to publish a new post"
+             data-bs-placement="bottom">Add Post</a>
         </li>
       </ul>
       <ul class="navbar-nav">

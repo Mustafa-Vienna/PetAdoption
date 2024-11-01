@@ -48,7 +48,10 @@
     <div class="heading text-center pt-5">
       <small>Latest Posts</small>
       <h3>Blog &amp; Articles</h3>
-      <a href="{% url "posts-page" %}">View All Posts</a>
+      <a href="{% url "posts-page" %}"
+         data-bs-toggle="tooltip"
+         data-bs-title="Click to explore all posts"
+         data-bs-placement="bottom">View All Posts</a>
     </div>
     <div class="mt-5">
       <div class="row p-3">

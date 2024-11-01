@@ -8,11 +8,11 @@
     <div class="card-body d-flex flex-column px-4">
       <h4 class="card-title py-3 mb-2">
         <a href="{% url "post-detail-page" post.slug %}"
-           class="text-decoration-non ">{{ post.title }}</a>
+           class="text-decoration-non stretched-link hover-shadow">{{ post.title }}</a>
       </h4>
       <p class="text-muted">{{ post.excerpt|truncatewords:20 }}</p>
       <address class="fst-italic text-muted mb-2">
-        By &nbsp;&nbsp;<a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
+        By &nbsp;&nbsp;{{ post.author }}
       </address>
       <time class="mb-2">Published: {{ post.date|date:"d M Y" }}</time>
     </div>

@@ -30,15 +30,23 @@
                   {% for tag in post_tags %}<span class="badge bg-success rounded-pill fs-6 me-2">{{ tag.caption }}</span>{% endfor %}
                 </div>
                 <p class="author mb-2 fst-italic">
-                  Author: <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a>
+                  Author: <a href="mailto:{{ post.author.email }}"
+    data-bs-toggle="tooltip"
+    data-bs-title="Author Email Address: {{ post.author.email }}">{{ post.author }}</a>
                 </p>
                 <hr>
                 <div class="buttons d-flex mb-3">
                   {% if request.user == post.author %}
                     <a href="{% url "delete-post" post.slug %}"
-                       class="btn btn-outline-danger me-2">Delete Post</a>
+                       class="btn btn-outline-danger me-2"
+                       data-bs-toggle="tooltip"
+                       data-bs-title="Click to delete this post"
+                       data-bs-placement="bottom">Delete Post</a>
                     <a href="{% url "update-post" post.slug %}"
-                       class="btn btn-outline-success">Update Post</a>
+                       class="btn btn-outline-success"
+                       data-bs-toggle="tooltip"
+                       data-bs-title="Click to update this post"
+                       data-bs-placement="bottom">Update Post</a>
                   {% endif %}
                 </div>
                 <p class="date fst-italic">Published Date: {{ post.date|date:"d M, Y" }}</p>
