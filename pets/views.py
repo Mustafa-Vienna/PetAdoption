@@ -132,3 +132,7 @@ class PostLikeView(View):
             messages.success(request, "You just liked this post.")
 
         return HttpResponseRedirect(reverse('post-detail-page', args=[slug]))
+
+
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
