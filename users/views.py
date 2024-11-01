@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth import logout, authenticate, login
 
 from .forms import UserRegisterForm
 
@@ -17,8 +17,16 @@ class RegisterView(View):
         form = UserRegisterForm(request.POST)
 
         if form.is_valid():
-            form.save()
-            return redirect('main-page')
+            user = form.save()
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password1")
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                next_url = request.GET.get('next')
+                if next_url:
+                    return redirect(next_url)
+                return redirect('main-page')
         return render(request, "users/register.html", {
             'form': form
         })

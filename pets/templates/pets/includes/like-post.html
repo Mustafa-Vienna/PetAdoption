@@ -10,7 +10,7 @@
                 value="{{ post.slug }}"
                 class="text-danger bg-transparent border-0 mt-5"
                 id="unlike-button">
-          <i class="fa-solid fa-heart-crack"></i>
+          <i class="fa-solid fa-heart"></i>
         </button>
       </form>
     {% else %}
@@ -20,22 +20,16 @@
         {% csrf_token %}
         <button type="submit"
                 value="{{ post.slug }}"
-                class="text-danger bg-transparent border-0 mt-5"
+                class="text-secondary bg-transparent border-0 mt-5"
                 id="like-button">
           <i class="fa-solid fa-heart"></i>
         </button>
       </form>
     {% endif %}
   {% else %}
-    <h3 class="text-center my-3 text-danger">Only registered users can like the post!</h3>
-    <div class="pt-3 px-4">
-      <small class="text-muted">Need an account?
-        <a href="{% url 'register' %}" class="ml-2 mx-2">Sign Up</a>
-      </small>
-    </div>
-    <div class="py-4 my-3 px-4">
+    <div class="pt-4 mt-3 px-4 fs-5">
       <small class="text-muted mb-3">Already have an account?
-        <a href="{% url 'login' %}" class="ml-2 mx-2">Sign In</a>
+        <a href="{% url 'login' %}?next={{ request.path }}" class="ml-2 mx-2">Sign In</a>
       </small>
     </div>
   {% endif %}
