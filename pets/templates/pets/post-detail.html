@@ -83,11 +83,21 @@
   </section>
   <section id="comments">
     <h3 class="text-center my-3 fw-bold">Community Feedback</h3>
+    <div class="text-muted text-center">
+      {% if not post.comments.all %}
+        Be the first to share your thought on this post! &nbsp;&nbsp;<i class="fa-regular fa-comment-dots"></i>
+      {% endif %}
+    </div>
     <div>
       <ul>
         {% for comment in comments %}
           <li>
-            <h2>{{ comment.author.username }}</h2>
+            <h2>
+              <a href="mailto:{{ post.author.email }}"
+                 class="text-decoration-none text-muted"
+                 data-bs-toggle="tooltip"
+                 data-bs-title="Author Email Address: {{ post.author.email }}">{{ comment.author.username }}</a>
+            </h2>
             <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
             <p>{{ comment.text|linebreaks }}</p>
             <div class="my-3">{{ comment.content }}</div>
@@ -98,7 +108,7 @@
   </section>
   <section id="comment-section" class="row mb-5 mx-auto">
     <h3 class="text-center my-1 fw-bold">Leave Your Comment</h3>
-    <span class="my-3">Written by: {{ user.username }}</span>
+    <span class="my-3 fst-italic">Written by: {{ user.username }}</span>
     {% if request.user.is_authenticated %}
       <form action="{% url "post-detail-page" post.slug %}"
             method="POST"
