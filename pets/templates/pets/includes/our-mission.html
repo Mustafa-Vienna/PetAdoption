@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Our mission
+{% endblock title %}
+{% block css_files %}
+{% endblock css_files %}
+{% block content %}
+  <h1>
+    About Us  <i class="fa-solid fa-users"></i>
+  </h1>
+  <h3>Helping Pets Find Loving Homes</h3>
+  <p class="text-muted fs-4 py-4">
+    At <strong>Pet Adoption</strong>, our mission is to connect pets with compassionate individuals looking to adopt.
+    <br>
+    We believe every pet deserves a second chance at finding a forever home, and we are committed to making the adoption process smooth and stress-free for both the pet and the owner.
+  </p>
+  <br>
+  <p class="py-5">
+    Caring for a pet is a big responsibility. Learn how to properly care for your pet, from choosing the right food to understanding their health needs. We provide essential tips to help you take the best care of your furry friend.
+  </p>
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary"
+       data-bs-toggle="collapse"
+       href="#multiCollapseExample1"
+       role="button"
+       aria-expanded="false"
+       aria-controls="multiCollapseExample1">Toggle first element</a>
+    <button class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2"
+            aria-expanded="false"
+            aria-controls="multiCollapseExample2">Toggle second element</button>
+    <button class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target=".multi-collapse"
+            aria-expanded="false"
+            aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

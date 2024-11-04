@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Pet Care Tips
+{% endblock title %}
+{% block css_files %}
+{% endblock css_files %}
+{% block content %}
+  <div class="container page-text">
+    <div class="mt-4 text-center">
+      <h1>
+        Pet Care Tips &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-brands fa-gratipay"></i>
+      </h1>
+      <h3>Supporting Pet Adoptions and Responsible Care</h3>
+      <p class="text-muted fs-4 py-4">
+        At <strong>Pet Adoption</strong>, our goal is to match pets with compassionate adopters who are ready to provide loving, lifelong homes.
+        <br>
+        We believe every animal deserves a second chance, and we’re here to make the adoption journey easy and fulfilling—for both pets and their new families.
+      </p>
+      <br>
+      <p class="py-3">
+        Welcoming a pet into your life is a wonderful, rewarding experience, but it also comes with important responsibilities. From selecting nutritious food to understanding behavioral needs and health care, our expert tips are here to guide you in providing the best for your new companion. Let us help you give them the love and care they deserve, every step of the way.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      {% for topic in topics.values %}
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 gap-5 mb-5">
+          <div class="card p-3 h-100 d-flex flex-column">
+            <div class="ratio ratio-4x3">
+              <img src="{% static topic.image %}"
+                   class="card-img-top px-4 img-fluid"
+                   alt="{{ topic.name }}">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="card-title text-center py-3 mb-2">
+                <h3>{{ topic.name }}</h3>
+                <br>
+                <div class=" fw-bold mb-3 text-success">{{ topic.title }}</div>
+              </div>
+              <div id="collapseDescription{{ forloop.counter }}" class="collapse">
+                <p class="card-text">{{ topic.description }}</p>
+                <hr>
+                <br>
+                <ul>
+                  {% for detail in topic.details %}<li>{{ detail }}</li>{% endfor %}
+                </ul>
+              </div>
+              <button class="btn btn-primary border-3 rounded-3 shadow-lg"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseDescription{{ forloop.counter }}"
+                      aria-expanded="false"
+                      aria-controls="collapseDescription{{ forloop.counter }}">Read More</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
