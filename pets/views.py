@@ -9,6 +9,7 @@ from django.contrib import messages
 
 from .models import Post, Comment
 from .forms import CommentForm, UserPostForm
+from .topics_data import topics
 
 # Create your views here.
 
@@ -136,3 +137,11 @@ class PostLikeView(View):
 
 def handler404(request, exception):
     return render(request, '404.html', status=404)
+
+
+def care_tips(request):
+    return render(request, 'pets/includes/pet-care.html', {'topics': topics})
+
+
+def our_mission(request):
+    return render(request, 'pets/includes/our-mission.html')
