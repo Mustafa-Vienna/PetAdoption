@@ -1,0 +1,77 @@
+{% load static %}
+<section class="testimonial py-5" id="testimonial">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column: Image Collage -->
+      <div class="col-10 col-md-6 text-center mt-4 mt-md-0"
+           data-aos="slide-right"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out">
+        <img src="{% static 'pets/images/testimonials.png' %}"
+             alt="Happy clients giving thumbs-up, showcasing positive testimonials"
+             class="img-fluid rounded-5">
+      </div>
+      <!-- Right Column: Testimonials Text and Carousel -->
+      <div class="col-10 col-md-6 text-center"
+           data-aos="slide-left"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out">
+        <div class="heading-text mb-4 text-center">
+          <strong class="text-primary py-2">Testimonials</strong>
+          <h4 class="my-2">Clients Feedback</h4>
+        </div>
+        <!-- Carousel for Testimonials -->
+        <div id="carouselExampleSlidesOnly"
+             class="carousel slide"
+             data-bs-ride="carousel">
+          <div class="carousel-inner bg-success-subtle p-4 rounded-circle text-warning">
+            <!-- First Testimonial -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-10">
+                  <p class="text-muted my-2">
+                    The adoption process was seamless and supportive.
+                    <br>
+                    The team guided me every step of the way, ensuring I found the perfect pet for my family. Highly recommend!
+                  </p>
+                  <h4 class="fst-italic fs-6">John Doe</h4>
+                  <small class="text-muted fs-6">Pet Parent</small>
+                </div>
+              </div>
+            </div>
+            <!-- Second Testimonial -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-10">
+                  <p class="text-muted my-2">
+                    Adopting my pet was a wonderful experience!
+                    <br>
+                    The staff was knowledgeable and caring, making sure I had everything I needed to welcome my new furry friend home.
+                  </p>
+                  <h4>Janny Emil</h4>
+                  <small class="text-muted fs-6">Happy Adopter</small>
+                </div>
+              </div>
+            </div>
+            <!-- Third Testimonial -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-10">
+                  <p class="text-muted my-2">
+                    I couldn't have asked for a better experience.
+                    <br>
+                    They matched me with the perfect pet and provided resources to make the transition smooth and stress-free.
+                    <br>
+                    I'm so grateful!
+                  </p>
+                  <h4>Emily Brown</h4>
+                  <small class="text-muted fs-6">Lifelong Animal Lover</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

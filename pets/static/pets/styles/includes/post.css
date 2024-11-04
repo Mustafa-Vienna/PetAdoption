@@ -1,5 +1,5 @@
 #newest {
-  background-color: var(--neutral-color);
+  background-color: hsl(30, 53%, 66%);
   display: flex;
   flex-direction: column;
   padding: 1rem;

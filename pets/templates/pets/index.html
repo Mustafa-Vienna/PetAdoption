@@ -6,6 +6,7 @@
 {% block css_files %}
   <link rel="stylesheet" href="{% static "pets/styles/index.css" %}">
   <link rel="stylesheet" href="{% static "pets/styles/includes/post.css" %}">
+  <link rel="stylesheet" href="{% static "pets/styles/includes/testimonials.css" %}">
 {% endblock css_files %}
 {% block content %}
   <!-- home section starts  -->
@@ -64,4 +65,7 @@
     </div>
   </div>
   <!-- Latest posts section ends here-->
+  <!-- Testimonials section start -->
+  {% include "pets/includes/testimonials.html" %}
+  <!-- Testimonials section ends here -->
 {% endblock content %}
