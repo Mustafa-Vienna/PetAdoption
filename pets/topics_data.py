@@ -1,6 +1,6 @@
 topics = {
     "cat": {
-        "name": "cat",
+        "name": "Cat",
         "title": "Caring for Your Cat",
         "description": "We have all the information you need to keep your feline friend happy and healthy. From diet and nutrition to exercise and playtime, we've got you covered!",
         "details": [

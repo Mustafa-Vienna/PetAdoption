@@ -39,7 +39,7 @@
                 <br>
                 <div class=" fw-bold mb-3 text-success">{{ topic.title }}</div>
               </div>
-              <div id="collapseDescription{{ forloop.counter }}" class="collapse">
+              <div id="collapseDescription{{ topic.name }}" class="collapse">
                 <p class="card-text">{{ topic.description }}</p>
                 <hr>
                 <br>
@@ -50,9 +50,9 @@
               <button class="btn btn-primary border-3 rounded-3 shadow-lg"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseDescription{{ forloop.counter }}"
+                      data-bs-target="#collapseDescription{{ topic.name }}"
                       aria-expanded="false"
-                      aria-controls="collapseDescription{{ forloop.counter }}">Read More</button>
+                      aria-controls="collapseDescription{{ topic.name }}">Read More About {{ topic.name }}</button>
             </div>
           </div>
         </div>
