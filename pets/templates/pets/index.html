@@ -14,8 +14,10 @@
       <!-- here data-aos is used for adding aos animation  -->
       <div class="col-10 col-md-6 text-center text-md-start welcome"
            data-aos="slide-right"
-           data-oas-duration="2000"
-           data-osdelay="500">
+           data-aos="flip-up"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out"
+           data-aos-offset="200">
         <h1 class="py-4">
           Hello!
           <br>
@@ -33,7 +35,7 @@
         <a href="#About Us" class="link ms-4 d-none"></a>
       </div>
       <div class="col-10 col-md-5 d-none d-md-block">
-        <img src="{% static "pets/images/main_pic.png" %}" class="img-fluid" data-aos="slide-left" alt="pet with new family" />
+        <img src="{% static "pets/images/main_pic.png" %}" class="img-fluid rounded-5" data-aos="slide-left" alt="pet with new family" />
       </div>
     </div>
   </section>

@@ -6,53 +6,102 @@
 {% block css_files %}
 {% endblock css_files %}
 {% block content %}
-  <h1>
-    About Us  <i class="fa-solid fa-users"></i>
-  </h1>
-  <h3>Helping Pets Find Loving Homes</h3>
-  <p class="text-muted fs-4 py-4">
-    At <strong>Pet Adoption</strong>, our mission is to connect pets with compassionate individuals looking to adopt.
-    <br>
-    We believe every pet deserves a second chance at finding a forever home, and we are committed to making the adoption process smooth and stress-free for both the pet and the owner.
-  </p>
-  <br>
-  <p class="py-5">
-    Caring for a pet is a big responsibility. Learn how to properly care for your pet, from choosing the right food to understanding their health needs. We provide essential tips to help you take the best care of your furry friend.
-  </p>
-  <p class="d-inline-flex gap-1">
-    <a class="btn btn-primary"
-       data-bs-toggle="collapse"
-       href="#multiCollapseExample1"
-       role="button"
-       aria-expanded="false"
-       aria-controls="multiCollapseExample1">Toggle first element</a>
-    <button class="btn btn-primary"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#multiCollapseExample2"
-            aria-expanded="false"
-            aria-controls="multiCollapseExample2">Toggle second element</button>
-    <button class="btn btn-primary"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target=".multi-collapse"
-            aria-expanded="false"
-            aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-  </p>
-  <div class="row">
-    <div class="col">
-      <div class="collapse multi-collapse" id="multiCollapseExample1">
-        <div class="card card-body">
-          Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  <section class="py-2" id="mission">
+    <div class="row justify-content-evenly align-middle">
+      <!-- here data-aos is used for adding aos animation  -->
+      <div class="col-10 col-md-6 text-center text-md-start mission-text"
+           data-aos="slide-right"
+           data-aos="flip-up"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out"
+           data-aos-offset="200">
+        <h1 class="pt-2">
+          Our mission &nbsp;&nbsp;&nbsp;&nbsp; <span class="text-warning"><i class="fa-solid fa-lightbulb"></i></span>
+        </h1>
+        <p class="text-muted fs-5 pt-3">
+          Our mission at <span class="span-color fw-bold">Pet Adoption <i class="fa-solid fa-paw"></i></span> &nbsp; is to ensure every pet finds a safe, loving, and permanent home. We believe every animal deserves kindness, care, and the opportunity to become a cherished family member. Through partnerships with shelters and foster homes, we match pets with adopters who can provide the right environment for them to flourish.
+        </p>
+        <p class="text-muted fs-5">
+          <strong>At Pet Adoption</strong>, by promoting responsible pet ownership and supporting adopters with resources, we strive to create lasting, meaningful connections between pets and people.
+          <br>
+          Together, we're building a community where every pet has a home and every family finds the joy of animal companionship.
+        </p>
+        <a href="#About Us" class="link ms-4 d-none"></a>
+      </div>
+      <div class="col-10 col-md-5 d-none d-md-block pt-5">
+        <img src="{% static "pets/images/mission.png" %}" class="img-fluid rounded-5" data-aos="slide-left" alt="pet with new family" />
+      </div>
+    </div>
+  </section>
+  <section id="vision">
+    <div class="row p-5"
+         data-aos="fade-up"
+         data-aos="flip-up"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out">
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5 ">
+        <div class="card p-3 h-100 d-flex flex-column rounded-5 bg-warning-subtle">
+          <div class="card-body">
+            <h5 class="card-title pb-4">
+              Building Compassionate Communities &nbsp;
+              <span class="bg-success-subtle p-1 rounded-circle"><i class="fa-solid fa-people-group text-warning"></i></span>
+            </h5>
+            <p class="card-text">
+              Our goal is to cultivate compassion and respect for all animals within our community. We believe that by educating people on pet care and responsible ownership, we can create a society where pets are valued and well-cared for.
+            </p>
+            <br>
+            <p>
+              By empowering families with resources and knowledge, we strive to reduce animal homelessness and create a community that actively supports and cherishes its animals. Together, we can shape a future where every pet is understood and loved.
+            </p>
+            <br>
+            <p>
+              We work closely with local organizations, schools, and community groups to raise awareness and foster empathy toward animals. Through outreach and education, we're helping to build a future where compassion for animals is part of every community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5">
+        <div class="card p-3 h-100 d-flex flex-column rounded-5 bg-warning-subtle">
+          <div class="card-body">
+            <h5 class="card-title pb-4">
+              Creating Forever Homes &nbsp;
+              <span class="bg-success-subtle p-1 rounded-circle"><i class="fa-solid fa-house text-warning"></i></span>
+            </h5>
+            <p class="card-text">
+              We envision a world where every pet finds a lifelong home filled with love and care. Too many animals are left without families, but we are dedicated to changing this by working with shelters, fostering communities, and compassionate adopters.
+            </p>
+            <br>
+            <p>
+              Through responsible adoption practices, we ensure that each pet is matched with the ideal family for their unique needs. Our mission is to see happy pets in homes that are ready to nurture and cherish them for a lifetime.
+            </p>
+            <br>
+            <p>
+              We also provide continued support to adoptive families, offering resources on pet wellness, behavior, and training. Our goal is to make sure that both pets and families thrive, building a lasting bond that brings joy and companionship.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5">
+        <div class="card p-3 h-100 d-flex flex-column rounded-5 bg-warning-subtle">
+          <div class="card-body">
+            <h5 class="card-title pb-4">
+              Supporting Lifelong Connections
+              <span class="bg-success-subtle p-1 rounded-circle"><i class="fa-solid fa-circle-info text-warning"></i></span>
+            </h5>
+            <p class="card-text">
+              Our mission is not just to place pets in homes but to foster lifelong connections between pets and people. We believe that the joy and companionship pets bring enrich families and create bonds that last a lifetime.
+            </p>
+            <br>
+            <p>
+              We support these connections by offering guidance on pet care, training, and adoption preparation, ensuring families are ready to welcome their new companion. Through these efforts, we aim to make adoption a rewarding experience for everyone involved.
+            </p>
+            <br>
+            <p>
+              With post-adoption resources and support, we're here to help families navigate each step of pet ownership, creating bonds that grow stronger over time and contribute to happier, healthier lives for both pets and their people.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="collapse multi-collapse" id="multiCollapseExample2">
-        <div class="card card-body">
-          Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 {% endblock content %}
