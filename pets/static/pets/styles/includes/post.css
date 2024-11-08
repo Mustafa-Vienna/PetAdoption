@@ -1,37 +1,20 @@
 #newest {
   background-color: hsl(30, 53%, 66%);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-#newest .heading a {
-  font-family: var(--lato-font);
-  font-size: 1.5rem;
-  color: var(--secondary-color);
 }
 
 #newest .heading a,
 .recent .card a {
-  padding: 1rem 0;
+  font-family: var(--lato-font);
+  font-size: 1.5rem;
+  color: #479a9dd8;
   text-decoration: none;
-}
-
-.recent .card a {
-  color: var(--neutral-color);
 }
 
 #newest .heading a:hover,
 #newest .heading a:active,
-.card-body a:hover,
-.card-body a:active {
+.card:hover,
+.card:active {
+  transition: transform 0.25s ease-in-out;
   transform: scale(1.1);
-  color: var(--highlight-brown);
-}
-
-.recent a img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 50%;
+  color: var(--neutral-color);
 }

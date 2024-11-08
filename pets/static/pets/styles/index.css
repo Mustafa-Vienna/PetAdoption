@@ -2,7 +2,7 @@ body {
   background-color: var(--highlight-brown);
 }
 
-#home h2 {
+#home h1 {
   color: rgba(29, 34, 29, 0.731);
 }
 
@@ -13,10 +13,4 @@ body {
 #home p {
   font-family: var(--sans-font);
   color: var(--text-color);
-}
-
-.img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

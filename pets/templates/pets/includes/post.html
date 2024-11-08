@@ -1,9 +1,9 @@
-<div class="col-sm-10 col-md-6 col-lg-4 mb-3 g-5 recent"
+<div class="col-sm-10 col-md-6 col-lg-4 mb-3 g-5 recent "
      data-aos="fade-up"
      data-aos="flip-up"
      data-aos-duration="1000"
      data-aos-easing="ease-in-out">
-  <div class="card p-3 h-100 d-flex flex-column">
+  <div class="card p-3 h-100 d-flex flex-column rounded-4">
     <div class="ratio ratio-4x3">
       <img src="{{ post.image.url }}"
            alt="{{ post.title }}"
@@ -15,10 +15,12 @@
            class="text-decoration-non stretched-link hover-shadow">{{ post.title }}</a>
       </h4>
       <p class="text-muted">{{ post.excerpt|truncatewords:20 }}</p>
-      <address class="fst-italic text-muted mb-2">
-        By &nbsp;&nbsp;{{ post.author }}
-      </address>
-      <time class="mb-2">Published: {{ post.date|date:"d M Y" }}</time>
+      <div class="bottom-group mt-auto">
+        <address class="fst-italic text-muted mb-2">
+          By &nbsp;&nbsp;{{ post.author }}
+        </address>
+        <time class="mb-2">Published: {{ post.date|date:"d M Y" }}</time>
+      </div>
     </div>
   </div>
 </div>

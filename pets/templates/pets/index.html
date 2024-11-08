@@ -10,7 +10,7 @@
 {% endblock css_files %}
 {% block content %}
   <!-- home section starts  -->
-  <section class="py-5" id="home">
+  <section class="py-3" id="home">
     <div class="row justify-content-evenly align-middle">
       <!-- here data-aos is used for adding aos animation  -->
       <div class="col-10 col-md-6 text-center text-md-start welcome"
@@ -19,16 +19,16 @@
            data-aos-duration="1000"
            data-aos-easing="ease-in-out"
            data-aos-offset="200">
-        <h1 class="py-4">
+        <h1 class="py-2 text-center">
           Hello!
           <br>
           Welcome to
           <span class="span-color fw-bold">Pet Adoption <i class="fa-solid fa-paw"></i></span>
         </h1>
-        <p class="text-muted fs-4 py-4">
-          where we help pets find loving homes. With years of experience, we're dedicated to connecting pets in need with families ready to give them a new beginning. Let's find the perfect companion for you today!
+        <p class="text-muted fs-5 py-3">
+          Where we help pets find loving homes. With years of experience, we're dedicated to connecting pets in need with families ready to give them a new beginning. Let's find the perfect companion for you today!
         </p>
-        <p class="text-muted fs-4">
+        <p class="text-muted fs-5">
           <strong>At Pet Adoption</strong>, we believe every pet deserves a loving home <i class="fa-solid fa-house"></i>.
           <br>
           Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
@@ -36,7 +36,7 @@
         <a href="#About Us" class="link ms-4 d-none"></a>
       </div>
       <div class="col-10 col-md-5 d-none d-md-block">
-        <img src="{% static "pets/images/main_pic.png" %}" class="img-fluid rounded-5" data-aos="slide-left" alt="pet with new family" />
+        <img src="{% static "pets/images/main_pic.png" %}" class="img-fluid rounded-5 shadow-sm p-2 mb-5 " data-aos="slide-left" alt="pet with new family" />
       </div>
     </div>
   </section>
@@ -48,24 +48,29 @@
   <!-- About page ends here-->
   <!-- Letest Posts section start -->
   <div id="newest">
-    <div class="heading text-center pt-5">
-      <small>Latest Posts</small>
-      <h3>Blog &amp; Articles</h3>
+    <div class="heading text-center pt-3">
+      <small class="fs-5 mb-2 p-3">Latest Posts</small>
+      <h3 class="my-3">Blog &amp; Articles</h3>
       <a href="{% url "posts-page" %}"
+         class="fst-italic fw-semibold all-posts"
          data-bs-toggle="tooltip"
          data-bs-title="Click to explore all posts"
          data-bs-placement="bottom">View All Posts</a>
     </div>
-    <div class="mt-5">
-      <div class="row p-3">
-        {% for post in posts %}
-          {% include "pets/includes/post.html" %}
-        {% endfor %}
+    <div class="container-fluid">
+      <div class="mt-3">
+        <div class="row p-4 g-5">
+          {% for post in posts %}
+            {% include "pets/includes/post.html" %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
   <!-- Latest posts section ends here-->
   <!-- Testimonials section start -->
-  {% include "pets/includes/testimonials.html" %}
+  <div class="container-fluid">
+    <div class="row g-5">{% include "pets/includes/testimonials.html" %}</div>
+  </div>
   <!-- Testimonials section ends here -->
 {% endblock content %}
