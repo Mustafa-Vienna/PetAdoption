@@ -1,131 +1,175 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pet Adoption
 
-Welcome Mustafa Muhammed,
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Mustafa-Vienna/PetAdoption)](https://github.com/Mustafa-Vienna/PetAdoption/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Mustafa-Vienna/PetAdoption)](https://github.com/Mustafa-Vienna/PetAdoption/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Mustafa-Vienna/PetAdoption)](https://github.com/Mustafa-Vienna/PetAdoption)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mustafa-Vienna&repo=PetAdoption&layout=compact)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Pet Adoption Platform
 
-## Gitpod Reminders
+**Pet Adoption** is a Django-based platform for pet adoption, designed to connect people who are looking to re-home pets with potential adopters. This web application offers an easy and user-friendly way for users to post pet listings, browse available pets, and manage inquiries. Our goal is to support pet adoption, encourage responsible pet ownership, and help every pet find a loving home.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Project Overview
 
-`python3 -m http.server`
+The Pet Adoption application enables users to view available pets, post pet listings, and interact with potential adopters. Built with Django and Bootstrap, the project focuses on creating an intuitive experience that makes it simple for users to connect with pets in need of a new home.
 
-A blue button should appear to click: _Make Public_,
+[Live Demo](https://pet-adoptions-9841a93e0575.herokuapp.com/)
 
-Another blue button should appear to click: _Open Browser_.
+![Responsive Design Screenshot]()
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Key Features
 
-A blue button should appear to click: _Make Public_,
+- **User Registration and Authentication**
 
-Another blue button should appear to click: _Open Browser_.
+  - Users can register, log in, and manage their profiles, including uploading profile pictures and displaying user-specific information.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Pet Listing with Add, Update, and Delete Options**
 
-To log into the Heroku toolbelt CLI:
+  - Users can create, update, and delete posts for pets they wish to give away.
+  - Each post includes images, descriptions, and tags, helping adopters find pets that match their preferences.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Detailed Pet Profiles with Images, Descriptions, and Interaction Options**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+  - Each pet listing provides a detailed profile view with images, descriptive tags, and user comments.
+  - Users can "like" posts by clicking a heart icon to show interest, and they can leave comments for further inquiries.
 
-### Connecting your Mongo database
+- **Enhanced User Interaction on Posts**
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+  - Users can engage with posts through likes and comments, creating a more interactive platform for pet adoption.
+  - Comments allow potential adopters to ask questions directly under each post, facilitating communication between pet owners and adopters.
 
-------
+- **Admin Panel for Monitoring and Management**
 
-## Release History
+  - An admin panel enables administrators to manage user posts, monitor platform activity, and ensure content quality and compliance.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- **Responsive Design**
+  - The platform is optimized for both mobile and desktop devices, ensuring a seamless experience across different screen sizes.
 
-**June 18, 2024,** Add Mongo back into template
+## contents
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+1. [Features](#features)
+2. [User Experience (UX)](#user-experience-ux)
+3. [Technologies Used](#technologies-used)
+4. [Agile Methodology](#agile-methodology)
+5. [Version Control](#version-control)
+6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Known Issues and Future Features](#known-issues-and-future-features)
+9. [Credits](#credits)
 
-**May 28 2024:** Fix Mongo and Links installs
+## Features
 
-**April 26 2024:** Update node version to 16
+### Existing Features
 
-**September 20 2023:** Update Python version to 3.9.17.
+1. **User Registration and Authentication**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+   - Users can sign up, log in, and log out of their accounts with the help of `crispy_form_tag` for a smooth registration experience.
+   - User profiles display a list of posted pets associated with each account, but there are no options to edit, reset, or change account details.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+2. **Pet Listing Management**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+   - Authors (the users who create posts) can add detailed pet profiles with properties including `title`, `pet_name`, `pet_age`, `excerpt`, `image`, and `content`.
+   - Only the author of a post can edit or delete their own listings. These options are not available to other registered users or visitors.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+3. **Post Interactions (Likes and Comments)**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+   - Registered users and authors can like posts by clicking a heart icon to show interest.
+   - Both authors and registered users can leave comments on posts to facilitate discussions and inquiries.
+   - Visitors (non-registered users) can view posts but cannot interact through likes or comments.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+4. **Admin Dashboard**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+   - Admin users have access to a dashboard where they can monitor listings, manage posts, and oversee user activity to ensure a safe and supportive platform.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+5. **Responsive Design**
+   - The website is fully responsive, ensuring an optimal user experience across all devices, including mobile and desktop views.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Future Features
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- **User Account Management**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - Add functionality for users to edit their profiles, including resetting or updating their password. This will provide users with greater control over their account information and security.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- **Enhanced Comment Section**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - Allow users to edit and delete their comments on posts, giving them flexibility in managing their interactions on the platform.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- **Direct Contact Form for Adoption**
 
-------
+  - Implement a direct contact form that enables potential adopters to reach out to the author of a pet post. This feature aims to streamline the adoption process by facilitating direct communication.
 
-## FAQ about the uptime script
+- **Favorites List**
 
-**Why have you added this script?**
+  - Enable users to save posts to a “Favorites” list for easy access to pets they are interested in, allowing them to quickly revisit and manage potential adoption options.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- **Draft Post Feature**
 
-**How will this affect me?**
+  - Allow users to save posts as drafts in case they are unable to complete the listing in one session. A “Drafts” section will be available in the navigation bar, enabling users to continue and publish their saved posts when ready.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- **Adoption Status Tracking**
+  - Add an adoption status indicator on each pet listing to inform users if the pet is still available or has been adopted. This feature will help users know the availability of each pet more clearly.
+- **User Activity Dashboard**
+  - Implement a dashboard where users can view all their recent activities, such as posts, comments, and interactions. This feature would provide users with a centralized overview of their contributions and engagement on the platform.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[Go to Contents](#contents)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## User Experience (UX)
 
-**So….?**
+### Design Choices
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+#### Color Scheme
 
-**Can I opt out?**
+The color palette is crafted to evoke a warm, friendly, and welcoming atmosphere for users, with shades that convey trust, approachability, and growth. The primary colors include deep blues and greens to establish reliability, with coral red accents for calls-to-action that stand out, and soft neutral tones to create a calm backdrop. Each color was selected to enhance readability and visual appeal while maintaining a cohesive and approachable aesthetic.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+#### Typography
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+The primary font is **Roboto**, chosen for its readability and modern feel, providing a clean and professional look. **Open Sans** and **Lato** are used as secondary fonts, lending versatility across different text elements to enhance user experience.
 
-**Anything more?**
+#### Imagery
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Images of pets are central to the platform, as they capture users' attention and provide key information about each pet.
 
----
+### User Stories
 
-Happy coding!
+#### New Users
+
+- As a new user, I want to register an account so I can list pets for adoption.
+- As a new user, I want to browse pet listings so I can find pets available for adoption.
+
+#### Admin Users
+
+- As an admin, I want to review all pet listings and user interactions to ensure a safe and welcoming environment.
+
+## Technologies Used
+
+### Languages and Frameworks
+
+- **HTML5** - For structuring the website.
+- **CSS3** - For styling and layout.
+- **JavaScript** - For interactivity and dynamic elements.
+- **Python (Django)** - For backend functionality.
+- **Bootstrap** - For responsive design.
+
+### Databases
+
+- **PostgreSQL** (production) - For reliable, scalable production data storage.
+
+### Other Tools
+
+- **Git** - Version control.
+- **GitHub** - Remote repository hosting.
+- **Heroku** - Deployment platform.
+- **Cloudinary** - For hosting and managing images.
+
+## Agile Methodology
+
+**GitHub Projects** and **Issues** were used to organize the development process. User stories were assigned priorities (Must Have, Should Have, Could Have) based on the MoSCoW method to focus development efforts.
+
+### Kanban Workflow
+
+1. **To Do** - Tasks planned for the current sprint.
+2. **In Progress** - Tasks currently being worked on.
+3. **Done** - Tasks that have been fully tested and merged.
+
+## Version Control
