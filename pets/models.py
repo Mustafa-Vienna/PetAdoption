@@ -28,15 +28,15 @@ class Author(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    pet_name = models.CharField(max_length=40)
+    title = models.CharField(max_length=220, unique=True)
+    pet_name = models.CharField(max_length=100)
     pet_age = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(10)])
-    excerpt = models.CharField(max_length=150)
+    excerpt = models.CharField(max_length=200)
     image = CloudinaryField('image', folder="posts")
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True, db_index=True, blank=True)
-    content = models.TextField(validators=[MaxLengthValidator(600)])
+    content = models.TextField(validators=[MaxLengthValidator(700)])
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="posts")
     tags = models.ManyToManyField(Tag)
