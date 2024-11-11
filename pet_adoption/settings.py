@@ -144,6 +144,8 @@ LOGIN_REDIRECT_URL = 'main-page'
 
 LOGIN_URL = '/accounts/login'
 
+LOGOUT_REDIRECT_URL = 'main-page'
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
