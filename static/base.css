@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  background-color: hsl(203, 39%, 70%);
+  background-color: hsla(203, 39%, 67%, 0.8);
   color: var(--main-color);
 }
 
