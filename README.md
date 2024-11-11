@@ -160,7 +160,7 @@ Images of pets are central to the platform, as they capture users' attention and
 - **Git** - Version control.
 - **GitHub** - Remote repository hosting.
 - **Heroku** - Deployment platform.
-- **Cloudinary** - For hosting and managing images.
+- **Cloudinary** - For hosting and managing images
 
 ## Agile Methodology
 
