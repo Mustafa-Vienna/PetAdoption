@@ -3,6 +3,7 @@ from django.core.validators import MaxLengthValidator, MinValueValidator, MaxVal
 
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from django.forms import ValidationError
 from django.utils.text import slugify
 # Create your models here.
 
@@ -28,7 +29,7 @@ class Author(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=220, unique=True)
+    title = models.CharField(max_length=50, unique=True)
     pet_name = models.CharField(max_length=100)
     pet_age = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(10)])
@@ -52,6 +53,12 @@ class Post(models.Model):
                 unique_slug_counter += 1
             self.slug = slug
         super().save(*args, **kwargs)
+
+    def clean(self):
+        super().clean()
+        if len(self.title) > 50:
+            raise ValidationError(
+                "Oops! The title you entered is too long. Please limit it to 50 characters.")
 
     def __str__(self):
         return self.title

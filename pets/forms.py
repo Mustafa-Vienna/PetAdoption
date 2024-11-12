@@ -21,3 +21,6 @@ class UserPostForm(forms.ModelForm):
         fields = [
             'title', 'pet_name', 'pet_age', 'excerpt', 'image', 'content'
         ]
+        widgets = {
+            'pet_age': forms.NumberInput(attrs={'min': 0, 'max': 10}),
+        }
