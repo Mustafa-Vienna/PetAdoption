@@ -246,3 +246,113 @@ For version control, I used Git to efficiently track and manage code changes thr
 By sticking to these basic commands, I was able to keep my version history manageable and transparent, capturing meaningful updates without unnecessary complexity.
 
 [Go to Contents](#contents)
+
+
+## Deployment
+
+This Django application was deployed on Heroku, leveraging its GitHub integration for smooth, automatic deployments. Below is a summary of the deployment process:
+
+1. **Heroku App Creation**:  
+   I logged into my Heroku dashboard, selected "New" > "Create new app," and provided a unique app name along with the appropriate region.
+
+2. **GitHub Integration**:  
+   In the "Deploy" tab of the Heroku dashboard, I chose GitHub as the deployment method, connected my GitHub account, and selected the repository for this Django app.
+
+3. **Automatic Deployment**:  
+   I enabled automatic deployment from the `main` branch. This allows Heroku to redeploy the app automatically whenever changes are pushed to the main branch in GitHub.
+
+4. **Environment Configuration**:  
+   In the "Settings" tab, I clicked "Reveal Config Vars" and added essential environment variables for security and functionality:
+
+   - `SECRET_KEY`: My Django secret key
+   - `DATABASE_URL`: The database connection URL
+   - `CLOUDINARY_URL`: Cloudinary URL for managing images, with `secure=true` to ensure HTTPS delivery
+   - `DEVELOPMENT`: Set in the local environment to enable `DEBUG=True` during development
+  
+   > **Note**: The `DEVELOPMENT` variable is used to control `DEBUG` mode in local environments, allowing safe testing and debugging without affecting production settings.
+
+5. **Buildpack Configuration**:  
+   In the "Settings" tab, I configured the buildpack by selecting "heroku/python" to support the Django application.
+
+6. **Automatic Collection of Static Files**:  
+   Heroku automatically runs `python manage.py collectstatic` during each deployment to gather all static files into a single directory. This ensures that static assets, like CSS and JavaScript files, are ready to be served in production. During the build, 157 static files were successfully copied to the static file directory.
+
+7. **Verify Deployment**:  
+   Once set up, I tested the deployment by clicking "Open App" in Heroku to ensure the application loaded and functioned as expected.
+
+- **Link to Project Board**: [Kanban Board](https://github.com/users/Mustafa-Vienna/projects/6)
+
+---
+
+### Forking and Local Setup
+
+If you’d like to fork this repository and set it up locally, follow these steps:
+
+1. **Fork the Repository**:  
+   - Go to the GitHub repository and click on "Fork" to create a copy in your account.
+
+2. **Clone Your Fork**:  
+   - Click "Code" on your forked repository, copy the URL, then open your terminal and run:
+     ```
+     git clone [URL you copied]
+     ```
+
+3. **Set Up Virtual Environment**:  
+   - Navigate to the project directory:
+     ```
+     cd [project directory name]
+     ```
+   - Create a virtual environment:
+     ```
+     python3 -m venv venv
+     ```
+   - Activate the virtual environment:
+     - On Windows: `venv\Scripts\activate`
+     - On macOS and Linux: `source venv/bin/activate`
+
+4. **Install Dependencies**:  
+   - With the virtual environment activated, install the required packages:
+     ```
+     pip install -r requirements.txt
+     ```
+
+5. **Set Up Environment Variables**:  
+   - Create an `env.py` file in the root directory and add the following environment variables based on `settings.py` requirements:
+     ```python
+     SECRET_KEY = 'your_secret_key'
+     DATABASE_URL = 'your_database_url'
+     CLOUDINARY_URL = 'your_cloudinary_url?secure=true'
+     DEVELOPMENT = 'True'
+     ```
+   - Setting `DEVELOPMENT = 'True'` enables `DEBUG=True` in local development, allowing you to test and debug safely.
+   - Adding `secure=true` to the `CLOUDINARY_URL` ensures media files are delivered over HTTPS, providing secure access to images and assets.
+
+6. **Apply Migrations**:  
+   - Run migrations to set up the database schema:
+     ```
+     python3 manage.py makemigrations
+     python3 manage.py migrate
+     ```
+
+7. **Collect Static Files (Optional for Local Testing)**:  
+   - If you want to test static files locally in a production-like setup, you can run:
+     ```bash
+     python3 manage.py collectstatic
+     ```
+   - This is typically required in production but can be helpful to verify static files locally.
+
+8. **Run the Development Server**:  
+   - Start the server locally:
+     ```
+     python3 manage.py runserver 8001
+     ```
+   - Note: This project initially used port `8000` but now uses port `8001` to avoid conflicts with other services.
+   - Open a browser and go to `http://127.0.0.1:8001/` to view the application locally.
+
+---
+
+This enhanced setup provides a clear process for cloning, setting up environment variables, and preparing the local environment based on your project’s specific configuration requirements.
+
+---
+
+[Go to Contents](#contents)
