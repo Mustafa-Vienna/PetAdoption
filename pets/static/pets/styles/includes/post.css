@@ -8,6 +8,10 @@
   font-size: 1.5rem;
   color: #479a9dd8;
   text-decoration: none;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
 }
 
 #newest .heading a:hover,
