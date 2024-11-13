@@ -141,35 +141,108 @@ Images of pets are central to the platform, as they capture users' attention and
 
 - As an admin, I want to review all pet listings and user interactions to ensure a safe and welcoming environment.
 
+[Go to Contents](#contents)
+
 ## Technologies Used
 
 ### Languages and Frameworks
 
-- **HTML5** - For structuring the website.
-- **CSS3** - For styling and layout.
-- **JavaScript** - For interactivity and dynamic elements.
-- **Python (Django)** - For backend functionality.
-- **Bootstrap** - For responsive design.
+- [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
+
+- [![HTML](https://img.shields.io/badge/HTML-5-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML5) used for structuring the website.
+
+- [![CSS](https://img.shields.io/badge/CSS-3-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for styling and layout.
+
+- [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
+
+- [![Python](https://img.shields.io/badge/Python-3.x-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
+
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+
+- [![Django](https://img.shields.io/badge/Django-5.1.1-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
+
+- [![Django Crispy Forms](https://img.shields.io/badge/Django_Crispy_Forms-2.3-grey?logo=django&logoColor=092E20)](https://django-crispy-forms.readthedocs.io/) used to build customizable, responsive forms.
+
+- [![Crispy Bootstrap5](https://img.shields.io/badge/Crispy_Bootstrap5-2024.10-grey?logo=bootstrap&logoColor=7952B3)](https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_form_helper.html) used for styling forms with Bootstrap 5 in Django.
+
+- [![AOS Library](https://img.shields.io/badge/AOS_Library-grey?logo=javascript&logoColor=528DD7)](https://michalsnik.github.io/aos/) used for adding smooth scroll animations to elements on my website.
 
 ### Databases
 
-- **PostgreSQL** (production) - For reliable, scalable production data storage.
+- [![PostgreSQL by Code Institute](https://img.shields.io/badge/PostgreSQL_by_Code_Institute-grey?logo=okta&logoColor=F05223)](https://dbs.ci-dbs.net) used as (production) - For reliable, scalable production data storage.
 
 ### Other Tools
 
-- **Git** - Version control.
-- **GitHub** - Remote repository hosting.
-- **Heroku** - Deployment platform.
-- **Cloudinary** - For hosting and managing images
+- [![Git](https://img.shields.io/badge/Git-2.46.0-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`, `git status`)
+
+- [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
+
+- [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
+
+- [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for simplify deployment, manage scaling, and streamline environment setup for my Django app with minimal configuration.
+
+- [![Cloudinary](https://img.shields.io/badge/Cloudinary-1.41.0-grey?logo=cloudinary&logoColor=FFFFFF)](https://cloudinary.com) used for hosting and managing image and video files.
+
+- [![Django Cloudinary Storage](https://img.shields.io/badge/Django_Cloudinary_Storage-0.3.0-grey?logo=cloudinary&logoColor=FFFFFF)](https://github.com/klis87/django-cloudinary-storage) used for managing and serving media files via Cloudinary.
+
+- [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, README.md design and explain things.
+
+- [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used Font Awesome for easily adding scalable icons and styling them in my project.
+
+- [![Favicon](https://img.shields.io/badge/Favicon-grey?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABnVJREFUWEfFl39Q1HUax9/P97s/2S2QH4qKoBXsBqQoYb/uvOzHXDXdADdXM87kObs0p0JaN9dMZu0i4DRzU9fNldVpI3r9gU7WZYpYl4WAHclZg6mBQJiihLDAyu6yy+5+v0/z/a6QccCuM830+Wvn83me5/36PM/n+eznS/iFB/3C+pgRoPPt8rSwRlgqQJBkQTx+65rNgz838LQAZ6srnQRyMlgMBUN4f8/+sd4L37+nExNKXu/qGvu5QKYE6NpV9ZDEXAdEMnT6ZBs+PvAfVZMgOLafG9h6vQBn/7V1vhyW7tRqMBQwyp/nPl4RVOOVl5cLLS0t5r2OpzV+T/+Y++L5+0G8q7a1O7Gluw9Vv78bB9+rQ0db51UA9A3dPpi2bx+kWCHO7qzcBEIFAJ3iw8AFIjxhsTmbyJqb+28iFL/zwkZY0+fxqNtFV/ovoqGtB6d6BlB6/xK8+bcdCPgDE3pEVLC923UiFoCO3VtXMPNRME/OthekKVAAXmPmDTXOZ2BJn6fGDHhHMNgT2fGoz4+3Xt3xUy2mtTu+c02anBqnY1eVg8HPqudJpi+Z+DYCKyVMZKCGVq9ebXrsjhz3yqXZmnBwDFpDnBpp6FI3/CPDCIfC2PbKPyGFr804Ve0453LGkoH2nVUlosCcaXNWj9t3VFesYlANA31qWrzNh3o8ru/TdEYz9KYbVDtFXIFQRsORJpxo/mpC79Yl2a//eX/TxlgAet591Rj2XeFFtoqJGnZWv5QiI9zPIF8E4Iu6l8H87LUB/R43hi5+q04xM7451Y6+3suYk5qCnLwcnyzLd2Y/ueV0LBCTbdp3VlmIuB2gVhWAT7+r843EbQTRI6ScVEKrq6fLPObzPsGyJE4j4hYINZIko7/1ZAbLPB+gFIATABiUsMaU5JH4jPTzBOF/Mkt7rSXl9Uqsjuqt/2DIGwHaPONN6DqyZ/PwpXNVshQWZtqp69QZhAM/dsm4rTltPsxzU69xpT0EuBm8Doz2UEBaPiOAv/nwQu/I4LnxszAdRGDYDfe33UqtfmxVUURyTjZEvdr61w4JRB/qEC5bZKuIHMKZhqe51jXQ3ZYUGvPPaBf0eDE6MABpbAyiTgdTaiq0pkhH/XTQFxa7467xuagA3uZDLd7hgYIrfReisca0zoDHanfeGDOA7791+8JS8A99nV/HJBDNiAA5aJaME/8F0Rx8xw+Vs4wtA9+1I+j3RTOPuq4AjITmGG5fuzakGEctgaf54L0EoX6k/xI8g31RBaIZEDCaZXeaYi4B19drfIbR7oD3yoLBnq5o8aOuE+FCls2ZETOAYtj7/vZXTLPn/CXaORC1OsTFJ8FgjlezFfC4/w+IQV9Z7Y786wJoKCtek3HXr3eHOQgppL4joIiJGh0EUYRWb1RFdXFmdW10yIXB810QDNqpMlJvsTvvuz6AdcX3geRPZ91yC/Sz4lVfU0KylDA3YxTAiJIk5WZjUIt/+PKxtkP7D5AgLpjqIiKio1k2x8rrAmgse3QZy+KXhqQkJNy0cNz3jMXuzJ1qi8fKih+UZPmwaDSIiZmZk25Duty7KJy2cmVFOKYuUIwa1xZms4AzglaL2XmLVU2lnQia1Ez75oGpII6WFpYKjG3QiHRjenrQmJyknXgVEVZZbM69MQM0PFV4GySoN1FSTja0ccaIpig+YlnzwuHpjn5DaVEPmNOUh8e85fkVzHgrQi98arG9+EDMAI3ripYz8XHF4YYFaTClzlHjsEybrE86/jodQOP6ooMMflQ11VPivCXLasG4BwyZoV9gLXmuN+pFpJbgqcLfsoSPlN+GxMTWhJsX5an0hOosm7NkWoCyopdY5ufVZAma3JRleXNB/MnVGpZZbM43YwI4Wla0mmR+R3EU9Lo/zl68+G2A9QAdsdgdD04H0FRatEpmrlFhRf7Vim0HPm/fWXmCCPkA1Vrsjt9FBahfV7RQFPB3Zi4iIKhJjL8p+ebMjxisdMBJi92pZmPyqNvwsN4k6baAsUlZ0wjC3fe88UFzx+7Kl1mG8vxznzRbk6MCNJYWHmbGQ6qAIHyQmr80G4DlquA3FrszZyqApvWFD8hAJN0AiyKnpeQX5IFRC0S+EbR6YWFUgM/WF/+GBMxVHIymuGOzrJbXIvWnMJi+zrK/OOVnWueGh/W9sr5QBgkiycMrtn348dldlQVg/AmALBCFdDqN4wegjplDyjqt1AAAAABJRU5ErkJggg==&logoColor=528DD7)](https://favicon.io) used a favicon for adding a recognizable icon in browser tabs and bookmarks.
+
+- [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-6.7.0-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files directly from my Django app on Heroku, simplifying file management and boosting loading speed.
+
+- [![Google Fonts](https://img.shields.io/badge/Google_Fonts-grey?logo=google&logoColor=4285F4)](https://fonts.google.com/) used to import the "Lato" and "Open Sans" fonts for consistent typography and styling.
+
+[Go to Contents](#contents)
+
 
 ## Agile Methodology
 
-**GitHub Projects** and **Issues** were used to organize the development process. User stories were assigned priorities (Must Have, Should Have, Could Have) based on the MoSCoW method to focus development efforts.
+This project followed an Agile approach, using GitHub Projects and Issues to manage development tasks and adapt to changes effectively. User stories were prioritized according to the MoSCoW method to focus development efforts:
+
+- **Must Have**: Core requirements essential for project success
+- **Should Have**: Important features, prioritized after core requirements
+- **Could Have**: Additional features to enhance functionality if time allows
+- **Won't Have**: Deferred features for future consideration
 
 ### Kanban Workflow
 
-1. **To Do** - Tasks planned for the current sprint.
-2. **In Progress** - Tasks currently being worked on.
-3. **Done** - Tasks that have been fully tested and merged.
+The Kanban board was structured to track tasks across three main stages, allowing for a straightforward development flow:
+
+1. **To Do**: Tasks identified and planned for the project.
+2. **In Progress**: Tasks currently being developed.
+3. **Done**: Tasks that have been fully tested and merged.
+
+- **Link to Project Board**: [Kanban Board](https://github.com/users/Mustafa-Vienna/projects/6)
+
+### Project Evolution
+
+As the project progressed, the initial scope and plan changed significantly. Originally, I had a simpler and shorter project scope, but I made many edits and added new features along the way, leading to a different end result. Additionally, some specific functionalities I initially considered were ultimately not included in the final version. 
+
+Because Agile methodology was applied retrospectively at the end of the project, I placed all tasks directly in the **Done** section rather than tracking them through each stage. This approach helped document the project effectively, even though Agile was only introduced toward the project's completion.
+
+[Go to Contents](#contents)
+
 
 ## Version Control
+
+For version control, I used Git to efficiently track and manage code changes throughout my project. Working in Visual Studio Code on a MacOS setup, I utilized Git's basic commands to maintain a clear version history. My workflow included the following steps:
+
+1. **Development in VS Code**: 
+   I used Visual Studio Code as my primary development environment, taking advantage of its integrated terminal to run Git commands directly while working on the project.
+
+2. **Commit Workflow**:
+   To keep the project organized and maintain a coherent history, I used a simple commit strategy, frequently staging and committing changes after completing a feature or making improvements. This allowed me to capture the progression of my work and made it easier to review project updates over time.
+
+3. **Basic Git Commands**:
+   My Git workflow relied on a few essential commands:
+   - `git add <file>` or `git add .`: To stage individual files or all modified files for a commit.
+   - `git commit -m "descriptive message"`: To create a commit with a clear message, summarizing the changes made.
+   - `git push`: To upload the commits to the remote repository.
+   - `git status`: To check the status of staged and unstaged changes, helping ensure no modifications were overlooked.
+
+By sticking to these basic commands, I was able to keep my version history manageable and transparent, capturing meaningful updates without unnecessary complexity.
+
+[Go to Contents](#contents)
