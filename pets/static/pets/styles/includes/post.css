@@ -5,8 +5,8 @@
 #newest .heading a,
 .recent .card a {
   font-family: var(--lato-font);
-  font-size: 1.5rem;
-  color: #479a9dd8;
+  font-size: 1.2rem;
+  color: hsl(182, 38%, 35%);
   text-decoration: none;
   width: 100%;
   max-width: 500px;
