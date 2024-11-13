@@ -11,7 +11,7 @@ topics = {
             "Regular brushing reduces shedding and prevents hairballs, strengthening your bond with your cat.",
             "Routine vet visits and vaccinations are key to preventing health issues."
         ],
-        "image": "pets/images/cat.png"
+        "image": "pets/images/cat.webp"
     },
     "dog": {
         "name": "Dog",
@@ -24,7 +24,7 @@ topics = {
             "Grooming and regular baths keep dogs clean.",
             "Annual vet check-ups help maintain health."
         ],
-        "image": "pets/images/dog.png"
+        "image": "pets/images/dog.webp"
     },
     "rabbit": {
         "name": "Rabbit",
@@ -37,7 +37,7 @@ topics = {
             "Regular grooming prevents fur matting.",
             "Rabbits need exercise and social interaction."
         ],
-        "image": "pets/images/rabbit.png"
+        "image": "pets/images/rabbit.webp"
     },
     "bird": {
         "name": "Bird",
@@ -50,7 +50,7 @@ topics = {
             "Birds need regular social interaction.",
             "Routine vet visits are essential for health."
         ],
-        "image": "pets/images/bird.png"
+        "image": "pets/images/bird.webp"
     },
     "fish": {
         "name": "Fish",
@@ -63,7 +63,7 @@ topics = {
             "Provide hiding spots and decor in the tank.",
             "Research the specific needs of each fish species."
         ],
-        "image": "pets/images/fish.png"
+        "image": "pets/images/fish.webp"
     },
     "hamster": {
         "name": "Hamster",
@@ -76,6 +76,6 @@ topics = {
             "Clean the cage weekly for hygiene.",
             "Handle hamsters gently to build trust."
         ],
-        "image": "pets/images/hamster.png"
+        "image": "pets/images/hamster.webp"
     }
 }
