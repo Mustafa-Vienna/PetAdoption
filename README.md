@@ -356,3 +356,71 @@ This enhanced setup provides a clear process for cloning, setting up environment
 ---
 
 [Go to Contents](#contents)
+
+
+## Testing
+
+Comprehensive testing has been performed to validate the functionality, usability, and reliability of this Django application. Below is an overview of the testing process and results:
+
+- **Manual Testing**: I personally tested the application across multiple devices and environments, running various scenarios (both positive and negative) to validate input handling, functionality, and performance. This included testing different user interactions, edge cases, and error handling to ensure robustness.
+
+- **Peer Review**: I shared the application with friends and classmates to gather additional feedback. They tested different features, providing valuable insights on usability and helping identify areas for improvement.
+
+- **Code Validation**: All code was validated to ensure adherence to best practices and standards.
+
+- **Lighthouse Testing**: Performed testing for performance, accessibility, best practices, and SEO using Lighthouse to ensure the application meets modern standards.
+
+- **User Story Testing**: Each feature was tested against defined user stories to verify that all requirements were met.
+
+For further details on specific test cases, results, and testing methodologies, please refer to the [TESTING.md](TESTING.md) file.
+
+> **Note**: Please refer to the [TESTING.md](TESTING.md) file for all in-depth testing documentation, including individual test cases and their results.
+
+[Go to Contents](#contents)
+
+
+## Credits
+
+### Resources Used
+
+- **[Code Institute LMS](https://codeinstitute.net/)**: For providing a structured learning path, resources, and guidance throughout the development process.
+
+- **Udemy Course**: by **Jose Portilla**, *Learn to build websites with HTML, CSS, Bootstrap, JavaScript, jQuery, Python 3, and Django!*. This 32-hour course reinforced and expanded on the concepts I learned from the Code Institute, covering everything from basic HTML to Django projects.
+
+- **Udemy Course**: by **Maximilian Schwarzmüller**, *Learn how to build web applications and websites with Python and the Django framework* . This 23-hour course, which I watched multiple times, provided clarity and confidence in working with Django and understanding project structure in detail.
+
+- **YouTube Tutorial - Dennis Ivy**: [Django User Authentication Tutorial](https://www.youtube.com/watch?v=sMqDJovFO-Y). This tutorial provided in-depth guidance on building the `users` app, including creating, registering, and logging in users. It also introduced the use of `crispy_forms`, particularly `crispy_form_tag`, which significantly improved the styling and functionality of forms. Additionally, I frequently referred to the [Crispy Forms documentation](https://django-crispy-forms.readthedocs.io/en/latest/) to enhance my understanding and implementation of form handling within the app.
+
+- **YouTube Tutorial - Dennis Ivy**: [Django Real Project Tutorial](https://www.youtube.com/watch?v=Rp5vd34d-z4&t=7025s). This tutorial was instrumental in bridging the gap between learning and implementing Django in a real-world project.
+
+- **YouTube Tutorial - Traversy Media**: [Bootstrap 5 Guide](https://www.youtube.com/watch?v=-qfEOE4vtxE&t=3119s). Helped me explore the latest features and layout options in Bootstrap 5, enhancing the front-end design of the application.
+
+- **YouTube Series - CodingEntrepreneurs**: [In-Depth Django Project Series](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi). A comprehensive series that provided insights into more advanced Django project structures and functionalities.
+
+- **YouTube Tutorial - Programming with Mosh**: [Python Full Course for Beginners](https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=17917s). An in-depth course that explained foundational Python and Django concepts, helping me solidify my understanding and apply it effectively in this project.
+
+[Go to Contents](#contents)
+
+### Code Used
+
+I was inspired by my classmate Ibrahim’s project, [BSC Hastedt Football Camp](https://github.com/ibra8080/BSC-Hastedt-football-camp), for structuring the **Technologies Used** and **Languages and Frameworks** sections in a clean and organized way. His professional approach guided me in enhancing the readability and visual appeal of my own README.md file.
+
+Additionally, I adapted Ibrahim’s approach for the top of my README.md file, using a similar design structure with GitHub activity badges to display commit activity, last commit, and repository size, providing a more polished and informative look.
+
+I also learned how to set up a custom 404 error page in my Django project by referencing his project, which improved the user experience by providing a helpful and consistent error page.
+
+### Acknowledgements
+
+#### Luke
+
+I deeply thank my mentor, Luke, for his invaluable support and guidance from start to finish. His feedback, suggestions, and examples made this project possible and kept me motivated throughout.
+
+#### Ioan
+
+A huge thank you to my friend and classmate, Ioan, for his invaluable programming expertise and support. He helped me manage my time effectively throughout the project. Ioan tested the website from a user’s perspective, offering feedback on functionality and usability, and frequently provided suggestions for color combinations to enhance the design. His insights and knowledge have been immensely valuable to me.
+
+#### ChatGPT
+
+Used to help debug, troubleshoot, explain various concepts, and assist in creating a clear and comprehensive README.md file.
+
+[Go to Contents](#contents)
