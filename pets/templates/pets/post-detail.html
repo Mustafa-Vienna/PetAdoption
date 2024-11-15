@@ -76,9 +76,10 @@
   </section>
   <section id="comment-verified">
     {% if messages %}
-      <div class="messages my-3 text-center fw-bold text-success">
-        {% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}
-      </div>
+      <ul id="successMsg"
+          class="messages my-3 text-center fw-bold text-success">
+        {% for message in messages %}<li class="alert alert-{{ message.tags }}">{{ message }}</li>{% endfor %}
+      </ul>
     {% endif %}
   </section>
   <section id="comments">
@@ -112,6 +113,7 @@
     {% if request.user.is_authenticated %}
       <form action="{% url "post-detail-page" post.slug %}"
             method="POST"
+            class="comment-form"
             id="comment-form">
         {% csrf_token %}
         {% for form_field in comment_form %}
