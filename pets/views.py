@@ -111,6 +111,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         self.success_url = reverse('post-detail-page', kwargs={
             'slug': form.instance.slug
         })
+        messages.success(self.request, f"The {form.instance.pet_name} post successfully updated")
         return super().form_valid(form)
 
     def test_func(self):
