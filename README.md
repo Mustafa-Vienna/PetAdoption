@@ -409,6 +409,10 @@ Additionally, I adapted Ibrahim’s approach for the top of my README.md file, u
 
 I also learned how to set up a custom 404 error page in my Django project by referencing his project, which improved the user experience by providing a helpful and consistent error page.
 
+---
+
+In the footer section of this project, code was adapted from [MDBootstrap](https://mdbootstrap.com/snippets/standard/mdbootstrap/2885120?view=side). The original code provided a responsive and modern footer layout. It was modified to align with the project's theme and requirements by adjusting styles, customizing the footer links and text to include relevant navigation, contact information, and social media links, and ensuring compatibility with the overall project design by integrating it with the `base.html` template and Bootstrap styles. The original code served as an excellent starting point, and the modifications helped tailor it to meet the specific needs of this project.
+
 ### Acknowledgements
 
 #### Luke
