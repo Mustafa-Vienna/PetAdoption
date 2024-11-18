@@ -2,6 +2,11 @@
 {% block content %}
   <div class="row justify-content-center d-flex flex-grow-1 my-5 min-vh-100">
     <div class="col-11 col-md-6 mx-auto mt-5">
+      {% if messages %}
+        <div class="alert alert-success" id="successMsg">
+          {% for message in messages %}{{ message }}{% endfor %}
+        </div>
+      {% endif %}
       <h2>You Have Been Logged Out</h2>
       <div class="border-top py-5">
         <small class="text-muted">

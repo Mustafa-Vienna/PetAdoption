@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, authenticate, login
+from django.contrib import messages
 
 from .forms import UserRegisterForm
 
@@ -34,5 +35,7 @@ class RegisterView(View):
 
 @login_required
 def user_logout(request):
+    username = request.user.username
     logout(request)
+    messages.success(request, f"{username} was logged out successfully")
     return render(request, 'users/logout.html')
