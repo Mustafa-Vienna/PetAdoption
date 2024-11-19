@@ -236,10 +236,10 @@
 
 [Kanban Board (USER STORY: Community Feedback Display)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662394&issue=Mustafa-Vienna%7CPetAdoption%7C24)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US20-TS01|Verify community feedback section for no comments|Check the "Community Feedback" section on a post with no comments.|The message "Be the first to share your thoughts on this post" is displayed.|Pass|
-|US20-TS02|Verify display of existing comments|Check the "Community Feedback" section on a post with comments.|Comments are displayed with the author’s name, date-time, and comment text.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US20-TS01|Verify community feedback section for no comments|Check the "Community Feedback" section on a post with no comments.|The message "Be the first to share your thoughts on this post" is displayed.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US20-TS01.png) |
+|US20-TS02|Verify display of existing comments|Check the "Community Feedback" section on a post with comments.|Comments are displayed with the author’s name, date-time, and comment text.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US20-TS02.png) |
 
 ---
 
@@ -247,10 +247,10 @@
 
 [Kanban Board (USER STORY: Leave Your Comment Section for Logged-In Users)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662393&issue=Mustafa-Vienna%7CPetAdoption%7C25)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US21-TS01|Verify pre-filled username in the comment form|Log in and check the "Leave Your Comment" section on a post detail page.|The form displays the logged-in user’s name above the text area.|Pass|
-|US21-TS02|Verify functionality of the comment form|Write a comment in the text area and submit the form.|The comment is published and displayed in the "Community Feedback" section.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US21-TS01|Verify pre-filled username in the comment form|Log in and check the "Leave Your Comment" section on a post detail page.|The form displays the logged-in user’s name above the text area.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US21-TS01.png) |
+|US21-TS02|Verify functionality of the comment form|Write a comment in the text area and submit the form.|The comment is published and displayed in the "Community Feedback" section.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US21-TS02.png) |
 
 ---
 
@@ -258,10 +258,10 @@
 
 [Kanban Board (USER STORY: View All Posts with Pagination and Consistent Layout)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662832&issue=Mustafa-Vienna%7CPetAdoption%7C26)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US22-TS01|Verify pagination controls on All Posts page|Navigate to the All Posts page.|The page displays six posts per page with "Next" and "Previous" buttons.|Pass|
-|US22-TS02|Verify navigation between pages|Click the "Next" or "Previous" buttons.|The user is navigated to the respective pages.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US22-TS01|Verify pagination controls on All Posts page|Navigate to the All Posts page.|The page displays six posts per page with "Next" and "Previous" buttons.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US22-TS01.png) |
+|US22-TS02|Verify navigation between pages|Click the "Next" or "Previous" buttons.|The user is navigated to the respective pages.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US22-TS02.png) |
 
 ---
 
@@ -269,11 +269,11 @@
 
 [Kanban Board (USER STORY: Responsive Layout for All Posts Page)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662833&issue=Mustafa-Vienna%7CPetAdoption%7C27)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US23-TS01|Verify layout on large screens|View the All Posts page on a large screen.|The page displays posts in two rows with three posts per row.|Pass|
-|US23-TS02|Verify layout on medium screens|View the All Posts page on a medium screen.|The page displays posts in three rows with two posts per row.|Pass|
-|US23-TS03|Verify layout on small screens|View the All Posts page on a small screen.|The page displays one post per row.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US23-TS01|Verify layout on large screens|View the All Posts page on a large screen.|The page displays posts in two rows with three posts per row.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US22-TS01.png) |
+|US23-TS02|Verify layout on medium screens|View the All Posts page on a medium screen.|The page displays posts in three rows with two posts per row.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US23-TS02.png) |
+|US23-TS03|Verify layout on small screens|View the All Posts page on a small screen.|The page displays one post per row.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US23-TS03.png) |
 
 ---
 
@@ -281,8 +281,8 @@
 
 [Kanban Board (USER STORY: Custom 404 Error Page)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604162&issue=Mustafa-Vienna%7CPetAdoption%7C8)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US24-TS01|Verify custom 404 error page display|Navigate to a non-existent URL.|The 404 error page is displayed with a message like "Oops! This page doesn't exist."|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US24-TS01|Verify custom 404 error page display|Navigate to a non-existent URL.|The 404 error page is displayed with a message like "Oops! This page doesn't exist."|Pass|  ![Screenshot](readme_assets/images/manual_testing/US24-TS01.png) |
 |US24-TS02|Verify homepage link on 404 error page|Click the homepage link on the 404 error page.|The user is redirected to the homepage.|Pass|
 |US24-TS03|Verify consistency of 404 page layout|Inspect the layout of the 404 error page.|The 404 page uses the base.html template for consistent styling.|Pass|
