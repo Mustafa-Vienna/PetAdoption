@@ -108,11 +108,11 @@
 
 [Kanban Board (USER STORY: Latest Posts Section)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604157&issue=Mustafa-Vienna%7CPetAdoption%7C14)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US10-TS01|Verify the display of the latest posts|Navigate to the homepage as a visitor.|Three recent posts with images, descriptions, and timestamps are displayed in the latest posts section.|Pass|
-|US10-TS02|Verify clickable post cards|Click on a post card in the latest posts section.|The user is redirected to the respective post’s detailed page.|Pass|
-|US10-TS03|Verify "View All Posts" link|Click the "View All Posts" link in the latest posts section.|The user is redirected to the full posts page.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US10-TS01|Verify the display of the latest posts|Navigate to the homepage as a visitor.|Three recent posts with images, descriptions, and timestamps are displayed in the latest posts section.|Pass| ![Screenshot](readme_assets/images/manual_testing/US10-TS01.png) |
+|US10-TS02|Verify clickable post cards|Click on a post card in the latest posts section.|The user is redirected to the respective post’s detailed page.|Pass| ![Screenshot](readme_assets/images/manual_testing/US10-TS02.png) |
+|US10-TS03|Verify "View All Posts" link|Click the "View All Posts" link in the latest posts section.|The user is redirected to the full posts page.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US10-TS03.png) |
 
 ---
 
@@ -120,9 +120,9 @@
 
 [Kanban Board (USER STORY: Testimonials Section)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604158&issue=Mustafa-Vienna%7CPetAdoption%7C15)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US11-TS01|Verify the display of testimonials|Navigate to the testimonials section on the homepage.|The testimonials section displays user names and their feedback messages.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US11-TS01|Verify the display of testimonials|Navigate to the testimonials section on the homepage.|The testimonials section displays user names and their feedback messages.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US11-TS01.png) |
 |US11-TS02|Verify readability of testimonials|Inspect the layout and style of the testimonials.|Each testimonial is styled for readability.|Pass|
 
 ---
@@ -143,13 +143,13 @@
 
 [Kanban Board (USER STORY: Access Add Post Page via Navbar and About Section)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604156&issue=Mustafa-Vienna%7CPetAdoption%7C17)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
 |US13-TS01|Verify navigation bar link to Add Post page|Log in as a registered user and click the "Add Post" link in the navigation bar.|The user is redirected to the post creation page.|Pass|
 |US13-TS02|Verify "Post Your Pet" card button functionality|Log in as a registered user and click the "Publish Post" button on the "Post Your Pet" card in the about section.|The user is redirected to the post creation page.|Pass|
-|US13-TS03|Verify the post creation form fields|Navigate to the Add Post page and inspect the form fields.|The form contains fields for title, pet_name, pet_age, excerpt, image, and content.|Pass|
-|US13-TS04|Verify the Publish button functionality|Fill out the post creation form and click the "Publish" button.|The post is successfully saved and visible on the homepage.|Pass|
-|US13-TS05|Verify required field validations|Submit the post creation form with missing required fields.|Error messages are displayed for all required fields that are left empty.|Pass|
+|US13-TS03|Verify the post creation form fields|Navigate to the Add Post page and inspect the form fields.|The form contains fields for title, pet_name, pet_age, excerpt, image, and content.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US13-TS03.png) |
+|US13-TS04|Verify the Publish button functionality|Fill out the post creation form and click the "Publish" button.|The post is successfully saved and visible on the homepage.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US13-TS04.png) |
+|US13-TS05|Verify required field validations|Submit the post creation form with missing required fields.|Error messages are displayed for all required fields that are left empty.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US13-TS05.png) |
 
 ---
 
