@@ -7,16 +7,16 @@
 #### US01: As a new user, I can create an account so that I can access the pet adoption platform’s features, such as viewing and posting pets for adoption.
 [Kanban Board (USER STORY: User Registration)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604167&issue=Mustafa-Vienna%7CPetAdoption%7C5)
 
-| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** |
-|----------------------|--------------------|-------------------|---------------------|---------------|
-| US01-TS01 | Verify the registration form loads correctly | Open the registration page and confirm that username, email, and password fields are displayed. Verify the form uses `crispy` forms for layout. | The form is displayed with all fields, using a consistent and responsive layout. | Pass |
-| US01-TS02 | Test successful registration flow | Submit the form with a valid username, email, and password. | The user is successfully registered, logged in, and redirected to the main page. | Pass |
-| US01-TS03 | Test duplicate username or email validation | Submit the form with an existing username and/or email. | Error messages are displayed indicating duplicate username or email. | Pass |
-| US01-TS04 | Test weak password validation | Submit the form with a weak password (e.g., `12345`). | Error message indicates the password is too weak, and registration is rejected. | Pass |
-| US01-TS05 | Test invalid email format validation | Submit the form with an invalid email (e.g., `user@com` or `user@` or `user@gmailcom`). | Error message indicates an invalid email format, and registration is rejected. | Pass |
-| US01-TS06 | Test password mismatch validation | Submit the form with mismatched passwords in `password111` and `password222`. | Error message indicates passwords do not match, and registration is rejected. | Pass |
-| US01-TS07 | Check edge cases | Submit the form with empty fields, long strings, or special characters in the username/email fields. | Error messages are displayed for empty fields. Long strings are handled gracefully without breaking the application. | Pass |
-| US01-TS08 | Verify user name display on navbar after registration | Complete the registration form as a new user (e.g., `user1`). After redirection to the main page, check the navbar. | The navbar should display "Welcome: user1" for the logged-in user. | Pass |
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+| US01-TS01 | Verify the registration form loads correctly | Open the registration page and confirm that username, email, and password fields are displayed. Verify the form uses `crispy` forms for layout. | The form is displayed with all fields, using a consistent and responsive layout. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS01.png) |
+| US01-TS02 | Test successful registration flow | Submit the form with a valid username, email, and password. | The user is successfully registered, logged in, and redirected to the main page. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS02.png) |
+| US01-TS03 | Test duplicate username or email validation | Submit the form with an existing username and/or email. | Error messages are displayed indicating duplicate username or email. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS03.png) |
+| US01-TS04 | Test weak password validation | Submit the form with a weak password (e.g., `12345`). | Error message indicates the password is too weak, and registration is rejected. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS04.png) |
+| US01-TS05 | Test invalid email format validation | Submit the form with an invalid email (e.g., `user@com` or `user@` or `user@gmailcom`). | Error message indicates an invalid email format, and registration is rejected. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS05.png) |
+| US01-TS06 | Test password mismatch validation | Submit the form with mismatched passwords in `password111` and `password222`. | Error message indicates passwords do not match, and registration is rejected. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS06.png) |
+| US01-TS07 | Check edge cases | Submit the form with empty fields, long strings, or special characters in the username/email fields. | Error messages are displayed for empty fields. Long strings are handled gracefully without breaking the application. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS01.png) |![Screenshot](readme_assets/images/manual_testing/US01-TS07.png) |
+| US01-TS08 | Verify user name display on navbar after registration | Complete the registration form as a new user (e.g., `user1`). After redirection to the main page, check the navbar. | The navbar should display "Welcome: user1" for the logged-in user. | Pass | ![Screenshot](readme_assets/images/manual_testing/US01-TS08.png) |
 ---
 
 #### US02: As a registered user, I can log in to my account so that I can access the platform's features of the application.
