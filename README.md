@@ -413,6 +413,14 @@ I also learned how to set up a custom 404 error page in my Django project by ref
 
 In the footer section of this project, code was adapted from [MDBootstrap](https://mdbootstrap.com/snippets/standard/mdbootstrap/2885120?view=side). The original code provided a responsive and modern footer layout. It was modified to align with the project's theme and requirements by adjusting styles, customizing the footer links and text to include relevant navigation, contact information, and social media links, and ensuring compatibility with the overall project design by integrating it with the `base.html` template and Bootstrap styles. The original code served as an excellent starting point, and the modifications helped tailor it to meet the specific needs of this project.
 
+---
+
+For the **username and email validation**, I utilized code from [this StackOverflow post](https://stackoverflow.com/questions/61457903/django-usercreationform-raise-validation-error-when-email-already-exist) as a reference. The original code was modified to fit the specific requirements of this project.
+
+Credit to the StackOverflow community for the insightful solution.
+
+---
+
 ### Acknowledgements
 
 #### Luke
