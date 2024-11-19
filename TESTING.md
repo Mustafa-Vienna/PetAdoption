@@ -96,11 +96,11 @@
 
 [Kanban Board (USER STORY: About Section with Interactive Cards)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604159&issue=Mustafa-Vienna%7CPetAdoption%7C13)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US09-TS01|Verify the presence of interactive cards in the about section|Navigate to the about section.|Three cards (Post Your Pet, Pet Care Tips, Our Mission) are displayed with titles, descriptions, and buttons.|Pass|
-|US09-TS02|Verify hover effects on cards|Hover over each card in the about section.|Each card displays a hover effect for visual engagement.|Pass|
-|US09-TS03|Verify button functionality on cards|Click on the button for each card.|Each button navigates to its specific page: Post Your Pet, Pet Care Tips, or Our Mission.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US09-TS01|Verify the presence of interactive cards in the about section|Navigate to the about section.|Three cards (Post Your Pet, Pet Care Tips, Our Mission) are displayed with titles, descriptions, and buttons.|Pass| ![Screenshot](readme_assets/images/manual_testing/US09-TS01.png) |
+|US09-TS02|Verify hover effects on cards|Hover over each card in the about section.|Each card displays a hover effect for visual engagement.|Pass| ![Screenshot](readme_assets/images/manual_testing/US09-TS02.png) |
+|US09-TS03|Verify button functionality on cards|Click on the button for each card.|Each button navigates to its specific page: Post Your Pet, Pet Care Tips, or Our Mission.|Pass|   ![Screenshot](readme_assets/images/manual_testing/US09-TS03-mission.png) ![Screenshot](readme_assets/images/manual_testing/US09-TS03-petcare.png)  |
 
 ---
 
