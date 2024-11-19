@@ -286,3 +286,55 @@
 |US24-TS01|Verify custom 404 error page display|Navigate to a non-existent URL.|The 404 error page is displayed with a message like "Oops! This page doesn't exist."|Pass|  ![Screenshot](readme_assets/images/manual_testing/US24-TS01.png) |
 |US24-TS02|Verify homepage link on 404 error page|Click the homepage link on the 404 error page.|The user is redirected to the homepage.|Pass|
 |US24-TS03|Verify consistency of 404 page layout|Inspect the layout of the 404 error page.|The 404 page uses the base.html template for consistent styling.|Pass|
+---
+
+### Browser Compatibility
+
+In this section, we aim to ensure that the application performs seamlessly across various modern web browsers to provide a consistent user experience. The following browsers will be tested for compatibility:
+
+- **Google Chrome**  
+  Testing the latest version of Chrome to ensure smooth performance and accurate rendering of all features.
+
+- **Safari**  
+  Verifying the application’s functionality and responsiveness on Safari, particularly for macOS and iOS users.
+
+- **Mozilla Firefox**  
+  Testing the application on Firefox to ensure compatibility with its unique rendering engine and user preferences.
+
+- **Microsoft Edge**  
+  Checking the application’s performance and behavior on the latest version of Edge, a popular browser for Windows users.
+
+Each browser will be evaluated for key aspects such as layout, responsiveness, functionality, and interactive elements. This process ensures the application delivers a unified experience across platforms and devices.
+
+
+| **Browser** | **Version**  | **Index** | **All Posts** | **Post Detail** | **Result** |
+|-------------|--------------|-----------|---------------|-----------------|------------|
+| ![Chrome](https://img.shields.io/badge/Google%20Chrome-grey?logo=googlechrome&logoColor=red) | 131.0.6778.70 | ![Screenshot](readme_assets/images/browsers/google-index.png) | ![Screenshot](readme_assets/images/browsers/google-posts.png) | ![Screenshot](readme_assets/images/browsers/google-detail.png) | Fully responsive, all features work smoothly |
+| ![Safari](https://img.shields.io/badge/Safari-grey?logo=safari&logoColor=blue) | 18.0.1 (20619.1.26.31.7) | ![Screenshot](readme_assets/images/browsers/safari-index.png) | ![Screenshot](readme_assets/images/browsers/safari-posts.png) | ![Screenshot](readme_assets/images/browsers/safari-detail.png) | Fully responsive, all features work smoothly |
+| ![Firefox](https://img.shields.io/badge/Firefox-grey?logo=firefox&logoColor=orange) | 132.0.2 (aarch64) | ![Screenshot](readme_assets/images/browsers/firefox-index.png) | ![Screenshot](readme_assets/images/browsers/firefox-posts.png) | ![Screenshot](readme_assets/images/browsers/firefox-detail.png) | Fully responsive, all features work smoothly |
+| ![Edge](https://img.shields.io/badge/Microsoft%20Edge-grey?logo=microsoftedge&logoColor=blue) | 131.0.2903.51 | ![Screenshot](readme_assets/images/browsers/edge-index.png) | ![Screenshot](readme_assets/images/browsers/edge-posts.png) | ![Screenshot](readme_assets/images/browsers/edge-detail.png) | Fully responsive, all features work smoothly |
+---
+
+### Responsiveness
+
+The entire project was built using **Bootstrap 5.3.3**, which provided a powerful grid system and responsive utilities. Leveraging Bootstrap allowed for a quick start and saved significant development time, ensuring the website is fully responsive across different devices. 
+
+Key highlights:
+- **Efficient Development**: Bootstrap's pre-built components and rich features simplified the implementation of a mobile-first design.
+- **Responsive Grid System**: The grid system automatically adjusted layouts for various screen sizes without extensive customizations.
+- **Rich Features**: Built-in classes for margins, paddings, and utilities enhanced styling flexibility while maintaining a consistent design.
+
+### Device Testing
+
+The project was tested on various devices to ensure seamless responsiveness and user experience:
+
+| **Devices** | **Index** | **All Posts** | **Post Detail** | **Notes** |
+|-------------|-----------|---------------|-----------------|-----------|
+| ![Desktop](https://img.shields.io/badge/Desktop-grey?logo=apple&logoColor=0078D6) | ![Screenshot](readme_assets/images/browsers/google-index.png) | ![Screenshot](readme_assets/images/browsers/google-posts.png) | ![Screenshot](readme_assets/images/browsers/google-detail.png) | Fully responsive |
+| ![Tablet](https://img.shields.io/badge/Tablet-grey?logo=apple&logoColor=999999) | ![Screenshot](readme_assets/images/browsers/tablet-index.png) | ![Screenshot](readme_assets/images/browsers/tablet-posts.png) | ![Screenshot](readme_assets/images/browsers/tablet-detail.png) | Fully responsive |
+| ![iPhone 15 Pro Max](https://img.shields.io/badge/iPhone%2015%20Pro%20Max-grey?logo=apple&logoColor=000000) | ![Screenshot](readme_assets/images/browsers/mobile-index.PNG) | ![Screenshot](readme_assets/images/browsers/mobile.posts.PNG) | ![Screenshot](readme_assets/images/browsers/mobile-detail.PNG) | Fully responsive |
+
+
+### Conclusion
+
+Using **Bootstrap 5.3.3** ensured a fast and efficient development process while delivering a fully responsive, visually appealing, and user-friendly website. It provided all the necessary tools to adapt the project to various screen sizes effortlessly.
