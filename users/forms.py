@@ -28,6 +28,7 @@ class UserRegisterForm(UserCreationForm):
             raise forms.ValidationError(
                 format_html("This username already taken.<br>Please supply a different username!")
                 )
+        return username
 
     def clean_email(self):
         email = self.cleaned_data.get("email")
