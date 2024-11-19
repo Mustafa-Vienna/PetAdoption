@@ -157,10 +157,10 @@
 
 [Kanban Board (USER STORY: View Full Post Details)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662400&issue=Mustafa-Vienna%7CPetAdoption%7C18)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
 |US14-TS01|Verify post detail page displays complete content|Navigate to the post detail page as a visitor.|The page displays the image, title, pet details (e.g., name, age), and full description.|Pass|
-|US14-TS02|Verify accessibility of post detail page for visitors|Access a post detail page without logging in.|The post detail page is accessible without requiring login.|Pass|
+|US14-TS02|Verify accessibility of post detail page for visitors|Access a post detail page without logging in.|The post detail page is accessible without requiring login.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US14-TS02.png) |
 
 ---
 
@@ -206,16 +206,16 @@
 
 [Kanban Board (USER STORY: View and Interact with Post as a Logged-In User)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662398&issue=Mustafa-Vienna%7CPetAdoption%7C22)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US18-TS01|Verify initial like button state for logged-in users|Check the like button on the post detail page.|The like button appears as a gray heart if the user hasn’t liked the post.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US18-TS01|Verify initial like button state for logged-in users|Check the like button on the post detail page.|The like button appears as a gray heart if the user hasn’t liked the post.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS01.png) |
 |US18-TS02|Verify like functionality updates icon and count|Click the gray heart icon as a logged-in user.|The icon changes to a red heart, and the like count is incremented.|Pass|
 |US18-TS03|Verify like count messages when no one has liked the post|View the like count message on a post with no likes.|The message displays: "0 users like this post."|Pass|
-|US18-TS04|Verify like count message when the logged-in user is the first to like|Like a post that has no likes.|The message displays: "1 - You like this post."|Pass|
-|US18-TS05|Verify like count message when the logged-in user and one other person have liked|Like a post that already has one like.|The message displays: "2 - You and 1 other user like this post."|Pass|
-|US18-TS06|Verify like count message when the logged-in user and multiple others have liked|Like a post that already has multiple likes.|The message displays: "You and X other users like this post." where X is the number of additional users.|Pass|
-|US18-TS07|Verify like count message when only one other user has liked the post|View a post with one like from another user.|The message displays: "1 user likes this post."|Pass|
-|US18-TS08|Verify like count message when multiple users (excluding logged-in user) have liked|View a post with multiple likes from other users.|The message displays: "X users like this post." where X is the total number of other users.|Pass|
+|US18-TS04|Verify like count message when the logged-in user is the first to like|Like a post that has no likes.|The message displays: "1 - You like this post."|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS04.png) |
+|US18-TS05|Verify like count message when the logged-in user and one other person have liked|Like a post that already has one like.|The message displays: "2 - You and 1 other user like this post."|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS05.png) |
+|US18-TS06|Verify like count message when the logged-in user and multiple others have liked|Like a post that already has multiple likes.|The message displays: "You and X other users like this post." where X is the number of additional users.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS06.png) |
+|US18-TS07|Verify like count message when only one other user has liked the post|View a post with one like from another user.|The message displays: "1 user likes this post."|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS07.png) |
+|US18-TS08|Verify like count message when multiple users (excluding logged-in user) have liked|View a post with multiple likes from other users.|The message displays: "X users like this post." where X is the total number of other users.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US18-TS08.png) |
 
 ---
 
@@ -223,12 +223,12 @@
 
 [Kanban Board (USER STORY: Ownership Controls for Post Owner)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86662397&issue=Mustafa-Vienna%7CPetAdoption%7C23)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US19-TS01|Verify visibility of update and delete buttons for post owner|Log in as the post owner and navigate to the post detail page.|"Update Post" and "Delete Post" buttons are visible only for the post owner.|Pass|
-|US19-TS02|Verify absence of update and delete buttons for non-owners|Log in as a non-owner or view as a visitor and navigate to the post detail page.|The "Update Post" and "Delete Post" buttons are not visible to non-owners or visitors.|Pass|
-|US19-TS03|Verify delete functionality|Click the "Delete Post" button, confirm the action, and check the posts list.|The post is removed from the list after deletion.|Pass|
-|US19-TS04|Verify update functionality|Click the "Update Post" button, modify the post details, and save.|The post details are updated successfully.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US19-TS01|Verify visibility of update and delete buttons for post owner|Log in as the post owner and navigate to the post detail page.|"Update Post" and "Delete Post" buttons are visible only for the post owner.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US19-TS01.png) |
+|US19-TS02|Verify absence of update and delete buttons for non-owners|Log in as a non-owner or view as a visitor and navigate to the post detail page.|The "Update Post" and "Delete Post" buttons are not visible to non-owners or visitors.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US19-TS02.png) |
+|US19-TS03|Verify delete functionality|Click the "Delete Post" button, confirm the action, and check the posts list.|The post is removed from the list after deletion.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US19-TS03-before-deletion.png) ![Screenshot](readme_assets/images/manual_testing/US19-TS03-delete-alert.png) ![Screenshot](readme_assets/images/manual_testing/US19-TS03-after-deletion.png) |
+|US19-TS04|Verify update functionality|Click the "Update Post" button, modify the post details, and save.|The post details are updated successfully.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US19-TS04-before-updated-age.png)  ![Screenshot](readme_assets/images/manual_testing/US19-TS04-updated-age.png) |
 
 ---
 
