@@ -22,6 +22,7 @@ class RegisterView(View):
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
+            messages.success(request, f"Account created for {username}")
             if user is not None:
                 login(request, user)
                 next_url = request.GET.get('next')

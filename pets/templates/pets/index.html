@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="{% static "pets/styles/includes/testimonials.css" %}">
 {% endblock css_files %}
 {% block content %}
+  {% if messages %}
+    <div class="alert alert-success text-center" id="successMsg">
+      {% for message in messages %}{{ message }}{% endfor %}
+    </div>
+  {% endif %}
   <!-- home section starts  -->
   <section class="py-3" id="home">
     <div class="container-fluid">
