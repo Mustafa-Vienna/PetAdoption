@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="{% static "pets/styles/includes/post.css" %}">
 {% endblock css_files %}
 {% block content %}
+  {% if messages %}
+    <div class="alert alert-success text-center" id="successMsg">
+      {% for message in messages %}{{ message }}{% endfor %}
+    </div>
+  {% endif %}
   <section id="posts">
     <h2 class="py-2 text-center">
       The latest Post
