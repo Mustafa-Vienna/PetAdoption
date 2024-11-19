@@ -11,7 +11,9 @@
 {% block content %}
   {% if messages %}
     <div class="alert alert-success text-center" id="successMsg">
-      {% for message in messages %}{{ message }}{% endfor %}
+      {% for message in messages %}
+        {{ message }} <span class="text-warning"><i class="fa-solid fa-medal"></i></span>
+      {% endfor %}
     </div>
   {% endif %}
   <!-- home section starts  -->
