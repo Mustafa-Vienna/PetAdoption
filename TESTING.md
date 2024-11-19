@@ -73,12 +73,11 @@
 
 [Kanban Board (USER STORY: Visitor Access with Limited Functionality and Navigation)](https://github.com/users/Mustafa-Vienna/projects/6/views/1?pane=issue&itemId=86604161&issue=Mustafa-Vienna%7CPetAdoption%7C11)
 
-|**Test Scenario ID**|**Test Scenario**|**Steps to Test**|**Expected Result**|**Pass/Fail**|
-|--------------------|-----------------|-----------------|-------------------|-------------|
-|US07-TS01|Verify index page accessibility for visitors|Open the index page as a non-logged-in visitor.|The index page displays all posts with details (title, image, description, timestamp).|Pass|
-|US07-TS02|Verify navigation bar for visitors|Open the website as a visitor. Check the navigation bar.|The navigation bar displays "Sign In" and "Sign Up" buttons for visitors and hides "Create Post," "Comment," and "Like" options.|Pass|
-|US07-TS03|Verify prompts for interactive features|On the index page, check disabled interactive elements like "Like" or "Comment."|Interactive features are disabled or hidden with a message such as "Log in to interact with posts."|Pass|
-|US07-TS04|Verify navigation to login and registration pages|Click on "Sign In" or "Sign Up" in the navigation bar.|The visitor is redirected to the login or registration page.|Pass|
+| **Test Scenario ID** | **Test Scenario**  | **Steps to Test** | **Expected Result** | **Pass/Fail** | **Screenshots** |
+|----------------------|--------------------|-------------------|---------------------|---------------|-----------------|
+|US07-TS01|Verify index page accessibility for visitors|Open the index page as a non-logged-in visitor.|The index page displays all posts with details (title, image, description, timestamp).|Pass| ![Screenshot](readme_assets/images/manual_testing/US07-TS01.png) |
+|US07-TS02|Verify navigation bar for visitors|Open the website as a visitor. Check the navigation bar.|The navigation bar displays "Sign In" and "Sign Up" buttons for visitors and hides "Create Post," "Comment," and "Like" options.|Pass| ![Screenshot](readme_assets/images/manual_testing/US07-TS02.png) |
+|US07-TS03|Verify navigation to login and registration pages|Click on "Sign In" or "Sign Up" in the navigation bar.|The visitor is redirected to the login or registration page.|Pass|  ![Screenshot](readme_assets/images/manual_testing/US01-TS01.png) ![Screenshot](readme_assets/images/manual_testing/US02-TS01.png)  |
 
 ---
 
