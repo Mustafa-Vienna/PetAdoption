@@ -35,6 +35,9 @@ html {
 body {
   background-color: hsla(203, 39%, 67%, 0.81);
   color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -52,4 +55,8 @@ h3 {
 #main-navigation a:hover,
 #main-navigation a:active {
   color: var(--highlight-brown);
+}
+
+footer {
+  bottom: 0;
 }
