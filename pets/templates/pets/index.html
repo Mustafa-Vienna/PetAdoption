@@ -11,32 +11,34 @@
 {% block content %}
   <!-- home section starts  -->
   <section class="py-3" id="home">
-    <div class="row justify-content-evenly align-middle">
-      <!-- here data-aos is used for adding aos animation  -->
-      <div class="col-10 col-md-6 text-center text-md-start welcome"
-           data-aos="slide-right"
-           data-aos="flip-up"
-           data-aos-duration="1000"
-           data-aos-easing="ease-in-out"
-           data-aos-offset="200">
-        <h1 class="py-2 text-center">
-          Hello!
-          <br>
-          Welcome to
-          <span class="span-color fw-bold">Pet Adoption <i class="fa-solid fa-paw"></i></span>
-        </h1>
-        <p class="text-muted fs-5 py-3">
-          Where we help pets find loving homes. With years of experience, we're dedicated to connecting pets in need with families ready to give them a new beginning. Let's find the perfect companion for you today!
-        </p>
-        <p class="text-muted fs-5">
-          <strong>At Pet Adoption</strong>, we believe every pet deserves a loving home <i class="fa-solid fa-house"></i>.
-          <br>
-          Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
-        </p>
-        <a href="#About Us" class="link ms-4 d-none"></a>
-      </div>
-      <div class="col-10 col-md-5 d-none d-md-block">
-        <img src="{% static "pets/images/main_pic.webp" %}" class="img-fluid rounded-5 shadow-sm p-2 mb-5 " data-aos="slide-left" alt="pet with new family" />
+    <div class="container-fluid">
+      <div class="row justify-content-evenly align-middle">
+        <!-- here data-aos is used for adding aos animation  -->
+        <div class="col-10 col-md-6 text-center text-md-start welcome"
+             data-aos="slide-right"
+             data-aos="flip-up"
+             data-aos-duration="1000"
+             data-aos-easing="ease-in-out"
+             data-aos-offset="200">
+          <h1 class="py-2 text-center">
+            Hello!
+            <br>
+            Welcome to
+            <span class="span-color fw-bold">Pet Adoption <i class="fa-solid fa-paw"></i></span>
+          </h1>
+          <p class="text-muted fs-5 py-3">
+            Where we help pets find loving homes. With years of experience, we're dedicated to connecting pets in need with families ready to give them a new beginning. Let's find the perfect companion for you today!
+          </p>
+          <p class="text-muted fs-5">
+            <strong>At Pet Adoption</strong>, we believe every pet deserves a loving home <i class="fa-solid fa-house"></i>.
+            <br>
+            Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
+          </p>
+          <a href="#About Us" class="link ms-4 d-none"></a>
+        </div>
+        <div class="col-10 col-md-5 d-none d-md-block">
+          <img src="{% static "pets/images/main_pic.webp" %}" class="img-fluid rounded-5 shadow-sm p-2 mb-5 " data-aos="slide-left" alt="pet with new family" />
+        </div>
       </div>
     </div>
   </section>

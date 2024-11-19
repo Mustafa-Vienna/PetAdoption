@@ -29,6 +29,7 @@
 
 html {
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 body {
