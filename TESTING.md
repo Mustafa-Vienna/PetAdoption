@@ -1,5 +1,8 @@
 # Pet Adoption - Testing
 
+> [!NOTE]
+> Return back to the [README.md](README.md) file
+
 ## Manual Testing
 
 ### Test Scenarios for User Stories
@@ -338,3 +341,85 @@ The project was tested on various devices to ensure seamless responsiveness and 
 ### Conclusion
 
 Using **Bootstrap 5.3.3** ensured a fast and efficient development process while delivering a fully responsive, visually appealing, and user-friendly website. It provided all the necessary tools to adapt the project to various screen sizes effortlessly.
+---
+
+## Code Validation
+
+### HTML 
+
+I have validated all HTML files using the recommended [HTML W3C Validator](https://validator.w3.org) to ensure they meet current web standards and best practices.
+
+| **HTML Files Name** | **Validation Screenshot**  | **Comments** |
+|---------------------|----------------------------|--------------|
+| `base.html` | ![base validation](readme_assets/images/code_validation/base-validation.png) | Passed with no issues|
+| `footer.html` | ![footer validation](readme_assets/images/code_validation/footer-validation.png) | Passed with no issues|
+| `nav.html` | ![nav validation](readme_assets/images/code_validation/nav-validation.png) | Passed with no issues|
+| `404.html` | ![404 validation](readme_assets/images/code_validation/404-validation.png) | Passed with no issues|
+| `login.html` | ![login validation](readme_assets/images/code_validation/login-validation.png) | Passed with no issues|
+| `logout.html` | ![logout validation](readme_assets/images/code_validation/logout-validation.png) | Passed with no issues|
+| `register.html` | ![register validation](readme_assets/images/code_validation/register-validation.png) | Passed with no issues|
+| `index.html` | ![index validation](readme_assets/images/code_validation/index-validation.png) | Passed with no issues|
+| `posts.html` | ![posts validation](readme_assets/images/code_validation/posts-validation.png) | Passed with no issues|
+| `post.html` | ![post validation](readme_assets/images/code_validation/post-validation.png) | Passed with no issues|
+| `post-detail.html` | ![post-detail validation](readme_assets/images/code_validation/post-detail-validation.png) | Passed with no issues|
+| `create-post.html` | ![create-post validation](readme_assets/images/code_validation/create-post-validation.png) | Passed with no issues|
+| `delete-post.html` | ![delete-post validation](readme_assets/images/code_validation/delete-post-validation.png) | Passed with no issues|
+| `about.html` | ![about validation](readme_assets/images/code_validation/about-validation.png) | Passed with no issues|
+| `testimonials.html` | ![testimonials validation](readme_assets/images/code_validation/testimonials-validation.png) | Passed with no issues|
+| `like-post.html` | ![like-post validation](readme_assets/images/code_validation/like-post-validation.png) | Passed with no issues|
+| `our-mission.html` | ![our-mission validation](readme_assets/images/code_validation/our-mission-validation.png) | Passed with no issues|
+| `pet-care.html` | ![pet-care validation](readme_assets/images/code_validation/pet-care-validation.png) | Passed with no issues|
+---
+
+### CSS
+
+I primarily used Bootstrap 5.3.3 for styling across the project templates, complemented by custom CSS for specific components and layouts. Additionally, I employed LESS CSS for modular and reusable styles where applicable. To ensure compliance with current standards and best practices, I validated all custom CSS files using the recommended [CSS jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+
+| **CSS Files Name** | **Validation Screenshot**  | **Comments** |
+|---------------------|----------------------------|--------------|
+| `base.css` | ![base validation](readme_assets/images/code_validation/css-validation/base.png) | Passed with no issues|
+| `index.css` | ![index validation](readme_assets/images/code_validation/css-validation/index.png) | Passed with no issues|
+| `posts.css` | ![posts validation](readme_assets/images/code_validation/css-validation/posts.png) | Passed with no issues|
+| `post.css` | ![post validation](readme_assets/images/code_validation/css-validation/post.png) | Passed with no issues|
+| `post-detail.css` | ![post-detail validation](readme_assets/images/code_validation/css-validation/post-detail.png) | Passed with no issues|
+| `testimonials.css` | ![testimonials validation](readme_assets/images/code_validation/css-validation/testimonials.png) | Passed with no issues|
+| `pet-care.css` | ![pet-care validation](readme_assets/images/code_validation/css-validation/pet-care.png) | Passed with no issues|
+---
+
+### JavaScript
+
+In this project, I utilized both **JavaScript** and **jQuery** for various functionalities:
+
+- **JavaScript**: Primarily used for Bootstrap components and DOM manipulation, such as tooltips.
+- **jQuery**: Implemented custom functionality, including form handling and UI effects.
+
+To ensure code quality and adherence to best practices, I validated my custom JavaScript and jQuery code using the recommended [JSHint Validator](https://jshint.com).
+
+| **Script Type** | **Validation Screenshot**  | **Comments** |
+|-----------------|----------------------------|--------------|
+| `javaScript Code` | ![base validation](readme_assets/images/code_validation/js-validation.png) | Tooltip functionality directly copied from the [Bootstrap Documentation](https://getbootstrap.com/docs/5.2/components/tooltips/). |
+| `jquery Code` | ![base validation](readme_assets/images/code_validation/jquery-validation.png) | This code ensures that success messages fade out after 3 seconds and resets the first comment form on the page, enhancing the user experience. |
+---
+#### Script.js:
+1. **JavaScript (Bootstrap)**:
+   - 
+   ```javascript
+   const tooltipTriggerList = document.querySelectorAll(
+     '[data-bs-toggle="tooltip"]'
+   );
+   const tooltipList = [...tooltipTriggerList].map(
+     (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+   );
+   ```
+
+2. **jQuery**:
+   - 
+    ```jquery
+    $(document).ready(() => {
+      setTimeout(() => {
+        $("#successMsg").fadeOut().empty();
+      }, 3000);
+      $(".comment-form")[0]?.reset();
+    });
+    ```
+  ----
