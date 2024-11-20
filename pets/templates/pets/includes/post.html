@@ -1,8 +1,9 @@
+<!-- Grid column for a recent post card with animations -->
 <div class="col-sm-10 col-md-6 col-lg-4 mb-3 g-5 recent "
      data-aos="fade-up"
-     data-aos="flip-up"
      data-aos-duration="1000"
      data-aos-easing="ease-in-out">
+  <!-- Card container with an image, title, excerpt, and metadata -->
   <div class="card p-3 h-100 d-flex flex-column rounded-4">
     <div class="ratio ratio-4x3">
       <img src="{{ post.image.url }}"
@@ -10,6 +11,7 @@
            class="card-img-top img-fluid rounded-4"
            loading="lazy">
     </div>
+    <!-- Content section with title, excerpt, and post details -->
     <div class="card-body d-flex flex-column px-4">
       <h4 class="card-title py-3 mb-2">
         <a href="{% url "post-detail-page" post.slug %}"
@@ -20,7 +22,7 @@
         <address class="fst-italic text-muted mb-2">
           By &nbsp;&nbsp;{{ post.author }}
         </address>
-        <time class="mb-2">Published: {{ post.date|date:"d M Y" }}</time>
+        <time class="mb-2" datetime="{{ post.date|date:'Y-m-d' }}">Published: {{ post.date|date:"d M Y" }}</time>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{% static "pets/styles/includes/testimonials.css" %}">
 {% endblock css_files %}
 {% block content %}
+  <!-- Section to display flash messages -->
   {% if messages %}
     <div class="alert alert-success text-center" id="successMsg">
       {% for message in messages %}
@@ -23,7 +24,6 @@
         <!-- here data-aos is used for adding aos animation  -->
         <div class="col-10 col-md-6 text-center text-md-start welcome"
              data-aos="slide-right"
-             data-aos="flip-up"
              data-aos-duration="1000"
              data-aos-easing="ease-in-out"
              data-aos-offset="200">
@@ -41,10 +41,9 @@
             <br>
             Our mission is to make the adoption process easy and rewarding for both pets and their new families. Explore our latest listings to find your perfect companion today!
           </p>
-          <a href="#About Us" class="link ms-4 d-none"></a>
         </div>
         <div class="col-10 col-md-5 d-none d-md-block">
-          <img src="{% static "pets/images/main_pic.webp" %}" class="img-fluid rounded-5 shadow-sm p-2 mb-5 " data-aos="slide-left" alt="pet with new family" />
+          <img src="{% static "pets/images/main_pic.webp" %}" class="img-fluid rounded-5 shadow-sm p-2 mb-5 " data-aos="slide-left" alt="pet with new family">
         </div>
       </div>
     </div>
@@ -66,6 +65,7 @@
          data-bs-title="Click to explore all posts"
          data-bs-placement="bottom">View All Posts</a>
     </div>
+    <!-- Section to display the latest 3 posts dynamically -->
     <div class="container-fluid">
       <div class="mt-3">
         <div class="row p-4 g-5">

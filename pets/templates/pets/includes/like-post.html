@@ -1,7 +1,9 @@
 {% load static %}
 <strong>
   {% if request.user.is_authenticated %}
+    <!-- Display like/unlike button for authenticated users -->
     {% if liked_by_user %}
+      <!-- Form for unliking a post -->
       <form action="{% url "like-post" post.slug %}"
             class="d-inline"
             method="POST">
@@ -14,6 +16,7 @@
         </button>
       </form>
     {% else %}
+      <!-- Form for liking a post -->
       <form action="{% url "like-post" post.slug %}"
             class="d-inline"
             method="POST">
@@ -27,6 +30,7 @@
       </form>
     {% endif %}
   {% else %}
+    <!-- Display login prompt for unauthenticated users -->
     <div class="pt-4 mt-3 px-4 fs-5">
       <small class="text-muted mb-3">Already have an account?
         <a href="{% url 'login' %}?next={{ request.path }}" class="ml-2 mx-2">Sign In</a>

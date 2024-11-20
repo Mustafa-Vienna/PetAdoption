@@ -4,13 +4,16 @@
   404 - Page Not Found
 {% endblock page_title %}
 {% block content %}
+  <!-- Main container for the 404 error message -->
   <div class="d-flex justify-content-center vh-100 mt-5">
     <div class="text-center">
+      <!-- Display the error title and description -->
       <h1 class="fw-bold display-3 py-5">
         <span class="text-danger">Oops!</span>&nbsp;&nbsp;<span class="text-danger"><i class="fa-solid fa-face-frown"></i></span>
         <br>
         This page doesn't exist
       </h1>
+      <!-- Button to navigate back to the main page -->
       <p class="display-4 fs-3 lead my-3">The page you are looking for not available ...</p>
       <a href="{% url "main-page" %}" class="btn btn-outline-success btn-lg">Visit Home Page</a>
     </div>

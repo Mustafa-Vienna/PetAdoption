@@ -1,4 +1,5 @@
 {% load static %}
+<!-- Main section with an introduction to the organization's purpose and values -->
 <div class="text-center mx-auto px-5 container-fluid">
   <h1>
     About Us  <i class="fa-solid fa-users"></i>
@@ -18,11 +19,12 @@
     Whether it's through adoption or support services, we strive to make every interaction as seamless and helpful as possible.
   </p>
 </div>
+<!-- Section displaying features of the organization -->
 <div class="row p-3"
      data-aos="fade-up"
-     data-aos="flip-up"
      data-aos-duration="1500"
      data-aos-easing="ease-in-out">
+  <!-- Card 1: Post Your Pet and details -->
   <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5">
     <div class="card p-3 h-100 d-flex flex-column rounded-5">
       <div class="card-body d-flex flex-column">
@@ -34,7 +36,7 @@
           Have a pet you can no longer care for? We are here to help you find a loving home. You can easily post your pet, and we will assist in matching them with the perfect family, ensuring the process is quick and stress-free.
         </p>
         <div class="button-container mt-auto">
-          <!-- I will add posts page link inside the href it will navigate posts page-->
+          <!-- Button linking to the post creation page -->
           <a href="{% url "create-post" %}"
              class="btn btn-primary px-3"
              data-bs-toggle="tooltip"
@@ -44,6 +46,7 @@
       </div>
     </div>
   </div>
+  <!-- Card 2: Pet Care Tips and details -->
   <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5">
     <div class="card p-3 h-100 d-flex flex-column rounded-5">
       <div class="card-body d-flex flex-column">
@@ -54,6 +57,7 @@
         <p class="card-text mt-3 mx-2">
           Caring for a pet is a big responsibility. Learn how to properly care for your pet, from choosing the right food to understanding their health needs. We provide essential tips to help you take the best care of your furry friend.
         </p>
+        <!-- Button linking to the Pet Care Tips page -->
         <div class="button-container mt-auto">
           <a href="{% url "pet-care-page" %}"
              class="btn btn-primary px-3"
@@ -64,6 +68,7 @@
       </div>
     </div>
   </div>
+  <!-- Card 3: Our Mission and details -->
   <div class="col-sm-12 col-md-6 col-lg-4 mb-3 g-5">
     <div class="card p-3 h-100 d-flex flex-column rounded-5">
       <div class="card-body d-flex flex-column">
@@ -74,6 +79,7 @@
         <p class="card-text mt-3 mx-2">
           At Pet Adoption, we work tirelessly to ensure that every pet finds a home where they are loved and cared for. Our vision is to create a world where no pet is left behind, and every animal has the opportunity for a better life.
         </p>
+        <!-- Button linking to the Our Mission page -->
         <div class="button-container mt-auto">
           <a href="{% url "our-mission-page" %}"
              class="btn btn-primary px-3"

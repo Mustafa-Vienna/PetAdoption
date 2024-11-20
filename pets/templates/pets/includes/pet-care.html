@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="{% static "pets/styles/includes/pet-care.css" %}">
 {% endblock css_files %}
 {% block content %}
+  <!-- Introduction section with a brief overview of pet care tips -->
   <div class="container page-text"
        data-aos="slide-right"
-       data-aos="flip-up"
        data-aos-duration="1000"
        data-aos-easing="ease-in-out"
        data-aos-offset="200">
@@ -29,10 +29,12 @@
       </p>
     </div>
   </div>
+  <!-- Section for displaying pet care topics dynamically -->
   <div class="container">
     <div class="row">
       {% for topic in topics.values %}
         <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+          <!-- Card for each pet care topic -->
           <div class="card p-3">
             <div class="ratio ratio-4x3">
               <img src="{% static topic.image %}"
@@ -55,6 +57,7 @@
                   </ul>
                 </div>
               </div>
+              <!-- Button to toggle the collapsible description -->
               <button class="btn btn-primary border-3 rounded-3 shadow-lg mt-auto"
                       type="button"
                       data-bs-toggle="collapse"

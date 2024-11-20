@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{% static "pets/styles/post-detail.css" %}">
 {% endblock css_files %}
 {% block content %}
+  <!-- Main section for displaying a single post and post details -->
   <section id="single-post">
     <div class="container">
       <div class="card mx-auto my-5 custom-card">
@@ -36,6 +37,7 @@
                 </p>
                 <hr>
                 <div class="buttons d-flex mb-3">
+                  <!-- Edit and delete buttons for post author -->
                   {% if request.user == post.author %}
                     <a href="{% url "delete-post" post.slug %}"
                        class="btn btn-outline-danger me-2"
@@ -49,9 +51,11 @@
                        data-bs-placement="bottom">Update Post</a>
                   {% endif %}
                 </div>
+                <!-- Display post content and publish date -->
                 <p class="date fst-italic">Published Date: {{ post.date|date:"d M, Y" }}</p>
                 <p class="card-text">{{ post.content | safe }}</p>
               </div>
+              <!-- Display like button and like counts -->
               <div class="text-center fs-1 bg-transparent border-0">
                 <span>{% include "pets/includes/like-post.html" %}</span>
                 {% if request.user.is_authenticated and liked_by_user %}
@@ -74,6 +78,7 @@
       </div>
     </div>
   </section>
+  <!-- Section to display flash messages -->
   <section id="comment-verified">
     {% if messages %}
       <ul id="successMsg" class="messages my-3 text-center fw-bold text-danger">
@@ -85,6 +90,7 @@
       </ul>
     {% endif %}
   </section>
+  <!-- Section for displaying existing comments -->
   <section id="comments">
     <h3 class="text-center my-3 fw-bold">Community Feedback</h3>
     <div class="text-muted text-center">
@@ -110,6 +116,7 @@
       </ul>
     </div>
   </section>
+  <!-- Section for adding a new comment -->
   <section id="comment-section" class="row mb-5 mx-auto">
     <h3 class="text-center my-1 fw-bold">Leave Your Comment</h3>
     <span class="my-3 fst-italic">Written by: {{ user.username }}</span>

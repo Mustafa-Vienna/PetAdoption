@@ -38,14 +38,18 @@
             {% endblock css_files %}
       </head>
       <body>
+            <!-- Navbar section start -->
             <header id="main-navigation">
                   {% include "nav.html" %}
             </header>
+            <!-- Navbar section ends here -->
             {% block content %}
             {% endblock content %}
+            <!-- Footer section start -->
             <footer class="text-white text-center text-lg-start bg-dark">
                   {% include "footer.html" %}
             </footer>
+            <!-- Footer section ends here -->
             <!-- JQuery CDN link -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <!-- Bootstrap Js CDN link -->
