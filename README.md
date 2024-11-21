@@ -306,6 +306,10 @@ The flowchart for the **Pet Adoption** application were created using [Lucid Cha
 
 - [![PEP8 Validator](https://img.shields.io/badge/PEP8_Validator-grey?logo=python&logoColor=A44200)](https://pep8ci.herokuapp.com/) - Used to validate Python code for compliance with PEP8 style guidelines
 
+- [![TinyPNG](https://img.shields.io/badge/TinyPNG-grey?logo=tinypng&logoColor=ffffff)](https://tinypng.com/) - Used to compress images for better performance and optimized file sizes.
+
+- [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-grey?logo=stackoverflow&logoColor=FE7A16)](https://stackoverflow.com/) - Used to research and resolve coding challenges encountered during development.
+
 [Go to Contents](#contents)
 
 

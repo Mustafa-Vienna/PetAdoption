@@ -320,7 +320,14 @@ Each browser will be evaluated for key aspects such as layout, responsiveness, f
 
 ### Responsiveness
 
-The entire project was built using **Bootstrap 5.3.3**, which provided a powerful grid system and responsive utilities. Leveraging Bootstrap allowed for a quick start and saved significant development time, ensuring the website is fully responsive across different devices. 
+The entire project was built using **Bootstrap 5.3.3**, which provided a powerful grid system and responsive utilities. Leveraging Bootstrap allowed for a quick start and saved significant development time, ensuring the website is fully responsive across different devices.
+
+#### Responsive Design Testing
+
+- Tested on various devices and screen sizes to ensure optimal user experience.
+- Used **Chrome DevTools** to emulate different devices and screen resolutions.
+- Performed physical testing on four different smartphones to validate the design and functionality on real mobile devices.
+- Verified layout and functionality across mobile, tablet, and desktop views.
 
 Key highlights:
 - **Efficient Development**: Bootstrap's pre-built components and rich features simplified the implementation of a mobile-first design.
@@ -419,8 +426,9 @@ To ensure code quality and adherence to best practices, I validated my custom Ja
 |-----------------|----------------------------|--------------|
 | `javaScript Code` | ![base validation](readme_assets/images/code_validation/js-validation.png) | Tooltip functionality directly copied from the [Bootstrap Documentation](https://getbootstrap.com/docs/5.2/components/tooltips/). |
 | `jquery Code` | ![base validation](readme_assets/images/code_validation/jquery-validation.png) | This code ensures that success messages fade out after 3 seconds and resets the first comment form on the page, enhancing the user experience. |
----
+
 #### Script.js:
+
 1. **JavaScript (Bootstrap)**:
    - 
    ```javascript
@@ -442,4 +450,25 @@ To ensure code quality and adherence to best practices, I validated my custom Ja
       $(".comment-form")[0]?.reset();
     });
     ```
-  ----
+  
+
+ ## Lighthouse Testing
+
+Lighthouse was utilized to evaluate the **performance**, **accessibility**, **best practices**, and **SEO** of the Green Local Veggies application.
+
+#### Testing Overview
+
+- Tests were conducted for both **desktop** , **tablet** and **mobile** views to ensure a comprehensive analysis.
+- The **performance score** was slightly lower on mobile views due to the number of images used in the project. 
+
+#### Image Optimization
+
+- All images were optimized for web use with relatively small file sizes and resolutions. However, the mobile performance could have been improved with additional techniques:
+  - **Lazy loading**: To defer loading images until they are visible on the screen.
+  - **Reduced resolution**: To serve smaller, device-specific image versions for mobile users.
+
+While these advanced optimizations were not implemented due to project time constraints, I focused on using Bootstrap 5.3.3 for styling throughout the project, which limited the use of custom techniques but provided valuable experience in working within the framework's capabilities. These areas are will added for future improvement.
+
+
+
+
