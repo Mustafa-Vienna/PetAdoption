@@ -465,10 +465,32 @@ Lighthouse was utilized to evaluate the **performance**, **accessibility**, **be
 
 - All images were optimized for web use with relatively small file sizes and resolutions. However, the mobile performance could have been improved with additional techniques:
   - **Lazy loading**: To defer loading images until they are visible on the screen.
-  - **Reduced resolution**: To serve smaller, device-specific image versions for mobile users.
+
+#### Lighthouse Testing: Best Practices
+
+- The **Best Practices score** was slightly affected on some pages due to user-uploaded images hosted on Cloudinary. Initially, these images were served over HTTP, which caused Lighthouse to flag them as insecure requests.
+
+- Lighthouse considers serving resources over HTTPS a critical factor in achieving high **Best Practices** scores, as HTTPS ensures secure communication and prevents potential tampering or passive listening.
+
+- After investigation, it was found that these HTTP requests were automatically upgraded to HTTPS by Cloudinary. Despite this, the initial HTTP requests still impacted the Lighthouse score before the upgrade.
+- Pages with all static assets served directly over HTTPS achieved higher scores.
+
+**Resolution:**
+- To avoid similar issues in the future, ensure that all uploaded images are explicitly served over HTTPS from the beginning. This can be achieved by configuring Cloudinary to enforce HTTPS for all resources.
 
 While these advanced optimizations were not implemented due to project time constraints, I focused on using Bootstrap 5.3.3 for styling throughout the project, which limited the use of custom techniques but provided valuable experience in working within the framework's capabilities. These areas are will added for future improvement.
 
 
-
+| **Page Name** | **Validation Screenshot**  | **Comments** |
+|---------------|----------------------------|--------------|
+| `Index Page` | ![base validation](readme_assets/images/lighthouse/index.png) | Passed with no issues|
+| `Posts Page` | ![posts validation](readme_assets/images/lighthouse/posts.png) | Mixed content detected, HTTP impacts Best Practices score |
+| `Post Detail page` | ![post detail validation](readme_assets/images/lighthouse/post_detail.png) |  Mixed content detected, HTTP impacts Best Practices score |
+| `Create Post Page` | ![create post validation](readme_assets/images/lighthouse/create_post.png) | Passed with no issues|
+| `Update Post Page` | ![update post validation](readme_assets/images/lighthouse/update.png) | Passed with no issues|
+| `Delete Post Page` | ![delete post validation](readme_assets/images/lighthouse/delete.png) | Passed with no issues|
+| `Pet Care Page` | ![pet care validation](readme_assets/images/lighthouse/pet_care.png) | Passed with no issues|
+| `Mission Page` | ![mission validation](readme_assets/images/lighthouse/mission.png) | Passed with no issues|
+| `Register Page` | ![register validation](readme_assets/images/lighthouse/register.png) | Passed with no issues|
+| `Login Page` | ![base validation](readme_assets/images/lighthouse/login.png) | Passed with no issues|
 
