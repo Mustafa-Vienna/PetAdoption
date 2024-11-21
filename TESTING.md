@@ -494,3 +494,32 @@ While these advanced optimizations were not implemented due to project time cons
 | `Register Page` | ![register validation](readme_assets/images/lighthouse/register.png) | Passed with no issues|
 | `Login Page` | ![base validation](readme_assets/images/lighthouse/login.png) | Passed with no issues|
 
+
+## Python (PEP8) Validation
+
+At the end of the project, all Python files were thoroughly validated to ensure adherence to PEP8 standards. The following tools were used:
+
+- **PEP8 CI Python Linter**: Custom Python files were validated using the [Code Institute PEP8 Validator](https://pep8ci.herokuapp.com/) to ensure compliance with PEP8 guidelines.
+
+This final validation step ensured that the code meets industry-standard best practices for readability and maintainability.
+
+**Results:**  
+All Python files passed the validation checks, confirming compliance with PEP8 standards.
+
+| **Directory Name** | **File Name** | **Validation Screenshot**  | **Comments** |
+|--------------------|---------------|----------------------------|--------------|
+| `Project Level ` |`manage.py` | ![manage.py validation](readme_assets/images/pep8/manage.png) | Passed with no issues |
+| `Project Folder ` |`settings.py` | ![manage.py validation](readme_assets/images/pep8/project_settings.png) | Formatting issues resolved |
+| `Project Folder ` |`urls.py` | ![urls.py validation](readme_assets/images/pep8/project_urls.png) | Code adjusted for line-length compliance |
+| `Users App ` |`views.py` | ![views.py validation](readme_assets/images/pep8/users_views.png) | Passed with no issues|
+| `Users App ` |`forms.py` | ![forms.py validation](readme_assets/images/pep8/users_forms.png) | Code adjusted for line-length compliance|
+| `Users App ` |`urls.py` | ![urls.py validation](readme_assets/images/pep8/users_urls.png) | Passed PEP8 validation |
+| `Pets App ` |`views.py` | ![views.py validation](readme_assets/images/pep8/pets_views.png) | Passed with no issues |
+| `Pets App ` |`urls.py` | ![urls.py validation](readme_assets/images/pep8/pets_urls.png) | Passed with no issues |
+| `Pets App ` |`topics_data.py` | ![topics_data.py validation](readme_assets/images/pep8/topics_data.png) | Code adjusted for line-length compliance |
+| `Pets App ` |`models.py` | ![models.py validation](readme_assets/images/pep8/pets_models.png) | Code adjusted for line-length compliance |
+| `Pets App ` |`forms.py` | ![forms.py validation](readme_assets/images/pep8/pets_forms.png) | Passed with no issues|
+| `Pets App ` |`admin.py` | ![admin.py validation](readme_assets/images/pep8/pets_admin.png) | Passed with no issues|
+
+> [!NOTE]
+> Return back to the [README.md](README.md) file
