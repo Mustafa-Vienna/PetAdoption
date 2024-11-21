@@ -1,5 +1,5 @@
 {% load static %}
-<strong>
+<div>
   {% if request.user.is_authenticated %}
     <!-- Display like/unlike button for authenticated users -->
     {% if liked_by_user %}
@@ -37,4 +37,4 @@
       </small>
     </div>
   {% endif %}
-</strong>
+</div>

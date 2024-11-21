@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %}
+{% block page_title %}
   Post Your Pet for Adoption
-{% endblock title %}
+{% endblock page_title %}
 {% block css_files %}
 {% endblock css_files %}
 {% block content %}
@@ -16,7 +16,9 @@
         </div>
       {% endif %}
       <h1>Post Your Pet for Adoption</h1>
-      <form action="" method="POST" enctype="multipart/form-data">
+      <form action="{{ request.path }}"
+            method="POST"
+            enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
         <button class="btn btn-secondary mt-3" type="submit">Publish</button>

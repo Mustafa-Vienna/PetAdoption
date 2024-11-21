@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}
+{% block page_title %}
   {{ post.title }}
-{% endblock title %}
+{% endblock page_title %}
 {% block css_files %}
   <link rel="stylesheet" href="{% static "pets/styles/post-detail.css" %}">
 {% endblock css_files %}
@@ -57,7 +57,7 @@
               </div>
               <!-- Display like button and like counts -->
               <div class="text-center fs-1 bg-transparent border-0">
-                <span>{% include "pets/includes/like-post.html" %}</span>
+                <div>{% include "pets/includes/like-post.html" %}</div>
                 {% if request.user.is_authenticated and liked_by_user %}
                   {% if post.likes.count == 1 %}
                     <small class="text-muted fs-5">{{ post.likes.count }} &nbsp;&nbsp; You liked this post</small>
@@ -80,15 +80,18 @@
   </section>
   <!-- Section to display flash messages -->
   <section id="comment-verified">
-    {% if messages %}
-      <ul id="successMsg" class="messages my-3 text-center fw-bold text-danger">
-        {% for message in messages %}
-          <li class="list-unstyled">
-            <span class="alert alert-{{ message.tags }} text-{{ message.tags }}">{{ message }}</span>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    <h3 class="visually-hidden">Display success message here!</h3>
+    <div class="text-success">
+      {% if messages %}
+        <ul id="successMsg" class="messages my-3 text-center fw-bold text-danger">
+          {% for message in messages %}
+            <li class="list-unstyled">
+              <span class="alert alert-{{ message.tags }} text-{{ message.tags }}">{{ message }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
   </section>
   <!-- Section for displaying existing comments -->
   <section id="comments">
@@ -98,23 +101,23 @@
         Be the first to share your thought on this post! &nbsp;&nbsp;<i class="fa-regular fa-comment-dots"></i>
       {% endif %}
     </div>
-    <div>
-      <ul>
-        {% for comment in comments %}
-          <li>
-            <h2>
-              <a href="mailto:{{ post.author.email }}"
-                 class="text-decoration-none text-muted"
-                 data-bs-toggle="tooltip"
-                 data-bs-title="Author Email Address: {{ post.author.email }}">{{ comment.author.username }}</a>
-            </h2>
-            <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
-            <p>{{ comment.text|linebreaks }}</p>
-            <div class="my-3">{{ comment.content }}</div>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <h2>
+            <a href="mailto:{{ post.author.email }}"
+               class="text-decoration-none text-muted"
+               data-bs-toggle="tooltip"
+               data-bs-title="Author Email Address: {{ post.author.email }}">{{ comment.author.username }}</a>
+          </h2>
+          <small class="text-muted">{{ comment.created_at|date:"d M, Y H:i:s" }}</small>
+          <div>
+            {{ comment.text|linebreaks }}
+            <span class="my-3">{{ comment.content }}</span>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
   </section>
   <!-- Section for adding a new comment -->
   <section id="comment-section" class="row mb-5 mx-auto">
