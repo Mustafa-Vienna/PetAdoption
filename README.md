@@ -50,6 +50,11 @@ The Pet Adoption application enables users to view available pets, post pet list
 
 1. [Features](#features)
 2. [User Experience (UX)](#user-experience-ux)
+   - [Design Choices](#design-choices)
+   - [Typography](#typography)
+   - [Imagery](#imagery)
+   - [User Stories](#user-stories)
+   - [Wireframe](#Wireframes)
 3. [Technologies Used](#technologies-used)
 4. [Agile Methodology](#agile-methodology)
 5. [Version Control](#version-control)
@@ -85,33 +90,6 @@ The Pet Adoption application enables users to view available pets, post pet list
 5. **Responsive Design**
    - The website is fully responsive, ensuring an optimal user experience across all devices, including mobile and desktop views.
 
-### Future Features
-
-- **User Account Management**
-
-  - Add functionality for users to edit their profiles, including resetting or updating their password. This will provide users with greater control over their account information and security.
-
-- **Enhanced Comment Section**
-
-  - Allow users to edit and delete their comments on posts, giving them flexibility in managing their interactions on the platform.
-
-- **Direct Contact Form for Adoption**
-
-  - Implement a direct contact form that enables potential adopters to reach out to the author of a pet post. This feature aims to streamline the adoption process by facilitating direct communication.
-
-- **Favorites List**
-
-  - Enable users to save posts to a “Favorites” list for easy access to pets they are interested in, allowing them to quickly revisit and manage potential adoption options.
-
-- **Draft Post Feature**
-
-  - Allow users to save posts as drafts in case they are unable to complete the listing in one session. A “Drafts” section will be available in the navigation bar, enabling users to continue and publish their saved posts when ready.
-
-- **Adoption Status Tracking**
-  - Add an adoption status indicator on each pet listing to inform users if the pet is still available or has been adopted. This feature will help users know the availability of each pet more clearly.
-- **User Activity Dashboard**
-  - Implement a dashboard where users can view all their recent activities, such as posts, comments, and interactions. This feature would provide users with a centralized overview of their contributions and engagement on the platform.
-
 [Go to Contents](#contents)
 
 ## User Experience (UX)
@@ -123,7 +101,8 @@ The Pet Adoption application enables users to view available pets, post pet list
 The color palette is crafted to evoke a warm, friendly, and welcoming atmosphere for users, with shades that convey trust, approachability, and growth. The primary colors include deep blues and greens to establish reliability, with coral red accents for calls-to-action that stand out, and soft neutral tones to create a calm backdrop. Each color was selected to enhance readability and visual appeal while maintaining a cohesive and approachable aesthetic.
 
 ![Color Screenshot](readme_assets/images/color.png)
----
+
+[Go to Contents](#contents)
 
 
 #### Typography
@@ -131,14 +110,56 @@ The color palette is crafted to evoke a warm, friendly, and welcoming atmosphere
 The primary font is **Roboto**, chosen for its readability and modern feel, providing a clean and professional look. **Open Sans** and **Lato** are used as secondary fonts, lending versatility across different text elements to enhance user experience.
 
 ![Font and color Screenshot](readme_assets/images/design.png)
----
+
+[Go to Contents](#contents)
+
 
 #### Imagery
 
 Images of pets are central to the platform, as they capture users' attention and provide key information about each pet.
 
 ![Latest Posts Screenshot](readme_assets/images/browsers/google-posts.png)
----
+
+[Go to Contents](#contents)
+
+
+#### User Stories
+
+- As a visitor, I can view all posts and their details so that I can learn about pets available for adoption.
+- As a visitor, I am restricted from liking posts, writing comments, or creating posts so that I am encouraged to register or log in.
+- As a visitor, I can see tags like *Hot*, *Fresh*, and *Featured* on posts so that I can quickly identify popular or new content.
+
+#### Registered Users
+- As a registered user, I can create posts for pets I want to give away so that I can help them find new homes.
+- As a registered user, I can like posts created by other users so that I can show support or interest in their posts.
+- As a registered user, I can write comments on posts so that I can engage with other users.
+- As a registered user, I can edit or delete my own posts so that I can keep them updated or remove them if needed.
+- As a registered user, I cannot see the edit or delete options for posts that I did not create so that only authors can manage their content.
+
+#### Authors (Post Creators)
+- As the author of a post, I can see edit and delete buttons on my posts so that I can manage my content directly.
+
+#### Admin Users
+- As an admin, I can delete or update any post so that I can ensure the platform remains safe and organized.
+- As an admin, I can moderate user interactions, including comments and likes, so that the community maintains a respectful environment.
+- As an admin, I can assign tags such as *Hot*, *Fresh*, or *Featured* to posts so that they are categorized and highlighted appropriately.
+  - *Hot*: For posts with more than 50 views.
+
+  ![Posts Wireframe](readme_assets/images/hot.png)
+
+
+  - *Fresh*: For newly created posts.
+
+  ![Posts Wireframe](readme_assets/images/fresh.png)
+
+
+  - *Featured*: For posts the admin wants to showcase prominently.
+
+  ![Posts Wireframe](readme_assets/images/hot_featured.png)
+  
+
+[Go to Contents](#contents)
+
 
 ### Wireframes
 
@@ -169,10 +190,10 @@ Home/Index Page
 
 ![Logout Wireframe](readme_assets/images/wireframes/logout-wireframe.webp)
 
-The wireframes for the **Pet Adoption** application were created using [Balsamiq](https://balsamiq.com/wireframes/)
+The wireframes for the **Pet Adoption** application were created using ![Balsamiq](https://balsamiq.com/wireframes/)
 
 [Go to Contents](#contents)
----
+
 
 ### Information Architecture
 
@@ -183,20 +204,9 @@ To provide a clear understanding of the structure and user flow of the **Green L
 The flowchart serves as a roadmap, highlighting the application's workflow from the user's initial interaction to the final outcome. It includes details such as navigation paths, user actions, and system responses, ensuring a comprehensive view of how the application functions.
 
 ![Pet Adoption Flowchart](readme_assets/images/flowchart.png)
----
-
-### User Stories
-
-#### New Users
-
-- As a new user, I want to register an account so I can list pets for adoption.
-- As a new user, I want to browse pet listings so I can find pets available for adoption.
-
-#### Admin Users
-
-- As an admin, I want to review all pet listings and user interactions to ensure a safe and welcoming environment.
 
 [Go to Contents](#contents)
+
 
 ## Technologies Used
 
@@ -450,6 +460,36 @@ For further details on specific test cases, results, and testing methodologies, 
 > **Note**: Please refer to the [TESTING.md](TESTING.md) file for all in-depth testing documentation, including individual test cases and their results.
 
 [Go to Contents](#contents)
+---
+
+## Known Issues and Future Features
+
+### Future Features
+
+- **User Account Management**
+
+  - Add functionality for users to edit their profiles, including resetting or updating their password. This will provide users with greater control over their account information and security.
+
+- **Enhanced Comment Section**
+
+  - Allow users to edit and delete their comments on posts, giving them flexibility in managing their interactions on the platform.
+
+- **Direct Contact Form for Adoption**
+
+  - Implement a direct contact form that enables potential adopters to reach out to the author of a pet post. This feature aims to streamline the adoption process by facilitating direct communication.
+
+- **Favorites List**
+
+  - Enable users to save posts to a “Favorites” list for easy access to pets they are interested in, allowing them to quickly revisit and manage potential adoption options.
+
+- **Draft Post Feature**
+
+  - Allow users to save posts as drafts in case they are unable to complete the listing in one session. A “Drafts” section will be available in the navigation bar, enabling users to continue and publish their saved posts when ready.
+
+- **Adoption Status Tracking**
+  - Add an adoption status indicator on each pet listing to inform users if the pet is still available or has been adopted. This feature will help users know the availability of each pet more clearly.
+- **User Activity Dashboard**
+  - Implement a dashboard where users can view all their recent activities, such as posts, comments, and interactions. This feature would provide users with a centralized overview of their contributions and engagement on the platform.
 
 
 ## Credits
