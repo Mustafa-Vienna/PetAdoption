@@ -351,24 +351,18 @@ I have validated all HTML files using the recommended [HTML W3C Validator](https
 
 | **HTML Files Name** | **Validation Screenshot**  | **Comments** |
 |---------------------|----------------------------|--------------|
-| `base.html` | ![base validation](readme_assets/images/code_validation/base-validation.png) | Passed with no issues|
-| `footer.html` | ![footer validation](readme_assets/images/code_validation/footer-validation.png) | Passed with no issues|
-| `nav.html` | ![nav validation](readme_assets/images/code_validation/nav-validation.png) | Passed with no issues|
-| `404.html` | ![404 validation](readme_assets/images/code_validation/404-validation.png) | Passed with no issues|
 | `login.html` | ![login validation](readme_assets/images/code_validation/login-validation.png) | Passed with no issues|
 | `logout.html` | ![logout validation](readme_assets/images/code_validation/logout-validation.png) | Passed with no issues|
 | `register.html` | ![register validation](readme_assets/images/code_validation/register-validation.png) | Passed with no issues|
 | `index.html` | ![index validation](readme_assets/images/code_validation/index-validation.png) | Passed with no issues|
 | `posts.html` | ![posts validation](readme_assets/images/code_validation/posts-validation.png) | Passed with no issues|
-| `post.html` | ![post validation](readme_assets/images/code_validation/post-validation.png) | Passed with no issues|
 | `post-detail.html` | ![post-detail validation](readme_assets/images/code_validation/post-detail-validation.png) | Passed with no issues|
 | `create-post.html` | ![create-post validation](readme_assets/images/code_validation/create-post-validation.png) | Passed with no issues|
 | `delete-post.html` | ![delete-post validation](readme_assets/images/code_validation/delete-post-validation.png) | Passed with no issues|
-| `about.html` | ![about validation](readme_assets/images/code_validation/about-validation.png) | Passed with no issues|
-| `testimonials.html` | ![testimonials validation](readme_assets/images/code_validation/testimonials-validation.png) | Passed with no issues|
-| `like-post.html` | ![like-post validation](readme_assets/images/code_validation/like-post-validation.png) | Passed with no issues|
 | `our-mission.html` | ![our-mission validation](readme_assets/images/code_validation/our-mission-validation.png) | Passed with no issues|
 | `pet-care.html` | ![pet-care validation](readme_assets/images/code_validation/pet-care-validation.png) | Passed with no issues|
+| `404.html` | ![404 validation](readme_assets/images/code_validation/404-validation.png) | Passed with no issues |
+ >[!NOTE] Initially, testing with the URL didn't display correctly in the W3C Validator due to the dynamic nature of the 404 error page. Instead, the HTML source of the rendered 404 page was copied and validated using the "Validate by Direct Input" option on https://validator.w3.org/. The validation passed without any issues.
 ---
 
 ### CSS

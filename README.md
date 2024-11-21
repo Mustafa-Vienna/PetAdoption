@@ -16,7 +16,7 @@ The Pet Adoption application enables users to view available pets, post pet list
 
 [Live Demo](https://pet-adoptions-9841a93e0575.herokuapp.com/)
 
-![Responsive Design Screenshot]()
+![Responsive Design Screenshot](readme_assets/images/code_validation/readme_main.png)
 
 ### Key Features
 
