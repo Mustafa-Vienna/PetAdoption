@@ -45,6 +45,7 @@ The Pet Adoption application enables users to view available pets, post pet list
 
 - **Responsive Design**
   - The platform is optimized for both mobile and desktop devices, ensuring a seamless experience across different screen sizes.
+  
 
 ## contents
 
@@ -54,14 +55,19 @@ The Pet Adoption application enables users to view available pets, post pet list
    - [Typography](#typography)
    - [Imagery](#imagery)
    - [User Stories](#user-stories)
-   - [Wireframe](#Wireframes)
-3. [Technologies Used](#technologies-used)
-4. [Agile Methodology](#agile-methodology)
-5. [Version Control](#version-control)
-6. [Deployment](#deployment)
-7. [Testing](#testing)
-8. [Known Issues and Future Features](#known-issues-and-future-features)
-9. [Credits](#credits)
+   - [Wireframes](#wireframes)
+3. [Information Architecture](#information-architecture)
+   - [Flowchart](#flowchart)
+   - [Database Schema Diagram](#database-schema-diagram)
+4. [Technologies Used](#technologies-used)
+5. [Agile Methodology](#agile-methodology)
+   - [Kanban Workflow](#kanban-workflow)
+   - [Project Evolution](#project-evolution)
+6. [Version Control](#version-control)
+7. [Deployment](#deployment)
+8. [Testing](#testing)
+9. [Known Issues and Future Features](#known-issues-and-future-features)
+10. [Credits](#credits)
    - [Resources Used](#resources-used)
    - [Code Used](#code-used)
    - [Acknowledgements](#acknowledgements)
@@ -94,6 +100,7 @@ The Pet Adoption application enables users to view available pets, post pet list
    - The website is fully responsive, ensuring an optimal user experience across all devices, including mobile and desktop views.
 
 [Go to Contents](#contents)
+
 
 ## User Experience (UX)
 
@@ -160,7 +167,6 @@ Images of pets are central to the platform, as they capture users' attention and
 
   ![Posts Wireframe](readme_assets/images/hot_featured.png)
 
-
 [Go to Contents](#contents)
 
 
@@ -207,6 +213,13 @@ To provide a clear understanding of the structure and user flow of the **Green L
 The flowchart serves as a roadmap, highlighting the application's workflow from the user's initial interaction to the final outcome. It includes details such as navigation paths, user actions, and system responses, ensuring a comprehensive view of how the application functions.
 
 ![Pet Adoption Flowchart](readme_assets/images/flowchart.png)
+
+[Go to Contents](#contents)
+
+
+#### Database Schema Diagram
+
+
 
 [Go to Contents](#contents)
 
@@ -302,6 +315,9 @@ The Kanban board was structured to track tasks across three main stages, allowin
 3. **Done**: Tasks that have been fully tested and merged.
 
 - **Link to Project Board**: [Kanban Board](https://github.com/users/Mustafa-Vienna/projects/6)
+
+[Go to Contents](#contents)
+
 
 ### Project Evolution
 
