@@ -22,7 +22,7 @@ The Pet Adoption application enables users to view available pets, post pet list
 
 - **User Registration and Authentication**
 
-  - Users can register, log in, and manage their profiles, including uploading profile pictures and displaying user-specific information.
+  - Users can register, log in, and log out.
 
 - **Pet Listing with Add, Update, and Delete Options**
 
@@ -33,6 +33,7 @@ The Pet Adoption application enables users to view available pets, post pet list
 
   - Each pet listing provides a detailed profile view with images, descriptive tags, and user comments.
   - Users can "like" posts by clicking a heart icon to show interest, and they can leave comments for further inquiries.
+  - Each post displays the author's name. When users hover over the author's name, a tooltip reveals their email address, providing an additional way for potential adopters to connect with pet owners directly and securely.
 
 - **Enhanced User Interaction on Posts**
 
@@ -44,7 +45,7 @@ The Pet Adoption application enables users to view available pets, post pet list
   - An admin panel enables administrators to manage user posts, monitor platform activity, and ensure content quality and compliance.
 
 - **Responsive Design**
-  - The platform is optimized for both mobile and desktop devices, ensuring a seamless experience across different screen sizes.
+  - The platform is optimized for mobile, tablet and desktop devices, ensuring a seamless experience across different screen sizes.
   
 
 ## contents
@@ -90,11 +91,15 @@ The Pet Adoption application enables users to view available pets, post pet list
 
    - Registered users and authors can like posts by clicking a heart icon to show interest.
    - Both authors and registered users can leave comments on posts to facilitate discussions and inquiries.
-   - Visitors (non-registered users) can view posts but cannot interact through likes or comments.
+   - Visitors (non-registered users) can browse posts and view comments as well as the like counts, but they cannot engage by liking or commenting.
 
 4. **Admin Dashboard**
 
-   - Admin users have access to a dashboard where they can monitor listings, manage posts, and oversee user activity to ensure a safe and supportive platform.
+     **Admin users have access to a comprehensive dashboard that provides full control over managing the platform. They can:**
+
+      - Create, update, and delete comments, likes, tags, and user details.
+      - Manage users, including account status and permissions.
+      - Oversee platform activity to maintain a safe and supportive environment.
 
 5. **Responsive Design**
    - The website is fully responsive, ensuring an optimal user experience across all devices, including mobile and desktop views.
@@ -150,10 +155,15 @@ Images of pets are central to the platform, as they capture users' attention and
 - As the author of a post, I can see edit and delete buttons on my posts so that I can manage my content directly.
 
 #### Admin Users
-- As an admin, I can delete or update any post so that I can ensure the platform remains safe and organized.
-- As an admin, I can moderate user interactions, including comments and likes, so that the community maintains a respectful environment.
-- As an admin, I can assign tags such as *Hot*, *Fresh*, or *Featured* to posts so that they are categorized and highlighted appropriately.
-  - *Hot*: For posts with more than 50 views.
+
+- As an admin, I can create, update, and delete comments, likes, tags, and user details to maintain platform integrity and organization.
+- As an admin, I can manage users, including their account status and permissions, to ensure proper access control and user management.
+- As an admin, I can oversee platform activity to maintain a safe and supportive community environment.
+- As an admin, I can delete or update any post to ensure the platform remains safe and organized.
+- As an admin, I can moderate user interactions, including comments and likes, to foster a respectful environment.
+- As an admin, I can assign tags such as *Hot*, *Fresh*, or *Featured* to posts for proper categorization and visibility:
+
+   - *Hot*: Assigned to the most liked posts to highlight popular content
 
   ![Posts Wireframe](readme_assets/images/hot.png)
 
@@ -199,7 +209,7 @@ Home/Index Page
 
 ![Logout Wireframe](readme_assets/images/wireframes/logout-wireframe.webp)
 
-The wireframes for the **Pet Adoption** application were created using ![Balsamiq](https://balsamiq.com/wireframes/)
+The wireframes for the **Pet Adoption** application were created using [Balsamiq](https://balsamiq.com/wireframes/)
 
 [Go to Contents](#contents)
 
@@ -213,6 +223,8 @@ To provide a clear understanding of the structure and user flow of the **Green L
 The flowchart serves as a roadmap, highlighting the application's workflow from the user's initial interaction to the final outcome. It includes details such as navigation paths, user actions, and system responses, ensuring a comprehensive view of how the application functions.
 
 ![Pet Adoption Flowchart](readme_assets/images/flowchart.png)
+
+The flowchart for the **Pet Adoption** application were created using [Lucid Chart](https://lucid.app/documents#/home?folder_id=recent)
 
 [Go to Contents](#contents)
 
