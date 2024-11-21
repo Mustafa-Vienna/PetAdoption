@@ -168,6 +168,21 @@ Home/Index Page
 ![Login Wireframe](readme_assets/images/wireframes/login-wireframe.webp)
 
 ![Logout Wireframe](readme_assets/images/wireframes/logout-wireframe.webp)
+
+The wireframes for the **Pet Adoption** application were created using [Balsamiq](https://balsamiq.com/wireframes/)
+
+[Go to Contents](#contents)
+---
+
+### Information Architecture
+
+#### Flowchart
+
+To provide a clear understanding of the structure and user flow of the **Green Local Veggies** application, I created a flowchart using Lucidchart. This flowchart visually represents the application's primary processes, user interactions, and key decision points.
+
+The flowchart serves as a roadmap, highlighting the application's workflow from the user's initial interaction to the final outcome. It includes details such as navigation paths, user actions, and system responses, ensuring a comprehensive view of how the application functions.
+
+![Pet Adoption Flowchart](readme_assets/images/flowchart.png)
 ---
 
 ### User Stories
