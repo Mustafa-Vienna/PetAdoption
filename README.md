@@ -122,9 +122,15 @@ The Pet Adoption application enables users to view available pets, post pet list
 
 The color palette is crafted to evoke a warm, friendly, and welcoming atmosphere for users, with shades that convey trust, approachability, and growth. The primary colors include deep blues and greens to establish reliability, with coral red accents for calls-to-action that stand out, and soft neutral tones to create a calm backdrop. Each color was selected to enhance readability and visual appeal while maintaining a cohesive and approachable aesthetic.
 
+![Color Screenshot](readme_assets/images/color.png)
+---
+
+
 #### Typography
 
 The primary font is **Roboto**, chosen for its readability and modern feel, providing a clean and professional look. **Open Sans** and **Lato** are used as secondary fonts, lending versatility across different text elements to enhance user experience.
+
+![Font and color Screenshot](readme_assets/images/design.png)
 
 #### Imagery
 
@@ -194,6 +200,24 @@ Images of pets are central to the platform, as they capture users' attention and
 - [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-6.7.0-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files directly from my Django app on Heroku, simplifying file management and boosting loading speed.
 
 - [![Google Fonts](https://img.shields.io/badge/Google_Fonts-grey?logo=google&logoColor=4285F4)](https://fonts.google.com/) used to import the "Lato" and "Open Sans" fonts for consistent typography and styling.
+
+- [![W3C HTML Validator](https://img.shields.io/badge/W3C_HTML_Validator-grey?logo=w3c&logoColor=005A9C)](https://validator.w3.org/) - Used to check the validity of HTML code and ensure it adheres to web standards.
+
+- [![W3C CSS Validator](https://img.shields.io/badge/W3C_CSS_Validator-grey?logo=w3c&logoColor=005A9C)](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code for errors and improve styling consistency.
+
+- [![JSHint](https://img.shields.io/badge/JSHint-grey?logo=javascript&logoColor=F7DF1E)](https://jshint.com/) - Used to identify and fix errors in JavaScript code.
+
+- [![Coolors](https://img.shields.io/badge/Coolors-grey?logo=adobe&logoColor=FF5722)](https://coolors.co/) - Used to generate and manage consistent color palettes for the project.
+
+- [![Mermaid Flow](https://img.shields.io/badge/Mermaid_Flow-grey?logo=mermaid&logoColor=000000)](https://www.mermaidflow.app/) - Used for creating flowcharts and visualizing workflows.
+
+- [![Lucidchart](https://img.shields.io/badge/Lucidchart-grey?logo=lucidchart&logoColor=FF6F00)](https://www.lucidchart.com/pages/) - Used for designing wireframes and visual diagrams.
+
+- [![Am I Responsive](https://img.shields.io/badge/Am_I_Responsive-grey?logo=responsive&logoColor=0078D4)](https://ui.dev/amiresponsive) - Used to test and showcase responsiveness across various device sizes.
+
+- [![Unsplash](https://img.shields.io/badge/Unsplash-grey?logo=unsplash&logoColor=000000)](https://unsplash.com/) - Used to source high-quality images for the project.
+
+- [![PEP8 Validator](https://img.shields.io/badge/PEP8_Validator-grey?logo=python&logoColor=A44200)](https://pep8ci.herokuapp.com/) - Used to validate Python code for compliance with PEP8 style guidelines
 
 [Go to Contents](#contents)
 
