@@ -62,6 +62,9 @@ The Pet Adoption application enables users to view available pets, post pet list
 7. [Testing](#testing)
 8. [Known Issues and Future Features](#known-issues-and-future-features)
 9. [Credits](#credits)
+   - [Resources Used](#resources-used)
+   - [Code Used](#code-used)
+   - [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -156,7 +159,7 @@ Images of pets are central to the platform, as they capture users' attention and
   - *Featured*: For posts the admin wants to showcase prominently.
 
   ![Posts Wireframe](readme_assets/images/hot_featured.png)
-  
+
 
 [Go to Contents](#contents)
 
@@ -488,9 +491,20 @@ For further details on specific test cases, results, and testing methodologies, 
 
 - **Adoption Status Tracking**
   - Add an adoption status indicator on each pet listing to inform users if the pet is still available or has been adopted. This feature will help users know the availability of each pet more clearly.
+
 - **User Activity Dashboard**
   - Implement a dashboard where users can view all their recent activities, such as posts, comments, and interactions. This feature would provide users with a centralized overview of their contributions and engagement on the platform.
 
+- **Automated Tag Management**
+  - Implement automated tagging logic to dynamically assign tags to posts based on user interactions and activity:
+    - **Fresh Tag**: Automatically assign the *Fresh* tag to newly created posts so they can stand out as recent contributions.
+    - **Hot Tag**: Automatically assign the *Hot* tag to posts that have over 50 likes and more than 10 comments, highlighting them as engaging and popular content within the community.
+    - **Featured Tag**: Automatically assign the *Featured* tag to posts that have over 100 likes and more than 30 comments, recognizing them as exceptional and widely appreciated content.
+  - This feature will reduce the manual work for admins and ensure tags remain accurate and reflective of real-time activity.
+
+### Known Issues
+
+- Currently, tag assignment (*Fresh*, *Hot*, and *Featured*) is managed manually by the admin, which can delay updates and limit scalability. Automating this process will address these issues and improve the user experience.
 
 ## Credits
 
@@ -522,17 +536,18 @@ Additionally, I adapted Ibrahim’s approach for the top of my README.md file, u
 
 I also learned how to set up a custom 404 error page in my Django project by referencing his project, which improved the user experience by providing a helpful and consistent error page.
 
----
+[Go to Contents](#contents)
+
 
 In the footer section of this project, code was adapted from [MDBootstrap](https://mdbootstrap.com/snippets/standard/mdbootstrap/2885120?view=side). The original code provided a responsive and modern footer layout. It was modified to align with the project's theme and requirements by adjusting styles, customizing the footer links and text to include relevant navigation, contact information, and social media links, and ensuring compatibility with the overall project design by integrating it with the `base.html` template and Bootstrap styles. The original code served as an excellent starting point, and the modifications helped tailor it to meet the specific needs of this project.
 
----
 
 For the **username and email validation**, I utilized code from [this StackOverflow post](https://stackoverflow.com/questions/61457903/django-usercreationform-raise-validation-error-when-email-already-exist) as a reference. The original code was modified to fit the specific requirements of this project.
 
 Credit to the StackOverflow community for the insightful solution.
 
----
+[Go to Contents](#contents)
+
 
 ### Acknowledgements
 
