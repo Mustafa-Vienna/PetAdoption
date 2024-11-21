@@ -1,6 +1,9 @@
 from django.db import models
-from django.core.validators import MaxLengthValidator, MinValueValidator, MaxValueValidator
-
+from django.core.validators import (
+    MaxLengthValidator,
+    MinValueValidator,
+    MaxValueValidator
+)
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from django.forms import ValidationError
@@ -58,7 +61,8 @@ class Post(models.Model):
         super().clean()
         if len(self.title) > 50:
             raise ValidationError(
-                "Oops! The title you entered is too long. Please limit it to 50 characters.")
+                "Oops! The title you entered is too long. "
+                "Please limit it to 50 characters.")
 
     def __str__(self):
         return self.title
