@@ -368,6 +368,32 @@ I have validated all HTML files using the recommended [HTML W3C Validator](https
 ### CSS
 
 I primarily used Bootstrap 5.3.3 for styling across the project templates, complemented by custom CSS for specific components and layouts. Additionally, I employed LESS CSS for modular and reusable styles where applicable. To ensure compliance with current standards and best practices, I validated all custom CSS files using the recommended [CSS jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+---
+
+#### Validation Methods
+
+##### 1. Production URL Validation
+When validating the production URL, the following results were observed:
+- **Errors (61)**: Related to the `https://unpkg.com/aos@2.3.1/dist/aos.css` file used for animations.
+- **Warning**: `Due to their dynamic nature, CSS variables are currently not statically checked.`
+
+> Note: The errors from third-party libraries (e.g., AOS) and warnings about dynamic CSS variables do not affect the functionality or responsiveness of the website.
+
+##### 2. Direct Input Validation
+To validate only the custom CSS written for the project, the CSS code was copied from the production release and pasted into the validator using the **Direct Input** option. This method ensured focused validation of the project's core styles.
+
+---
+
+#### Findings and Fixes
+
+##### Third-Party Library (AOS)
+- Errors from the `aos.css` file are external and beyond the project's control. These errors were ignored during validation as they do not affect the core functionality or visual appeal of the website.
+
+##### Bootstrap 5.3.3
+- The project relies heavily on Bootstrap 5.3.3 for styling, which minimizes the need for custom CSS.
+- Bootstrap's built-in styles were not modified, and any errors from these files were not addressed as they are considered optimized and validated by the Bootstrap development team.
+
+
 
 | **CSS Files Name** | **Validation Screenshot**  | **Comments** |
 |---------------------|----------------------------|--------------|
