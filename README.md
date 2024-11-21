@@ -131,10 +131,44 @@ The color palette is crafted to evoke a warm, friendly, and welcoming atmosphere
 The primary font is **Roboto**, chosen for its readability and modern feel, providing a clean and professional look. **Open Sans** and **Lato** are used as secondary fonts, lending versatility across different text elements to enhance user experience.
 
 ![Font and color Screenshot](readme_assets/images/design.png)
+---
 
 #### Imagery
 
 Images of pets are central to the platform, as they capture users' attention and provide key information about each pet.
+
+![Latest Posts Screenshot](readme_assets/images/browsers/google-posts.png)
+---
+
+### Wireframes
+
+To ensure a user-friendly and structured design, wireframes were developed for desktop views. These wireframes serve as a blueprint for organizing the layout and navigation of the Pet Adoption website, prioritizing usability and effective content display.
+
+#### Desktop Design
+
+The desktop wireframes leverage larger screen real estate to provide an enriched browsing experience. The layout ensures intuitive navigation and a professional appearance.
+
+#### Key pages Wireframed: ####
+
+Home/Index Page
+![Home Wireframe](readme_assets/images/wireframes/home-wireframe.webp)
+
+![Posts Wireframe](readme_assets/images/wireframes/allPosts-wireframe.webp)
+
+![Post Detail Wireframe](readme_assets/images/wireframes/postDetail-wireframe.webp)
+
+![Create Post Wireframe](readme_assets/images/wireframes/createPost-wireframe.webp)
+
+![Pet Care Wireframe](readme_assets/images/wireframes/petCare-wireframe.webp)
+
+![Mission Wireframe](readme_assets/images/wireframes/our-mission.webp)
+
+![User Registration Wireframe](readme_assets/images/wireframes/register-wireframe.webp)
+
+![Login Wireframe](readme_assets/images/wireframes/login-wireframe.webp)
+
+![Logout Wireframe](readme_assets/images/wireframes/logout-wireframe.webp)
+---
 
 ### User Stories
 
