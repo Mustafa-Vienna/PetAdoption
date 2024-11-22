@@ -214,9 +214,9 @@ The wireframes for the **Pet Adoption** application were created using [Balsamiq
 [Go to Contents](#contents)
 
 
-### Information Architecture
+## Information Architecture
 
-#### Flowchart
+### Flowchart
 
 To provide a clear understanding of the structure and user flow of the **Green Local Veggies** application, I created a flowchart using Lucidchart. This flowchart visually represents the application's primary processes, user interactions, and key decision points.
 
@@ -229,9 +229,88 @@ The flowchart for the **Pet Adoption** application were created using [Lucid Cha
 [Go to Contents](#contents)
 
 
-#### Database Schema Diagram
+### Database Schema Diagram Documentation
 
 
+#### Overview
+The database schema for this application consists of five tables: `User`, `Tag`, `Author`, `Post`, and `Comment`. This structure supports the core functionality of the application, including user management, tagging, posts, and comments. Below is a description of the relationships between the tables.
+
+---
+
+#### Relationships
+
+**User**
+1. **`User` to `Post`**:
+   - **Relationship**: One-to-Many
+   - **Description**: Each `Post` is authored by a single `User`, but a `User` can author multiple posts.
+   - **Key**: ForeignKey (`author`) in the `Post` table.
+
+2. **`User` to `Post (likes)`**:
+   - **Relationship**: Many-to-Many
+   - **Description**: Users can like multiple posts, and each post can be liked by multiple users.
+   - **Key**: ManyToManyField (`likes`) in the `Post` table.
+
+3. **`User` to `Comment`**:
+   - **Relationship**: One-to-Many
+   - **Description**: A `User` can write multiple comments, but each `Comment` is authored by one `User`.
+   - **Key**: ForeignKey (`author`) in the `Comment` table.
+
+---
+
+**Tags**
+1. **`Tag` to `Post`**:
+   - **Relationship**: Many-to-Many
+   - **Description**: A `Post` can have multiple tags, and a `Tag` can be associated with multiple posts.
+   - **Key**: ManyToManyField (`tags`) in the `Post` table.
+
+---
+
+**Author**
+1. **`Author` Table**:
+   - **Purpose**: Represents detailed information about authors (separate from Django's default `User` model).
+
+---
+
+**Post**
+1. **`Post` to `Tag`**:
+   - **Relationship**: Many-to-Many
+   - **Description**: Posts can have multiple tags to categorize them.
+   - **Key**: ManyToManyField (`tags`).
+
+2. **`Post` to `Comment`**:
+   - **Relationship**: One-to-Many
+   - **Description**: A `Post` can have multiple comments, but each `Comment` belongs to a single `Post`.
+   - **Key**: ForeignKey (`post`) in the `Comment` table.
+
+3. **`Post` to `User`**:
+   - **Relationship**: One-to-Many
+   - **Description**: Each `Post` is authored by one `User`.
+   - **Key**: ForeignKey (`author`).
+
+4. **`Post` to `User (likes)`**:
+   - **Relationship**: Many-to-Many
+   - **Description**: Tracks which users liked a post.
+   - **Key**: ManyToManyField (`likes`).
+
+---
+
+**Comment**
+1. **`Comment` to `Post`**:
+   - **Relationship**: Many-to-One
+   - **Description**: Each `Comment` is associated with a single `Post`.
+   - **Key**: ForeignKey (`post`).
+
+2. **`Comment` to `User`**:
+   - **Relationship**: Many-to-One
+   - **Description**: Each `Comment` is authored by one `User`.
+   - **Key**: ForeignKey (`author`).
+
+---
+
+#### Diagram
+The Entity Relationship Diagram (ERD) visually represents the relationships described above.
+
+![Pet Adoption Database ERD Diagram](readme_assets/images/erd.png)
 
 [Go to Contents](#contents)
 
@@ -385,7 +464,6 @@ This Django application was deployed on Heroku, leveraging its GitHub integratio
    - `SECRET_KEY`: My Django secret key
    - `DATABASE_URL`: The database connection URL
    - `CLOUDINARY_URL`: Cloudinary URL for managing images, with `secure=true` to ensure HTTPS delivery
-   - `DEVELOPMENT`: Set in the local environment to enable `DEBUG=True` during development
   
    > **Note**: The `DEVELOPMENT` variable is used to control `DEBUG` mode in local environments, allowing safe testing and debugging without affecting production settings.
 
