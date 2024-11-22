@@ -15,18 +15,28 @@ from .topics_data import topics
 
 
 class HomePageView(ListView):
+    '''
+    Ensure to display three latest posts in the homepage
+    '''
     template_name = "pets/index.html"
     model = Post
     ordering = ["-date"]
     context_object_name = "posts"
 
     def get_queryset(self):
+        '''
+        Get the latest three posts.
+        '''
         queryset = super().get_queryset()
         data = queryset[:3]
         return data
 
 
 class AllPostsView(ListView):
+    '''
+    Display all posts with pagination
+    six posts per page
+    '''
     template_name = "pets/posts.html"
     model = Post
     paginate_by = 6
@@ -35,8 +45,14 @@ class AllPostsView(ListView):
 
 
 class SelectedPostView(View):
+    '''
+    Display details of the selected post
+    '''
 
     def get(self, request, slug):
+        '''
+        Display the post details, tags, comments and like status
+        '''
         post = Post.objects.get(slug=slug)
         liked_by_user = post.likes.filter(id=request.user.id).exists()
         context = {
@@ -50,6 +66,9 @@ class SelectedPostView(View):
         return render(request, "pets/post-detail.html", context)
 
     def post(self, request, slug):
+        '''
+        Handle comment submission for the selected post
+        '''
         comment_form = CommentForm(request.POST)
         post = Post.objects.get(slug=slug)
 
@@ -77,6 +96,9 @@ class SelectedPostView(View):
 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
+    '''
+    Allow create new posts to the authenticated users
+    '''
     model = Post
     template_name = "pets/create-post.html"
     form_class = UserPostForm
@@ -84,6 +106,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('posts-page')
 
     def form_valid(self, form):
+        '''
+        Save the new post and display success msg
+        '''
         form.instance.author = self.request.user
         messages.success(
             self.request,
@@ -93,12 +118,18 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    '''
+    Allow authenticated users to delete their own posts
+    '''
     model = Post
     template_name = "pets/delete-post.html"
     success_url = reverse_lazy("posts-page")
     slug_url_kwarg = 'slug'
 
     def test_func(self):
+        '''
+        Validate if the current user is the author of the post
+        '''
         post = self.get_object()
         if self.request.user == post.author:
             return True
@@ -106,12 +137,18 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    '''
+    Allow authenticated users to update their own posts
+    '''
     model = Post
     template_name = "pets/create-post.html"
     form_class = UserPostForm
     login_url = 'login'
 
     def form_valid(self, form):
+        '''
+        Save the updated post and display success msg
+        '''
         form.instance.author = self.request.user
         self.success_url = reverse('post-detail-page', kwargs={
             'slug': form.instance.slug
@@ -123,6 +160,9 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_valid(form)
 
     def test_func(self):
+        '''
+        Check if the current user is the author of the post
+        '''
         post = self.get_object()
         if self.request.user == post.author:
             return True
@@ -130,7 +170,13 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 class PostLikeView(View):
+    '''
+    Handle liking and unliking posts
+    '''
     def post(self, request, slug):
+        '''
+        Toggle like status for a post
+        '''
         post = Post.objects.get(slug=slug)
 
         if post.likes.filter(id=request.user.id).exists():
@@ -145,12 +191,21 @@ class PostLikeView(View):
 
 
 def handler404(request, exception):
+    '''
+    Render the custom 404 error page
+    '''
     return render(request, '404.html', status=404)
 
 
 def care_tips(request):
+    '''
+    Render the pet care tips page with topics data
+    '''
     return render(request, 'pets/includes/pet-care.html', {'topics': topics})
 
 
 def our_mission(request):
+    '''
+    Render the organization mission page
+    '''
     return render(request, 'pets/includes/our-mission.html')
