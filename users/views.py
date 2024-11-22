@@ -8,27 +8,27 @@ from .forms import UserRegisterForm
 
 
 class RegisterView(View):
-    '''
+    """
     Handle user registration flow via Get and Post requests.
-    '''
+    """
     def get(self, request):
-        '''
+        """
         Render the user registration form
-        '''
+        """
         form = UserRegisterForm()
         return render(request, 'users/register.html', {
             'form': form
         })
 
     def post(self, request):
-        '''
+        """
         Handle user registration flow via Post request
         Validate the registration form, create a new user
         Login the user if the created user is valid
 
         Returns:
             Redirect on success or re-renders the form with errors.
-        '''
+        """
         form = UserRegisterForm(request.POST)
 
         if form.is_valid():
@@ -50,9 +50,9 @@ class RegisterView(View):
 
 @login_required
 def user_logout(request):
-    '''
+    """
     Log out the user and display success msg
-    '''
+    """
     username = request.user.username
     logout(request)
     messages.success(request, f"{username} was logged out successfully")

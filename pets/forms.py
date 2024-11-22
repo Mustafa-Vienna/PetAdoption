@@ -4,6 +4,12 @@ from .models import Comment, Post
 
 
 class CommentForm(forms.ModelForm):
+    """
+    A form for submitting comments on posts
+
+    Excludes the post, author, and email fields
+    as these are automatically populated
+    """
     class Meta:
         model = Comment
         exclude = ["post", "author", "email"]
@@ -17,6 +23,14 @@ class CommentForm(forms.ModelForm):
 
 
 class UserPostForm(forms.ModelForm):
+    """
+    A form for creating or updating posts
+
+    Including the following fields:
+    title, pet name, pet age, excerpt, image, and content
+
+    Adds a widget for pet age with a defined min and max values
+    """
     class Meta:
         model = Post
         fields = [
