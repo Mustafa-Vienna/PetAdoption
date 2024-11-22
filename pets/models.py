@@ -13,8 +13,14 @@ from django.utils.text import slugify
 
 class Tag(models.Model):
     caption = models.CharField(max_length=25)
+    '''
+    Represents a tag that can be associated with posts
+    '''
 
     def __str__(self):
+        '''
+        Return the tag caption as its string representation
+        '''
         return self.caption
 
 
@@ -32,6 +38,10 @@ class Author(models.Model):
 
 
 class Post(models.Model):
+    '''
+    Represents a post with details about a pet, including:
+    title, name, age, excerpt, image, content, author, tags, and likes
+    '''
     title = models.CharField(max_length=50, unique=True)
     pet_name = models.CharField(max_length=100)
     pet_age = models.IntegerField(
@@ -47,6 +57,9 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name="post_likes", blank=True)
 
     def save(self, *args, **kwargs):
+        '''
+        Auto generate a unique slug based on the title
+        '''
         if not self.slug:
             user_slug = slugify(self.title)
             slug = user_slug
@@ -58,6 +71,9 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
     def clean(self):
+        '''
+        Validate the post before saving, ensures the title is not too long
+        '''
         super().clean()
         if len(self.title) > 50:
             raise ValidationError(
@@ -65,13 +81,23 @@ class Post(models.Model):
                 "Please limit it to 50 characters.")
 
     def __str__(self):
+        '''
+        Return the post title as its string representation
+        '''
         return self.title
 
     def total_likes(self):
+        '''
+        Return the total count of likes for the post
+        '''
         return self.likes.count()
 
 
 class Comment(models.Model):
+    '''
+    Represents a comment on a post with
+    author, comment text and creation time
+    '''
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="comments")
     text = models.TextField(max_length=600)
@@ -80,4 +106,7 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        '''
+        Return a brief string representation of the comment
+        '''
         return f"Comment by {self.author.username} on {self.text[:30]}"
